@@ -89,6 +89,7 @@ namespace LibraryManagementSystem.DataAccessLayer
                 int rowsAffected = cmd.ExecuteNonQuery();
                 return rowsAffected > 0; // Return true if the password was updated successfully
             }
+
         }
     }
 }
