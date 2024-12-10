@@ -1,4 +1,4 @@
-# Ado.Net_ARS
+# LMS Using ADO.NET
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.sparity.com/itsadit/ado.net_ars.git
+git remote add origin https://gitlab.sparity.com/saisanthosh.vemireddi/lms-using-ado.net.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.sparity.com/itsadit/ado.net_ars/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.sparity.com/saisanthosh.vemireddi/lms-using-ado.net/-/settings/integrations)
 
 ## Collaborate with your team
 
