@@ -37,3 +37,9 @@
 /Users/adityakumar/Documents/Aditya/CRUDS/obj/Debug/net8.0/CRUDS.pdb
 /Users/adityakumar/Documents/Aditya/CRUDS/obj/Debug/net8.0/CRUDS.genruntimeconfig.cache
 /Users/adityakumar/Documents/Aditya/CRUDS/obj/Debug/net8.0/ref/CRUDS.dll
+/Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/FluentValidation.dll
+/Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/FluentValidation.AspNetCore.dll
+/Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/FluentValidation.DependencyInjectionExtensions.dll
+/Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/CRUDS.xml
+/Users/adityakumar/Documents/Aditya/CRUDS/obj/Debug/net8.0/CRUDS.xml

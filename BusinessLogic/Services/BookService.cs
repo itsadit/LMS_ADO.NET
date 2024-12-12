@@ -12,9 +12,16 @@ namespace LibraryAPI.BusinessLogic.Services
         {
             _bookRepository = bookRepository;
         }
-
-        // Add a new book with its related details (author, genre, publisher)
-        public async Task<bool> AddBookAsync(string bookName, decimal bookPrice, string authors, string genres, string publishers)
+        /// <summary>
+        /// Adds a new book to the database with related authors, genres, and publishers.
+        /// </summary>
+        /// <param name="bookName">The name of the book.</param>
+        /// <param name="bookPrice">The price of the book.</param>
+        /// <param name="authors">The list of authors related to the book.</param>
+        /// <param name="genres">The list of genres related to the book.</param>
+        /// <param name="publishers">The list of publishers related to the book.</param>
+        /// <returns>True if the book was successfully added; otherwise, false.</returns>
+        public bool AddBook(string bookName, decimal bookPrice, string authors, string genres, string publishers)
         {
             // Create a new Book object using the received parameters
             var book = new Book
@@ -26,22 +33,24 @@ namespace LibraryAPI.BusinessLogic.Services
             // Call the repository to add the book to the database
             try
             {
-                return await _bookRepository.AddBookAsync(book, authors, genres, publishers);
+                return _bookRepository.AddBook(book, authors, genres, publishers);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in service layer: {ex.Message}");
                 return false;
             }
-
         }
 
-        // Retrieve all books
-        public async Task<IEnumerable<Book>> GetAllBooksAsync()
+        /// <summary>
+        /// Retrieves all books from the database.
+        /// </summary>
+        /// <returns>A list of all books.</returns>
+        public IEnumerable<Book> GetAllBooks()
         {
             try
             {
-                return await Task.Run(() => _bookRepository.GetAllBooks());
+                return _bookRepository.GetAllBooks();
             }
             catch (Exception ex)
             {
@@ -50,12 +59,16 @@ namespace LibraryAPI.BusinessLogic.Services
             }
         }
 
-        // Get a book with its related details (author, genre, publisher)
-        public async Task<Book> GetBookAsync(int bookId)
+        /// <summary>
+        /// Retrieves a book with its related details (author, genre, publisher) by book ID.
+        /// </summary>
+        /// <param name="bookId">The ID of the book to retrieve.</param>
+        /// <returns>The book with its related details, or null if not found.</returns>
+        public Book GetBook(int bookId)
         {
             try
             {
-                return await Task.Run(() => _bookRepository.GetBookWithDetails(bookId));
+                return _bookRepository.GetBookWithId(bookId);
             }
             catch (Exception ex)
             {
@@ -64,8 +77,18 @@ namespace LibraryAPI.BusinessLogic.Services
             }
         }
 
-        // Update the details of a book
-        public async Task<bool> UpdateBookAsync(int bookId, string? bookName = null, decimal? bookPrice = null, string? authorName = null, string? genreName = null, string? publisherName = null)
+        /// <summary>
+        /// Updates the details of a book.
+        /// </summary>
+        /// <param name="bookId">The ID of the book to update.</param>
+        /// <param name="bookName">The updated book name.</param>
+        /// <param name="bookPrice">The updated book price.</param>
+        /// <param name="authorName">The updated author name.</param>
+        /// <param name="genreName">The updated genre name.</param>
+        /// <param name="publisherName">The updated publisher name.</param>
+        /// <returns>True if the book was successfully updated; otherwise, false.</returns>
+
+        public bool UpdateBook(int bookId, string? bookName = null, decimal? bookPrice = null, string? authorName = null, string? genreName = null, string? publisherName = null)
         {
             try
             {
@@ -76,9 +99,7 @@ namespace LibraryAPI.BusinessLogic.Services
                 }
 
                 // Call the repository method with the nullable parameters
-                await Task.Run(() =>
-                    _bookRepository.UpdateBook(bookId, bookName, bookPrice, authorName, genreName, publisherName)
-                );
+                _bookRepository.UpdateBook(bookId, bookName, bookPrice, authorName, genreName, publisherName);
 
                 return true;
             }
@@ -89,12 +110,17 @@ namespace LibraryAPI.BusinessLogic.Services
             }
         }
 
-        // Delete a book based on BookID
-        public async Task<bool> DeleteBookAsync(int bookId)
+        /// <summary>
+        /// Deletes a book based on its ID.
+        /// </summary>
+        /// <param name="bookId">The ID of the book to delete.</param>
+        /// <returns>True if the book was successfully deleted; otherwise, false.</returns>
+
+        public bool DeleteBook(int bookId)
         {
             try
             {
-                await Task.Run(() => _bookRepository.DeleteBook(bookId));
+                _bookRepository.DeleteBook(bookId);
                 return true;
             }
             catch (Exception ex)
@@ -104,13 +130,18 @@ namespace LibraryAPI.BusinessLogic.Services
             }
         }
 
-        // Search books based on a given field (e.g., name, author, genre)
-        public async Task<IEnumerable<Book>> SearchBooksAsync(string searchBy, string searchValue)
+        /// <summary>
+        /// Searches for books based on a given field (e.g., name, author, genre).
+        /// </summary>
+        /// <param name="searchBy">The field to search by (e.g., name, author, genre).</param>
+        /// <param name="searchValue">The value to search for.</param>
+        /// <returns>A list of books that match the search criteria.</returns>
+
+        public IEnumerable<Book> SearchBooks(string searchBy, string searchValue)
         {
             try
             {
-                return await Task.Run(() => _bookRepository.SearchBooks(searchBy, searchValue));
-                
+                return _bookRepository.SearchBooks(searchBy, searchValue);
             }
             catch (Exception ex)
             {

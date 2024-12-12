@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CRUDS</name>
+    </assembly>
+    <members>
+        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.AddBook(System.String,System.Decimal,System.String,System.String,System.String)">
+            <summary>
+            Adds a new book to the database with related authors, genres, and publishers.
+            </summary>
+            <param name="bookName">The name of the book.</param>
+            <param name="bookPrice">The price of the book.</param>
+            <param name="authors">The list of authors related to the book.</param>
+            <param name="genres">The list of genres related to the book.</param>
+            <param name="publishers">The list of publishers related to the book.</param>
+            <returns>True if the book was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.GetAllBooks">
+            <summary>
+            Retrieves all books from the database.
+            </summary>
+            <returns>A list of all books.</returns>
+        </member>
+        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.GetBook(System.Int32)">
+            <summary>
+            Retrieves a book with its related details (author, genre, publisher) by book ID.
+            </summary>
+            <param name="bookId">The ID of the book to retrieve.</param>
+            <returns>The book with its related details, or null if not found.</returns>
+        </member>
+        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.UpdateBook(System.Int32,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String)">
+            <summary>
+            Updates the details of a book.
+            </summary>
+            <param name="bookId">The ID of the book to update.</param>
+            <param name="bookName">The updated book name.</param>
+            <param name="bookPrice">The updated book price.</param>
+            <param name="authorName">The updated author name.</param>
+            <param name="genreName">The updated genre name.</param>
+            <param name="publisherName">The updated publisher name.</param>
+            <returns>True if the book was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.DeleteBook(System.Int32)">
+            <summary>
+            Deletes a book based on its ID.
+            </summary>
+            <param name="bookId">The ID of the book to delete.</param>
+            <returns>True if the book was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.SearchBooks(System.String,System.String)">
+            <summary>
+            Searches for books based on a given field (e.g., name, author, genre).
+            </summary>
+            <param name="searchBy">The field to search by (e.g., name, author, genre).</param>
+            <param name="searchValue">The value to search for.</param>
+            <returns>A list of books that match the search criteria.</returns>
+        </member>
+        <member name="T:LibraryAPI.DataAccess.Interfaces.IBookRepository">
+            <summary>
+            Interface for book repository defining CRUD operations and additional functionalities for managing books.
+            </summary>
+        </member>
+        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.GetAllBooks">
+            <summary>
+            Retrieves all books from the repository.
+            </summary>
+            <returns>A collection of all books.</returns>
+        </member>
+        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.UpdateBook(System.Int32,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String)">
+            <summary>
+            Updates an existing book's details in the repository. 
+            Only the provided parameters will be updated.
+            </summary>
+            <param name="bookId">The ID of the book to update.</param>
+            <param name="bookName">The new name of the book (optional).</param>
+            <param name="bookPrice">The new price of the book (optional).</param>
+            <param name="authorName">The new author name for the book (optional).</param>
+            <param name="genreName">The new genre name for the book (optional).</param>
+            <param name="publisherName">The new publisher name for the book (optional).</param>
+        </member>
+        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.DeleteBook(System.Int32)">
+            <summary>
+            Deletes a book from the repository by its ID.
+            </summary>
+            <param name="bookId">The ID of the book to delete.</param>
+            <returns>True if the book was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.SearchBooks(System.String,System.String)">
+            <summary>
+            Searches for books in the repository based on a specific field and value.
+            </summary>
+            <param name="searchBy">The field to search by (e.g., "Author", "Genre").</param>
+            <param name="searchValue">The value to search for in the specified field.</param>
+            <returns>A collection of books that match the search criteria.</returns>
+        </member>
+        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.GetBookWithId(System.Int32)">
+            <summary>
+            Retrieves a specific book from the repository by its ID.
+            </summary>
+            <param name="bookId">The ID of the book to retrieve.</param>
+            <returns>The book with the specified ID.</returns>
+        </member>
+        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.AddBook(LibraryAPI.DataAccess.Models.Book,System.String,System.String,System.String)">
+            <summary>
+            Adds a new book to the repository along with its associated author, genre, and publisher details.
+            </summary>
+            <param name="book">The book object containing basic book details.</param>
+            <param name="authorName">The name of the author associated with the book.</param>
+            <param name="genreName">The genre of the book.</param>
+            <param name="publisherName">The publisher of the book.</param>
+            <returns>True if the book was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryAPI.Presentation.Controllers.BookController.AddBook(LibraryAPI.Presentation.DTOs.AddBookRequest)">
+            <summary>
+            Add a new book with its related details (e.g., author, genre, publisher)
+            </summary>
+            <param name="request">The book details to be added.</param>
+            <returns>A response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:LibraryAPI.Presentation.Controllers.BookController.GetAllBooks">
+            <summary>
+            Retrieve a list of all books
+            </summary>
+            <returns>A list of all books in the system.</returns>
+        </member>
+        <member name="M:LibraryAPI.Presentation.Controllers.BookController.GetBook(System.Int32)">
+            <summary>
+            Retrieve a specific book by its ID
+            </summary>
+            <param name="id">The unique ID of the book to retrieve.</param>
+            <returns>The details of the book if found, otherwise an error message.</returns>
+        </member>
+        <member name="M:LibraryAPI.Presentation.Controllers.BookController.UpdateBook(System.Int32,LibraryAPI.Presentation.DTOs.UpdateBookRequest)">
+            <summary>
+            Update the details of a book
+            </summary>
+            <param name="id">The ID of the book to update.</param>
+            <param name="request">The updated book details.</param>
+            <returns>A response indicating the result of the update operation.</returns>
+        </member>
+        <member name="M:LibraryAPI.Presentation.Controllers.BookController.DeleteBook(System.Int32)">
+            <summary>
+            Delete a specific book by its ID
+            </summary>
+            <param name="id">The ID of the book to delete.</param>
+            <returns>A response indicating whether the deletion was successful.</returns>
+        </member>
+        <member name="M:LibraryAPI.Presentation.Controllers.BookController.SearchBooks(LibraryAPI.Presentation.DTOs.SearchBooksRequest)">
+            <summary>
+            Search for books based on a given field (e.g., name, author, genre)
+            </summary>
+            <param name="request">The search criteria (search field and value).</param>
+            <returns>A list of books matching the search criteria.</returns>
+        </member>
+    </members>
+</doc>

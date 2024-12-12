@@ -2,7 +2,6 @@ using System.Data.SqlClient;
 using LibraryAPI.DataAccess.Interfaces;
 using LibraryAPI.DataAccess.Models;
 using LibraryAPI.DataAccess.Data;
-using System.Threading.Tasks;
 
 namespace LibraryAPI.DataAccess.Repositories
 {
@@ -15,14 +14,14 @@ namespace LibraryAPI.DataAccess.Repositories
             _databaseHelper = databaseHelper;
         }
 
-        public async Task<bool> AddBookAsync(Book book, string authorName, string genreName, string publisherName)
+        public bool AddBook(Book book, string authorName, string genreName, string publisherName)
         {
             using (var connection = _databaseHelper.CreateConnection())
             {
                 var sqlConnection = (SqlConnection)connection;
-                await sqlConnection.OpenAsync();
+                sqlConnection.Open();
 
-                using (var transaction = await sqlConnection.BeginTransactionAsync())
+                using (var transaction = sqlConnection.BeginTransaction())
                 {
                     try
                     {
@@ -30,36 +29,112 @@ namespace LibraryAPI.DataAccess.Repositories
                         var insertBookCommand = new SqlCommand(
                             "INSERT INTO Books (BookName, BookPrice) VALUES (@Name, @Price); SELECT SCOPE_IDENTITY();",
                             sqlConnection,
-                            (SqlTransaction)transaction
+                            transaction
                         );
                         insertBookCommand.Parameters.AddWithValue("@Name", book.BookName);
                         insertBookCommand.Parameters.AddWithValue("@Price", book.BookPrice);
 
-                        int bookId = Convert.ToInt32(await insertBookCommand.ExecuteScalarAsync());
+                        int bookId = Convert.ToInt32(insertBookCommand.ExecuteScalar());
 
-                        // Insert related entities and get their IDs (reuse if already present)
-                        int authorId = await InsertOrGetIdAsync(sqlConnection, (SqlTransaction)transaction, "Authors", "AuthorName", authorName);
-                        int genreId = await InsertOrGetIdAsync(sqlConnection, (SqlTransaction)transaction, "Genres", "GenreName", genreName);
-                        int publisherId = await InsertOrGetIdAsync(sqlConnection, (SqlTransaction)transaction, "Publishers", "PublisherName", publisherName);
+                        // Insert related entities and get their IDs (insert even if already present)
+                        int authorId = InsertOrGetId(sqlConnection, transaction, "Authors", "AuthorName", authorName, true);
+                        int genreId = InsertOrGetId(sqlConnection, transaction, "Genres", "GenreName", genreName, true);
+                        int publisherId = InsertOrGetId(sqlConnection, transaction, "Publishers", "PublisherName", publisherName, true);
 
                         // Insert mappings for the relationships (with the new book ID)
-                        await InsertMappingAsync(sqlConnection, (SqlTransaction)transaction, "BooksAuthorsMap", "BookID", "AuthorID", bookId, authorId);
-                        await InsertMappingAsync(sqlConnection, (SqlTransaction)transaction, "BooksGenresMap", "BookID", "GenreID", bookId, genreId);
-                        await InsertMappingAsync(sqlConnection, (SqlTransaction)transaction, "BooksPublishersMap", "BookID", "PublisherID", bookId, publisherId);
+                        InsertMapping(sqlConnection, transaction, "BooksAuthorsMap", "BookID", "AuthorID", bookId, authorId);
+                        InsertMapping(sqlConnection, transaction, "BooksGenresMap", "BookID", "GenreID", bookId, genreId);
+                        InsertMapping(sqlConnection, transaction, "BooksPublishersMap", "BookID", "PublisherID", bookId, publisherId);
 
                         // Commit transaction
-                        await transaction.CommitAsync();
+                        transaction.Commit();
 
                         return true; // Success
                     }
                     catch (Exception ex)
                     {
-                        await transaction.RollbackAsync();
-                        Console.WriteLine($"Error during AddBookAsync: {ex.Message}");
+                        transaction.Rollback();
+                        // Log the full error for debugging
+                        Console.WriteLine($"Error during AddBook: {ex.Message}\n{ex.StackTrace}");
                         return false; // Failure
                     }
                 }
             }
+        }
+
+
+        public int InsertOrGetId(
+            SqlConnection connection,
+            SqlTransaction transaction,
+            string tableName,
+            string columnName,
+            string value,
+            bool forceInsert = false)  // New parameter to force insertion
+        {
+            if (forceInsert)
+            {
+                // Insert the value into the table and return the newly generated ID
+                var insertCommand = new SqlCommand(
+                    $"INSERT INTO {tableName} ({columnName}) VALUES (@Value); SELECT SCOPE_IDENTITY();",
+                    connection,
+                    transaction
+                );
+                insertCommand.Parameters.AddWithValue("@Value", value);
+
+                var newId = insertCommand.ExecuteScalar();
+                return newId != DBNull.Value ? Convert.ToInt32(newId) : 0; // Return 0 if insertion fails
+            }
+            else
+            {
+                // Check if the value already exists in the table
+                var checkExistsCommand = new SqlCommand(
+                    $"SELECT {columnName} FROM {tableName} WHERE {columnName} = @Value;",
+                    connection,
+                    transaction
+                );
+                checkExistsCommand.Parameters.AddWithValue("@Value", value);
+
+                var existingId = checkExistsCommand.ExecuteScalar();
+
+                if (existingId != null && existingId != DBNull.Value)
+                {
+                    // If the value already exists, return the existing ID
+                    return Convert.ToInt32(existingId);
+                }
+
+                // Insert the value into the table and return the newly generated ID
+                var insertCommand = new SqlCommand(
+                    $"INSERT INTO {tableName} ({columnName}) VALUES (@Value); SELECT SCOPE_IDENTITY();",
+                    connection,
+                    transaction
+                );
+                insertCommand.Parameters.AddWithValue("@Value", value);
+
+                var newId = insertCommand.ExecuteScalar();
+                return newId != DBNull.Value ? Convert.ToInt32(newId) : 0; // Return 0 if insertion fails
+            }
+        }
+
+
+        public void InsertMapping(
+            SqlConnection connection,
+            SqlTransaction transaction,
+            string tableName,
+            string bookColumn,
+            string relatedColumn,
+            int bookId,
+            int relatedId)
+        {
+            // Insert the mapping into the table
+            var insertMappingCommand = new SqlCommand(
+                $"INSERT INTO {tableName} ({bookColumn}, {relatedColumn}) VALUES (@BookId, @RelatedId);",
+                connection,
+                transaction
+            );
+            insertMappingCommand.Parameters.AddWithValue("@BookId", bookId);
+            insertMappingCommand.Parameters.AddWithValue("@RelatedId", relatedId);
+
+            insertMappingCommand.ExecuteNonQuery();
         }
 
 
@@ -400,7 +475,7 @@ namespace LibraryAPI.DataAccess.Repositories
 
 
 
-        public Book GetBookWithDetails(int bookId)
+        public Book GetBookWithId(int bookId)
         {
             using (var connection = _databaseHelper.CreateConnection())
             {
@@ -449,56 +524,7 @@ namespace LibraryAPI.DataAccess.Repositories
 
 
 
-        public async Task<int> InsertOrGetIdAsync(
-        SqlConnection connection,
-        SqlTransaction transaction,
-        string tableName,
-        string columnName,
-        string value)
-        {
-            var checkExistsCommand = new SqlCommand(
-                $"SELECT {columnName} FROM {tableName} WHERE {columnName} = @Value;",
-                connection,
-                transaction
-            );
-            checkExistsCommand.Parameters.AddWithValue("@Value", value);
 
-            var existingId = await checkExistsCommand.ExecuteScalarAsync();
-            if (existingId != null)
-            {
-                // If the value already exists, return the existing ID
-                return Convert.ToInt32(existingId);
-            }
-
-            var insertCommand = new SqlCommand(
-                $"INSERT INTO {tableName} ({columnName}) VALUES (@Value); SELECT SCOPE_IDENTITY();",
-                connection,
-                transaction
-            );
-            insertCommand.Parameters.AddWithValue("@Value", value);
-
-            return Convert.ToInt32(await insertCommand.ExecuteScalarAsync());
-        }
-
-        public async Task InsertMappingAsync(
-            SqlConnection connection,
-            SqlTransaction transaction,
-            string tableName,
-            string bookColumn,
-            string relatedColumn,
-            int bookId,
-            int relatedId)
-        {
-            var insertMappingCommand = new SqlCommand(
-                $"INSERT INTO {tableName} ({bookColumn}, {relatedColumn}) VALUES (@BookId, @RelatedId);",
-                connection,
-                transaction
-            );
-            insertMappingCommand.Parameters.AddWithValue("@BookId", bookId);
-            insertMappingCommand.Parameters.AddWithValue("@RelatedId", relatedId);
-
-            await insertMappingCommand.ExecuteNonQueryAsync();
-        }
 
 
     }

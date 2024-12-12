@@ -1,6 +1,7 @@
 using LibraryAPI.BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using LibraryAPI.DataAccess.Models;
+using LibraryAPI.Presentation.DTOs;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace LibraryAPI.Presentation.Controllers
 {
@@ -15,33 +16,25 @@ namespace LibraryAPI.Presentation.Controllers
             _bookService = bookService;
         }
 
-        // Add a new book with its related details (author, genre, publisher)
-        [HttpPost("add-book")]
-        public async Task<IActionResult> AddBookAsync(
-            [FromQuery] string bookName,
-            [FromQuery] decimal bookPrice,
-            [FromQuery] string authors,
-            [FromQuery] string genres,
-            [FromQuery] string publishers)
+        /// <summary>
+        /// Add a new book with its related details (e.g., author, genre, publisher)
+        /// </summary>
+        /// <param name="request">The book details to be added.</param>
+        /// <returns>A response indicating the result of the operation.</returns>
+
+        [HttpPost("books")]
+        [SwaggerOperation(Summary = "Add a new book along with its author, genre, and publisher",
+        Description = "Use this endpoint to add a new book with associated details like authors, genres, and publishers.")]
+        public IActionResult AddBook([FromForm] AddBookRequest request)
         {
-            Console.WriteLine($"Received BookName: {bookName}, BookPrice: {bookPrice}, Authors: {authors}, Genres: {genres}, Publishers: {publishers}");
-
-            // Validate the input types according to schema
-            if (bookPrice <= 0)
+            if (!ModelState.IsValid)
             {
-                return BadRequest("BookPrice must be a positive value.");
-            }
-            // Check if the required fields are not null or empty
-            if (string.IsNullOrEmpty(bookName) ||
-                string.IsNullOrEmpty(authors) ||
-                string.IsNullOrEmpty(genres) ||
-                string.IsNullOrEmpty(publishers))
-            {
-                return BadRequest("All fields (BookName, Authors, Genres, and Publishers) are required and cannot be empty.");
+                return BadRequest(ModelState);
             }
 
-            // Call the AddBookAsync method from the service layer
-            var result = await _bookService.AddBookAsync(bookName, bookPrice, authors, genres, publishers);
+            Console.WriteLine($"Received BookName: {request.BookName}, BookPrice: {request.BookPrice}, Authors: {request.Authors}, Genres: {request.Genres}, Publishers: {request.Publishers}");
+
+            var result = _bookService.AddBook(request.BookName, request.BookPrice, request.Authors, request.Genres, request.Publishers);
 
             if (result)
             {
@@ -51,11 +44,17 @@ namespace LibraryAPI.Presentation.Controllers
             return BadRequest("Failed to add book. Please check your inputs.");
         }
 
-        // Retrieve all books
-        [HttpGet("all-books")]
-        public async Task<IActionResult> GetAllBooksAsync()
+        /// <summary>
+        /// Retrieve a list of all books
+        /// </summary>
+        /// <returns>A list of all books in the system.</returns>
+
+        [HttpGet("books")]
+        [SwaggerOperation(Summary = "Retrieve a list of all books",
+        Description = "Use this endpoint to get a list of all books in the system.")]
+        public IActionResult GetAllBooks()
         {
-            var books = await _bookService.GetAllBooksAsync();
+            var books = _bookService.GetAllBooks();
             if (books == null || !books.Any())
             {
                 return NotFound("No books found.");
@@ -63,11 +62,22 @@ namespace LibraryAPI.Presentation.Controllers
             return Ok(books);
         }
 
-        // Get a book with its related details (author, genre, publisher)
-        [HttpGet("search-with-id/{id}")]
-        public async Task<IActionResult> GetBookAsync(int id)
+        /// <summary>
+        /// Retrieve a specific book by its ID
+        /// </summary>
+        /// <param name="id">The unique ID of the book to retrieve.</param>
+        /// <returns>The details of the book if found, otherwise an error message.</returns>
+
+        [HttpGet("books/{id}")]
+        [SwaggerOperation(Summary = "Retrieve a specific book by its ID", Description = "Use this endpoint to retrieve a specific book by providing its unique ID.")]
+        public IActionResult GetBook([FromRoute] int id)
         {
-            var book = await _bookService.GetBookAsync(id);
+            if (id <= 0)
+            {
+                return BadRequest("Invalid book ID.");
+            }
+
+            var book = _bookService.GetBook(id);
             if (book == null)
             {
                 return NotFound($"Book with ID {id} not found.");
@@ -75,15 +85,17 @@ namespace LibraryAPI.Presentation.Controllers
             return Ok(book);
         }
 
-        // Update the details of a book
-        [HttpPut("update-by-id/{id}")]
-        public async Task<IActionResult> UpdateBookAsync(
-        int id,
-        [FromQuery] string? bookName = null,
-        [FromQuery] decimal? bookPrice = null,
-        [FromQuery] string? authorName = null,
-        [FromQuery] string? genreName = null,
-        [FromQuery] string? publisherName = null)
+        /// <summary>
+        /// Update the details of a book
+        /// </summary>
+        /// <param name="id">The ID of the book to update.</param>
+        /// <param name="request">The updated book details.</param>
+        /// <returns>A response indicating the result of the update operation.</returns>
+
+        [HttpPut("books/{id}")]
+        [SwaggerOperation(Summary = "Update the details of a book",
+        Description = "Use this endpoint to update the details (name, price, author, genre, publisher) of an existing book.")]
+        public IActionResult UpdateBook(int id, [FromForm] UpdateBookRequest request)
         {
             if (id <= 0)
             {
@@ -92,14 +104,7 @@ namespace LibraryAPI.Presentation.Controllers
 
             try
             {
-                var result = await _bookService.UpdateBookAsync(
-                    id,
-                    bookName,
-                    bookPrice,
-                    authorName,
-                    genreName,
-                    publisherName
-                );
+                var result = _bookService.UpdateBook(id, request.BookName, request.BookPrice, request.AuthorName, request.GenreName, request.PublisherName);
 
                 if (result)
                 {
@@ -114,39 +119,48 @@ namespace LibraryAPI.Presentation.Controllers
             }
         }
 
+        /// <summary>
+        /// Delete a specific book by its ID
+        /// </summary>
+        /// <param name="id">The ID of the book to delete.</param>
+        /// <returns>A response indicating whether the deletion was successful.</returns>
 
-
-
-        // Delete a book based on BookID
-        [HttpDelete("delete-by-id/{id}")]
-        public async Task<IActionResult> DeleteBookAsync(int id)
+        [HttpDelete("books/{id}")]
+        [SwaggerOperation(Summary = "Delete a specific book by its ID",
+        Description = "Use this endpoint to delete a specific book by providing its unique ID.")]
+        public IActionResult DeleteBook([FromRoute] int id)
         {
-            // Call the DeleteBook method in the service layer
-            var result = await _bookService.DeleteBookAsync(id);
+            if (id <= 0)
+            {
+                return BadRequest("Invalid book ID.");
+            }
 
+            var result = _bookService.DeleteBook(id);
             if (result)
             {
-                // If book is deleted successfully, return Ok
                 return Ok(new { message = "Book deleted successfully" });
             }
 
-            // If the book is not found, return NotFound with a message
             return NotFound("No books found matching the search criteria.");
         }
 
+        /// <summary>
+        /// Search for books based on a given field (e.g., name, author, genre)
+        /// </summary>
+        /// <param name="request">The search criteria (search field and value).</param>
+        /// <returns>A list of books matching the search criteria.</returns>
 
-
-
-        // Search books based on a given field (e.g., name, author, genre)
-        [HttpGet("search")]
-        public async Task<IActionResult> SearchBooksAsync([FromQuery] string searchBy, [FromQuery] string searchValue)
+        [HttpGet("books/search")]
+        [SwaggerOperation(Summary = "Search for books based on a given field",
+        Description = "Use this endpoint to search for books by specifying a search field (e.g., name, author, genre) and its corresponding value.")]
+        public IActionResult SearchBooks([FromQuery] SearchBooksRequest request)
         {
-            if (string.IsNullOrEmpty(searchBy) || string.IsNullOrEmpty(searchValue))
+            if (string.IsNullOrEmpty(request.SearchBy) || string.IsNullOrEmpty(request.SearchValue))
             {
                 return BadRequest("Search criteria is missing.");
             }
-            Console.WriteLine($"SearchBy: {searchBy}, SearchValue: {searchValue}");     
-            var books = await _bookService.SearchBooksAsync(searchBy, searchValue);
+
+            var books = _bookService.SearchBooks(request.SearchBy, request.SearchValue);
             if (books == null || !books.Any())
             {
                 return NotFound("No books found matching the search criteria.");
@@ -154,6 +168,5 @@ namespace LibraryAPI.Presentation.Controllers
 
             return Ok(books);
         }
-
     }
 }
