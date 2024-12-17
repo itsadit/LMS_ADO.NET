@@ -21,9 +21,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
-    "Method": "GetAllBorrowedBooks",
-    "RelativePath": "Get All User-Book Transactions",
+    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "Method": "GetAllPayments",
+    "RelativePath": "GetAllPaymentDetails",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -31,9 +31,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
-    "Method": "GetAllPayments",
-    "RelativePath": "GetAllPaymentDetails",
+    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "Method": "GetAllBorrowedBooks",
+    "RelativePath": "GetAllUserBookTransactions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -75,7 +75,7 @@
   {
     "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
     "Method": "GetUserWhoBorrowedBookbyBookID",
-    "RelativePath": "GetUsersWhoBorrowedBookByBookID/{ID}",
+    "RelativePath": "GetUsersWhoBorrowedBookByBookID",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -84,11 +84,6 @@
         "Name": "BookID",
         "Type": "System.Int32",
         "IsRequired": false
-      },
-      {
-        "Name": "ID",
-        "Type": "",
-        "IsRequired": true
       }
     ],
     "ReturnTypes": []

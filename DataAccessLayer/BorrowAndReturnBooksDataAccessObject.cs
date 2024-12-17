@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using System.Data;
 using System.Data.SqlClient;
+using System.Reflection;
 
 namespace Library_Management_System.DataAccessLayer
 {
@@ -16,20 +17,20 @@ namespace Library_Management_System.DataAccessLayer
         public IEnumerable<BorrowBooks> GetBorrowBooks()
         {
             string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID";
-            return ReturnBorrowBooksByID(query);
+            return ReturnData<BorrowBooks>(query);
         }
         public IEnumerable<BorrowBooks> GetBorrowedBooksByUserID(int id)
         {
             string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID WHERE UserID = {id}";
-            return ReturnBorrowBooksByID(query);
-      
+            return ReturnData<BorrowBooks>(query);
         }
+        
         public IEnumerable<BorrowBooks> GetUserWhoBorrowedBookbyBookID(int ID)
         {
             string query = $"Select BorrowedBooks.*,Books.BookName From BorrowedBooks " +
                     $"INNER JOIN Books ON Books.BookID = BorrowedBooks.BookID " +
                     $"where Books.BookID ={ID}";
-            return ReturnBorrowBooksByID(query);
+            return ReturnData<BorrowBooks>(query);
 
         }
         public IEnumerable<BorrowBooks> GetUsersWhoBorrowedBookbyBookName(string bookName)
@@ -495,107 +496,64 @@ namespace Library_Management_System.DataAccessLayer
             }
         }
 
-        IEnumerable<FinePayments> IBorrowAndReturnBooksDataAccessObject.GetAllPayments()
+        public IEnumerable<FinePayments> GetAllPayments()
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
-            List<FinePayments> Fines = new List<FinePayments>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = $"SELECT * from FinePayments";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-
-                // Fill the data table with the result of the query
-                dataAdapter.Fill(dataTable);
-
-                // Convert the data rows into BorrowBooks objects
-                foreach (DataRow datarow in dataTable.Rows)
-                {
-                    FinePayments Fine = new FinePayments
-                    {
-                        PaymentID = Convert.ToInt32(datarow["PaymentID"]),
-                        UserID = Convert.ToInt32(datarow["UserID"]),
-                        Amount = Convert.ToDecimal(datarow["Amount"]),
-                        PaymentDate = Convert.ToDateTime(datarow["PaymentDate"]),
-                        PaymentMethod = Convert.ToString(datarow["PaymentMethodCount"]),
-                        TransactionID = Convert.ToString(datarow["TransactionID"])
-                    };
-                    Fines.Add(Fine);
-                }
-            }
-
-            return Fines;
+            string query = $"SELECT * from FinePayments";
+            return ReturnData<FinePayments>(query);
         }
 
-        IEnumerable<FinePayments> IBorrowAndReturnBooksDataAccessObject.GetPayment(int id)
+        public IEnumerable<FinePayments> GetPayment(int UserID)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
-            List<FinePayments> Fines = new List<FinePayments>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = $"SELECT * from FinePayments Where UserID = {id}";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-
-                // Fill the data table with the result of the query
-                dataAdapter.Fill(dataTable);
-
-                // Convert the data rows into BorrowBooks objects
-                foreach (DataRow datarow in dataTable.Rows)
-                {
-                    FinePayments Fine = new FinePayments
-                    {
-                        PaymentID = Convert.ToInt32(datarow["PaymentID"]),
-                        UserID = Convert.ToInt32(datarow["UserID"]),
-                        Amount = Convert.ToDecimal(datarow["Amount"]),
-                        PaymentDate = Convert.ToDateTime(datarow["PaymentDate"]),
-                        PaymentMethod = Convert.ToString(datarow["PaymentMethodCount"]),
-                        TransactionID = Convert.ToString(datarow["TransactionID"])
-                    };
-                    Fines.Add(Fine);
-                }
-            }
-
-            return Fines;
+            string query = $"SELECT * from FinePayments Where UserID = {UserID} ";
+            return ReturnData<FinePayments>(query);
         }
 
-        public IEnumerable<BorrowBooks> ReturnBorrowBooksByID(string Query)
+        public IEnumerable<T> ReturnData<T>(string query) where T : class
         {
             string connectionString = configuration["ConnectionStrings:DefaultConnection"];
-            List<BorrowBooks> Borrowedbooks = new List<BorrowBooks>();
+            List<T> dataList = new List<T>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = Query;
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
                 DataTable dataTable = new DataTable();
 
-                // Fill the data table with the result of the query
                 dataAdapter.Fill(dataTable);
 
-                // Convert the data rows into BorrowBooks objects
-                foreach (DataRow datarow in dataTable.Rows)
+                foreach (DataRow dataRow in dataTable.Rows)
                 {
-                    BorrowBooks borrowBook = new BorrowBooks
+                    // Create an instance of T using reflection
+                    T dataObject = Activator.CreateInstance<T>();
+
+                    // Map the data row to the properties of the data object
+                    foreach (PropertyInfo propertyInfo in dataObject.GetType().GetProperties())
                     {
-                        BorrowID = Convert.ToInt32(datarow["BorrowID"]),
-                        UserID = Convert.ToInt32(datarow["UserID"]),
-                        BookID = Convert.ToInt32(datarow["BookID"]),
-                        BookName = datarow["BookName"]?.ToString(),
-                        BorrowDate = Convert.ToDateTime(datarow["BorrowDate"]),
-                        DueDate = Convert.ToDateTime(datarow["DueDate"]),
-                        ReturnDate = datarow["ReturnDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(datarow["ReturnDate"]),
-                        RenewalCount = Convert.ToInt32(datarow["RenewalCount"]),
-                        FineAmount = datarow["FineAmount"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["FineAmount"]),
-                        IsFinePaid = datarow["IsFinePaid"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(datarow["IsFinePaid"])
-                    };
-                    Borrowedbooks.Add(borrowBook);
+                        if (dataRow.Table.Columns.Contains(propertyInfo.Name))
+                        {
+                            object value = dataRow[propertyInfo.Name];
+                            if (value == DBNull.Value)
+                            {
+                                if (propertyInfo.PropertyType.IsGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                                {
+                                    propertyInfo.SetValue(dataObject, null);  // Set null for nullable types
+                                }
+                                else
+                                {
+                                    propertyInfo.SetValue(dataObject, Activator.CreateInstance(propertyInfo.PropertyType)); // Set default value for non-nullable types
+                                }
+                            }
+                            else
+                            {
+                                propertyInfo.SetValue(dataObject, Convert.ChangeType(value, propertyInfo.PropertyType));
+                            }
+                        }
+                    }
+
+                    dataList.Add(dataObject);
                 }
             }
 
-            return Borrowedbooks;
+            return dataList;
         }
     }
 }

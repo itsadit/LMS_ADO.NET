@@ -49,7 +49,7 @@ namespace Library_Management_System.Controllers
             }
         }
 
-        [HttpGet("Get All User-Book Transactions")]
+        [HttpGet("GetAllUserBookTransactions")]
         public IActionResult GetAllBorrowedBooks()
         {
             try
@@ -114,7 +114,7 @@ namespace Library_Management_System.Controllers
             }
         }
 
-        [HttpGet("GetUsersWhoBorrowedBookByBookID/{ID}")]
+        [HttpGet("GetUsersWhoBorrowedBookByBookID")]
         public IActionResult GetUserWhoBorrowedBookbyBookID(ByBookIDRequest request)
         {
             try
