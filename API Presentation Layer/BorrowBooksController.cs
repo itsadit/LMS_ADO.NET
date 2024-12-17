@@ -4,6 +4,7 @@ using Library_Management_System.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
+using Library_Management_System.DataTransferObjects;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Library_Management_System.Controllers
@@ -17,12 +18,12 @@ namespace Library_Management_System.Controllers
             _dataServicesObject = dataServicesObject;
         }
         [HttpPost("BorrowBook")]
-        public IActionResult BorrowBook(int bookId, int userId)
+        public IActionResult BorrowBook(Request request)
         {
             try
             {
                 // Check if the bookId and userId are valid (you can add more validation here)
-                if (bookId <= 0 || userId <= 0)
+                if (request.BookId <= 0 || request.UserId <= 0)
                 {
                     return BadRequest(new { message = "Invalid BookID or UserID" });
                 }
@@ -30,8 +31,8 @@ namespace Library_Management_System.Controllers
                 // Initialize the BorrowBooks object with necessary details
                 var borrowBook = new BorrowBooks
                 {
-                    UserID = userId,
-                    BookID = bookId
+                    UserID = request.UserId,
+                    BookID = request.BookId
 
                 };
 
@@ -48,7 +49,7 @@ namespace Library_Management_System.Controllers
             }
         }
 
-        [HttpGet("GetAllUserBookTransactions")]
+        [HttpGet("Get All User-Book Transactions")]
         public IActionResult GetAllBorrowedBooks()
         {
             try
@@ -67,12 +68,16 @@ namespace Library_Management_System.Controllers
             }
         }
         [HttpGet("GetBorrowBooksByUserId")]
-        public IActionResult GetBorrowBooksByUserId([FromQuery, Required] int id)
+        public IActionResult GetBorrowBooksByUserId(ByUserIDRequest request)
         {
             try
             {
+                if (request.UserID <= 0)
+                {
+                    return BadRequest(new { message = "UserID Can't be Negative." });
+                }
                 // Call the method to fetch borrowed books for a specific user ID
-                IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetBorrowedBooksbyUserID(id);
+                IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetBorrowedBooksbyUserID(request.UserID);
 
                 if (borrowedBooks == null || !borrowedBooks.Any())
                 {
@@ -89,11 +94,11 @@ namespace Library_Management_System.Controllers
             }
         }
         [HttpGet("GetUsersWhoBorrowedSpecificBook")]
-        public IActionResult GetUsersWhoBorrowedBookbyBookName([FromQuery, Required] string Book_Name)
+        public IActionResult GetUsersWhoBorrowedBookbyBookName(ByBookNameRequest request)
         {
             try
             {
-                IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetUsersWhoBorrowedASpecificBookByName(Book_Name);
+                IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetUsersWhoBorrowedASpecificBookByName(request.BookName);
 
                 if (borrowedBooks == null || !borrowedBooks.Any())
                 {
@@ -109,19 +114,19 @@ namespace Library_Management_System.Controllers
             }
         }
 
-        [HttpGet("GetUsersWhoBorrowedBookByBookID")]
-        public IActionResult GetUserWhoBorrowedBookbyBookID(int ID)
+        [HttpGet("GetUsersWhoBorrowedBookByBookID/{ID}")]
+        public IActionResult GetUserWhoBorrowedBookbyBookID(ByBookIDRequest request)
         {
             try
             {
                 // Validate that the BookID is a valid number
-                if (ID <= 0)
+                if (request.BookID <= 0)
                 {
-                    return BadRequest(new { message = "Invalid BookID." });
+                    return BadRequest(new { message = "BookID Can't be Negative." });
                 }
 
                 // Call the data access method to fetch borrowed books by BookID
-                IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetUserWhoBorrowedBookBYID(ID);
+                IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetUserWhoBorrowedBookBYID(request.BookID);
 
                 // Check if no borrowed books found
                 if (borrowedBooks == null || !borrowedBooks.Any())

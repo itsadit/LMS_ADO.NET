@@ -15,112 +15,21 @@ namespace Library_Management_System.DataAccessLayer
 
         public IEnumerable<BorrowBooks> GetBorrowBooks()
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
-            List<BorrowBooks> Borrowedbooks = new List<BorrowBooks>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-
-                // Fill the data table with the result of the query
-                dataAdapter.Fill(dataTable);
-
-                // Convert the data rows into BorrowBooks objects
-                foreach (DataRow datarow in dataTable.Rows)
-                {
-                    BorrowBooks borrowBook = new BorrowBooks
-                    {
-                        BorrowID = Convert.ToInt32(datarow["BorrowID"]),
-                        UserID = Convert.ToInt32(datarow["UserID"]),
-                        BookID = Convert.ToInt32(datarow["BookID"]),
-                        BookName = datarow["BookName"]?.ToString(),
-                        BorrowDate = Convert.ToDateTime(datarow["BorrowDate"]),
-                        DueDate = Convert.ToDateTime(datarow["DueDate"]),
-                        ReturnDate = datarow["ReturnDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(datarow["ReturnDate"]),
-                        RenewalCount = Convert.ToInt32(datarow["RenewalCount"]),
-                        FineAmount = datarow["FineAmount"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["FineAmount"]),
-                        IsFinePaid = datarow["IsFinePaid"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(datarow["IsFinePaid"])
-                    };
-                    Borrowedbooks.Add(borrowBook);
-                }
-            }
-
-            return Borrowedbooks;
+            string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID";
+            return ReturnBorrowBooksByID(query);
         }
         public IEnumerable<BorrowBooks> GetBorrowedBooksByUserID(int id)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
-            List<BorrowBooks> Borrowedbooks = new List<BorrowBooks>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID WHERE UserID = {id}";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-
-                // Fill the data table with the result of the query
-                dataAdapter.Fill(dataTable);
-
-                // Convert the data rows into BorrowBooks objects
-                foreach (DataRow datarow in dataTable.Rows)
-                {
-                    BorrowBooks borrowBook = new BorrowBooks
-                    {
-                        BorrowID = Convert.ToInt32(datarow["BorrowID"]),
-                        UserID = Convert.ToInt32(datarow["UserID"]),
-                        BookID = Convert.ToInt32(datarow["BookID"]),
-                        BookName = datarow["BookName"]?.ToString(),
-                        BorrowDate = Convert.ToDateTime(datarow["BorrowDate"]),
-                        DueDate = Convert.ToDateTime(datarow["DueDate"]),
-                        ReturnDate = datarow["ReturnDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(datarow["ReturnDate"]),
-                        RenewalCount = Convert.ToInt32(datarow["RenewalCount"]),
-                        FineAmount = datarow["FineAmount"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["FineAmount"]),
-                        IsFinePaid = datarow["IsFinePaid"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(datarow["IsFinePaid"])
-                    };
-                    Borrowedbooks.Add(borrowBook);
-                }
-            }
-
-            return Borrowedbooks;
+            string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID WHERE UserID = {id}";
+            return ReturnBorrowBooksByID(query);
+      
         }
         public IEnumerable<BorrowBooks> GetUserWhoBorrowedBookbyBookID(int ID)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
-            List<BorrowBooks> Borrowedbooks = new List<BorrowBooks>();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = $"Select BorrowedBooks.*,Books.BookName From BorrowedBooks " +
+            string query = $"Select BorrowedBooks.*,Books.BookName From BorrowedBooks " +
                     $"INNER JOIN Books ON Books.BookID = BorrowedBooks.BookID " +
                     $"where Books.BookID ={ID}";
-                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
-                DataTable dataTable = new DataTable();
-
-                // Fill the data table with the result of the query
-                dataAdapter.Fill(dataTable);
-
-                // Convert the data rows into BorrowBooks objects
-                foreach (DataRow datarow in dataTable.Rows)
-                {
-                    BorrowBooks borrowBook = new BorrowBooks
-                    {
-                        BorrowID = Convert.ToInt32(datarow["BorrowID"]),
-                        UserID = Convert.ToInt32(datarow["UserID"]),
-                        BookID = Convert.ToInt32(datarow["BookID"]),
-                        BookName = datarow["BookName"]?.ToString(),
-                        BorrowDate = Convert.ToDateTime(datarow["BorrowDate"]),
-                        DueDate = Convert.ToDateTime(datarow["DueDate"]),
-                        ReturnDate = datarow["ReturnDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(datarow["ReturnDate"]),
-                        RenewalCount = Convert.ToInt32(datarow["RenewalCount"]),
-                        FineAmount = datarow["FineAmount"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["FineAmount"]),
-                        IsFinePaid = datarow["IsFinePaid"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(datarow["IsFinePaid"])
-                    };
-                    Borrowedbooks.Add(borrowBook);
-                }
-            }
-            return Borrowedbooks;
+            return ReturnBorrowBooksByID(query);
 
         }
         public IEnumerable<BorrowBooks> GetUsersWhoBorrowedBookbyBookName(string bookName)
@@ -650,6 +559,43 @@ namespace Library_Management_System.DataAccessLayer
             }
 
             return Fines;
+        }
+
+        public IEnumerable<BorrowBooks> ReturnBorrowBooksByID(string Query)
+        {
+            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            List<BorrowBooks> Borrowedbooks = new List<BorrowBooks>();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = Query;
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+                DataTable dataTable = new DataTable();
+
+                // Fill the data table with the result of the query
+                dataAdapter.Fill(dataTable);
+
+                // Convert the data rows into BorrowBooks objects
+                foreach (DataRow datarow in dataTable.Rows)
+                {
+                    BorrowBooks borrowBook = new BorrowBooks
+                    {
+                        BorrowID = Convert.ToInt32(datarow["BorrowID"]),
+                        UserID = Convert.ToInt32(datarow["UserID"]),
+                        BookID = Convert.ToInt32(datarow["BookID"]),
+                        BookName = datarow["BookName"]?.ToString(),
+                        BorrowDate = Convert.ToDateTime(datarow["BorrowDate"]),
+                        DueDate = Convert.ToDateTime(datarow["DueDate"]),
+                        ReturnDate = datarow["ReturnDate"] == DBNull.Value ? (DateTime?)null : Convert.ToDateTime(datarow["ReturnDate"]),
+                        RenewalCount = Convert.ToInt32(datarow["RenewalCount"]),
+                        FineAmount = datarow["FineAmount"] == DBNull.Value ? 0 : Convert.ToInt32(datarow["FineAmount"]),
+                        IsFinePaid = datarow["IsFinePaid"] == DBNull.Value ? (bool?)null : Convert.ToBoolean(datarow["IsFinePaid"])
+                    };
+                    Borrowedbooks.Add(borrowBook);
+                }
+            }
+
+            return Borrowedbooks;
         }
     }
 }

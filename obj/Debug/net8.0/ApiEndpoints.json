@@ -8,12 +8,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "bookId",
+        "Name": "BookId",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "userId",
+        "Name": "UserId",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -21,9 +21,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
-    "Method": "GetAllPayments",
-    "RelativePath": "GetAllPaymentDetails",
+    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "Method": "GetAllBorrowedBooks",
+    "RelativePath": "Get All User-Book Transactions",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -31,9 +31,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
-    "Method": "GetAllBorrowedBooks",
-    "RelativePath": "GetAllUserBookTransactions",
+    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "Method": "GetAllPayments",
+    "RelativePath": "GetAllPaymentDetails",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -49,7 +49,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "UserID",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -65,7 +65,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ID",
+        "Name": "UserID",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -75,15 +75,20 @@
   {
     "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
     "Method": "GetUserWhoBorrowedBookbyBookID",
-    "RelativePath": "GetUsersWhoBorrowedBookByBookID",
+    "RelativePath": "GetUsersWhoBorrowedBookByBookID/{ID}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ID",
+        "Name": "BookID",
         "Type": "System.Int32",
         "IsRequired": false
+      },
+      {
+        "Name": "ID",
+        "Type": "",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -97,7 +102,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Book_Name",
+        "Name": "BookName",
         "Type": "System.String",
         "IsRequired": false
       }
@@ -113,7 +118,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "userId",
+        "Name": "UserId",
         "Type": "System.Int32",
         "IsRequired": false
       },
@@ -144,12 +149,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "bookId",
+        "Name": "BookId",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "userId",
+        "Name": "UserId",
         "Type": "System.Int32",
         "IsRequired": false
       }
@@ -165,12 +170,12 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "bookId",
+        "Name": "BookId",
         "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "userId",
+        "Name": "UserId",
         "Type": "System.Int32",
         "IsRequired": false
       }
