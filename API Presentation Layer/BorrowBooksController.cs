@@ -17,6 +17,11 @@ namespace Library_Management_System.Controllers
         {
             _dataServicesObject = dataServicesObject;
         }
+        /// <summary>
+        /// Takes BookID and UserID as input and Assigns Book to the User
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost("BorrowBook")]
         public IActionResult BorrowBook(Request request)
         {
@@ -48,7 +53,10 @@ namespace Library_Management_System.Controllers
                 return StatusCode(500, new { message = "An error occurred while borrowing the book", error = ex.Message });
             }
         }
-
+        /// <summary>
+        /// On Execution Returns All the Details of Books Borrowed By Different Users
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllUserBookTransactions")]
         public IActionResult GetAllBorrowedBooks()
         {
@@ -67,6 +75,11 @@ namespace Library_Management_System.Controllers
                 return BadRequest(new { message = "An error occurred while retrieving borrowed books status", error = ex.Message });
             }
         }
+        /// <summary>
+        /// Takes UserID as Input and Returns All the Books Borrowed Books By that User
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet("GetBorrowBooksByUserId")]
         public IActionResult GetBorrowBooksByUserId(ByUserIDRequest request)
         {
@@ -93,7 +106,12 @@ namespace Library_Management_System.Controllers
                 return BadRequest(new { message = "An error occurred while retrieving borrowed books.", error = ex.Message });
             }
         }
-        [HttpGet("GetUsersWhoBorrowedSpecificBook")]
+        /// <summary>
+        /// Takes BookName As Input and Returns all the Users Who Borrowed Books With that BookName
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpGet("GetUsersWhoBorrowedBookByBookName")]
         public IActionResult GetUsersWhoBorrowedBookbyBookName(ByBookNameRequest request)
         {
             try
@@ -113,8 +131,12 @@ namespace Library_Management_System.Controllers
                 return BadRequest(new { message = "An error occurred while retrieving borrowed books status", error = ex.Message });
             }
         }
-
-        [HttpGet("GetUsersWhoBorrowedBookByBookID")]
+        /// <summary>
+        /// Takes BookID as Input and Returns all the Books Details Who Borrowed that Specific Book
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        [HttpGet("GetUsersWhoBorrowedSpecificBookByBookID")]
         public IActionResult GetUserWhoBorrowedBookbyBookID(ByBookIDRequest request)
         {
             try

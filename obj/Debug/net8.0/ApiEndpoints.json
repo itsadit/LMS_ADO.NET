@@ -74,24 +74,8 @@
   },
   {
     "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
-    "Method": "GetUserWhoBorrowedBookbyBookID",
-    "RelativePath": "GetUsersWhoBorrowedBookByBookID",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "BookID",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
     "Method": "GetUsersWhoBorrowedBookbyBookName",
-    "RelativePath": "GetUsersWhoBorrowedSpecificBook",
+    "RelativePath": "GetUsersWhoBorrowedBookByBookName",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -99,6 +83,22 @@
       {
         "Name": "BookName",
         "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "Method": "GetUserWhoBorrowedBookbyBookID",
+    "RelativePath": "GetUsersWhoBorrowedSpecificBookByBookID",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BookID",
+        "Type": "System.Int32",
         "IsRequired": false
       }
     ],

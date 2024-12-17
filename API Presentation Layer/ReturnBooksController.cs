@@ -20,6 +20,11 @@ namespace Library_Management_System.APIs___Controllers
         {
             _dataServicesObject = dataServicesObject;
         }
+        /// <summary>
+        /// Takes UserID and BookID as Input and Updates the Return Date and Fines in the DataBase
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("ReturnBook")]
         public IActionResult RetrieveBook(Request request)
         {
@@ -50,7 +55,11 @@ namespace Library_Management_System.APIs___Controllers
                 return StatusCode(500, new { message = "An error occurred while returning the book", error = ex.Message });
             }
         }
-
+        /// <summary>
+        /// Takes UserID and BookID as Input and Increments the Due date
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPut("RenewalBook")]
         public IActionResult RenewalBook(Request request)
         {
@@ -81,6 +90,11 @@ namespace Library_Management_System.APIs___Controllers
                 return StatusCode(500, new { message = "An error occurred while Renewing the book", error = ex.Message });
             }
         }
+        /// <summary>
+        /// Takes UserID and Amount as Input and Updates Total Fine in Users Table and Fine Paid in Borrowed Books Table
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpPost("PayFine")]
         public IActionResult FinePayment(FinePaymentRequest request)
         {
@@ -113,7 +127,10 @@ namespace Library_Management_System.APIs___Controllers
                 return StatusCode(500, new { message = "An error occurred while paying the fine", error = ex.Message });
             }
         }
-
+        /// <summary>
+        /// Returns All the Payments Details
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("GetAllPaymentDetails")]
         public IActionResult GetAllPayments()
         {
@@ -132,6 +149,11 @@ namespace Library_Management_System.APIs___Controllers
                 return BadRequest(new { message = "An error occurred while retrieving Payment Details", error = ex.Message });
             }
         }
+        /// <summary>
+        /// Takes UserID as Input and Returns All the Payments Done By that User
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         [HttpGet("GetPaymentDetailsByUserID")]
         public IActionResult GetPaymentsByUserID(ByUserIDRequest request)
         {
