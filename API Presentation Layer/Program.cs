@@ -1,5 +1,8 @@
 using Library_Management_System.BLL;
 using Library_Management_System.DataAccessLayer;
+using Library_Management_System.Models.Enum;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Models;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -22,6 +25,15 @@ builder.Services.AddSwaggerGen(c =>
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     c.IncludeXmlComments(xmlPath);
+
+    c.MapType<TransactionTypes>(() => new OpenApiSchema
+    {
+        Type = "string",
+        Enum = Enum.GetValues(typeof(TransactionTypes))
+            .Cast<TransactionTypes>()
+            .Select(e => new OpenApiString(e.ToString())) // Ensuring the conversion to OpenApiString
+            .ToList<IOpenApiAny>() // Convert to IOpenApiAny for Swagger compatibility
+    });
 });
 // Build the application
 var app = builder.Build();

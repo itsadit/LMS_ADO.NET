@@ -25,20 +25,19 @@ namespace Library_Management_System.Controllers
         [HttpPost("BorrowBook")]
         public IActionResult BorrowBook(Request request)
         {
+            if (!ModelState.IsValid)
+            {
+                // Return validation errors
+                return BadRequest(ModelState);
+            }
+
             try
             {
-                // Check if the bookId and userId are valid (you can add more validation here)
-                if (request.BookId <= 0 || request.UserId <= 0)
-                {
-                    return BadRequest(new { message = "Invalid BookID or UserID" });
-                }
-
                 // Initialize the BorrowBooks object with necessary details
                 var borrowBook = new BorrowBooks
                 {
-                    UserID = request.UserId,
-                    BookID = request.BookId
-
+                    UserID = request.UserID,
+                    BookID = request.BookID
                 };
 
                 // Call the BorrowBook method to insert the new record into the database
@@ -53,6 +52,7 @@ namespace Library_Management_System.Controllers
                 return StatusCode(500, new { message = "An error occurred while borrowing the book", error = ex.Message });
             }
         }
+
         /// <summary>
         /// On Execution Returns All the Details of Books Borrowed By Different Users
         /// </summary>
@@ -62,6 +62,11 @@ namespace Library_Management_System.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    // Return validation errors
+                    return BadRequest(ModelState);
+                }
                 // Fetch all borrowed books status
                 IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetAllUser_BookTransactions();
 
@@ -85,9 +90,10 @@ namespace Library_Management_System.Controllers
         {
             try
             {
-                if (request.UserID <= 0)
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest(new { message = "UserID Can't be Negative." });
+                    // Return validation errors
+                    return BadRequest(ModelState);
                 }
                 // Call the method to fetch borrowed books for a specific user ID
                 IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetBorrowedBooksbyUserID(request.UserID);
@@ -116,6 +122,11 @@ namespace Library_Management_System.Controllers
         {
             try
             {
+                if (!ModelState.IsValid)
+                {
+                    // Return validation errors
+                    return BadRequest(ModelState);
+                }
                 IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetUsersWhoBorrowedASpecificBookByName(request.BookName);
 
                 if (borrowedBooks == null || !borrowedBooks.Any())
@@ -141,12 +152,11 @@ namespace Library_Management_System.Controllers
         {
             try
             {
-                // Validate that the BookID is a valid number
-                if (request.BookID <= 0)
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest(new { message = "BookID Can't be Negative." });
+                    // Return validation errors
+                    return BadRequest(ModelState);
                 }
-
                 // Call the data access method to fetch borrowed books by BookID
                 IEnumerable<BorrowBooks> borrowedBooks = _dataServicesObject.GetUserWhoBorrowedBookBYID(request.BookID);
 

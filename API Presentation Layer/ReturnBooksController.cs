@@ -31,16 +31,17 @@ namespace Library_Management_System.APIs___Controllers
             try
             {
                 // Validate the request object
-                if (request == null || request.BookId <= 0 || request.UserId <= 0)
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest(new { message = "BookID or UserID Can't be Negative" });
+                    // Return validation errors
+                    return BadRequest(ModelState);
                 }
 
                 // Initialize the BorrowBooks object with necessary details
                 var borrowBook = new BorrowBooks
                 {
-                    UserID = request.UserId,
-                    BookID = request.BookId
+                    UserID = request.UserID,
+                    BookID = request.BookID
                 };
 
                 // Call the ReturnBook method to update the record in the database
@@ -65,17 +66,18 @@ namespace Library_Management_System.APIs___Controllers
         {
             try
             {
-                // Check if the bookId and userId are valid (you can add more validation here)
-                if (request.BookId <= 0 || request.UserId <= 0)
+                
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest(new { message = "BookID or UserID Can't be Negative" });
+                    // Return validation errors
+                    return BadRequest(ModelState);
                 }
 
                 // Initialize the BorrowBooks object with necessary details
                 var borrowBook = new BorrowBooks
                 {
-                    UserID = request.BookId,
-                    BookID = request.UserId
+                    UserID = request.BookID,
+                    BookID = request.UserID
                 };
 
                 // Call the BorrowBook method to insert the new record into the database
@@ -101,17 +103,18 @@ namespace Library_Management_System.APIs___Controllers
             try
             {
                 // Check if the request is valid (amount and userId should be greater than zero)
-                if (request.Amount <= 0 || request.UserId <= 0)
+                if (!ModelState.IsValid)
                 {
-                    return BadRequest(new { message = "UserID or Amount Can't be Negative" });
+                    // Return validation errors
+                    return BadRequest(ModelState);
                 }
 
                 // Initialize the FinePayments object with the details from the request
                 var finePayment = new FinePayments
                 {
-                    UserID = request.UserId,
+                    UserID = request.UserID,
                     Amount = request.Amount,
-                    PaymentMethod = request.PaymentMethod,
+                    PaymentMethod = request.PaymentMethod.ToString(),
                     TransactionID = request.TransactionID
                 };
 
@@ -136,6 +139,7 @@ namespace Library_Management_System.APIs___Controllers
         {
             try
             {
+
                 // Fetch all borrowed books status
                 IEnumerable<FinePayments> Fines = _dataServicesObject.GetAllFinePayments();
 

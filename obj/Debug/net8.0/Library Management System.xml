@@ -38,6 +38,51 @@
             <param name="request"></param>
             <returns></returns>
         </member>
+        <member name="P:Library_Management_System.DataTransferObjects.Request.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.Request.UserID">
+            <summary>
+            Input UserID(Integer Value) to get required Result
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.FinePaymentRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.FinePaymentRequest.Amount">
+            <summary>
+            Input exact Fine Amount that need to pay. To Know your Amount Goto GetUser API
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.FinePaymentRequest.PaymentMethod">
+            <summary>
+            Select the Type of Payment Done by the User
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.FinePaymentRequest.TransactionID">
+            <summary>
+            Enter TransactionID for Reference
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.ByUserIDRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.ByBookIDRequest.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book.
+            </summary>
+        </member>
+        <member name="P:Library_Management_System.DataTransferObjects.ByBookNameRequest.BookName">
+            <summary>
+            Input Exact BookName to get required Result. To Know BookName Check out the Cover Page
+            </summary>
+        </member>
         <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.RetrieveBook(Library_Management_System.DataTransferObjects.Request)">
             <summary>
             Takes UserID and BookID as Input and Updates the Return Date and Fines in the DataBase
@@ -61,7 +106,7 @@
         </member>
         <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.GetAllPayments">
             <summary>
-            Returns All the Payments Happened
+            Returns All the Payments Details
             </summary>
             <returns></returns>
         </member>
