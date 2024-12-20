@@ -1,7 +1,8 @@
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using LibraryAPI.DataAccess.Interfaces;
 using LibraryAPI.DataAccess.Models;
 using LibraryAPI.DataAccess.Data;
+using CRUDS.DataAccess.Models.Enum;
 
 namespace LibraryAPI.DataAccess.Repositories
 {
@@ -384,7 +385,7 @@ namespace LibraryAPI.DataAccess.Repositories
 
 
 
-        public IEnumerable<Book> SearchBooks(string searchBy, string searchValue)
+         IEnumerable<Book> IBookRepository.SearchBooks(SearchBy searchBy, string searchValue)
         {
             var books = new List<Book>();
 
@@ -392,85 +393,83 @@ namespace LibraryAPI.DataAccess.Repositories
             {
                 connection.Open();
 
-                // Map searchBy to the respective table and column
+                // Base query
                 string query = @"
-        SELECT 
-            b.BookID, 
-            b.BookName, 
-            b.BookPrice, 
-            ISNULL(STRING_AGG(a.AuthorName, ', '), '') AS Authors, 
-            ISNULL(STRING_AGG(g.GenreName, ', '), '') AS Genres, 
-            ISNULL(STRING_AGG(p.PublisherName, ', '), '') AS Publishers
-        FROM Books b
-        LEFT JOIN BooksAuthorsMap bam ON b.BookID = bam.BookID
-        LEFT JOIN Authors a ON bam.AuthorID = a.AuthorID
-        LEFT JOIN BooksGenresMap bgm ON b.BookID = bgm.BookID
-        LEFT JOIN Genres g ON bgm.GenreID = g.GenreID
-        LEFT JOIN BooksPublishersMap bpm ON b.BookID = bpm.BookID
-        LEFT JOIN Publishers p ON bpm.PublisherID = p.PublisherID
-    ";
+                                SELECT 
+                                    b.BookID, 
+                                    b.BookName, 
+                                    b.BookPrice, 
+                                    ISNULL(STRING_AGG(a.AuthorName, ', '), '') AS Authors, 
+                                    ISNULL(STRING_AGG(g.GenreName, ', '), '') AS Genres, 
+                                    ISNULL(STRING_AGG(p.PublisherName, ', '), '') AS Publishers
+                                FROM Books b
+                                LEFT JOIN BooksAuthorsMap bam ON b.BookID = bam.BookID
+                                LEFT JOIN Authors a ON bam.AuthorID = a.AuthorID
+                                LEFT JOIN BooksGenresMap bgm ON b.BookID = bgm.BookID
+                                LEFT JOIN Genres g ON bgm.GenreID = g.GenreID
+                                LEFT JOIN BooksPublishersMap bpm ON b.BookID = bpm.BookID
+                                LEFT JOIN Publishers p ON bpm.PublisherID = p.PublisherID";
 
-                // Append WHERE condition based on searchBy
-                switch (searchBy.ToLower())
+                // Append WHERE condition based on SearchBy enum
+                switch (searchBy)
                 {
-                    case "authors":
+                    case SearchBy.author:
                         query += " WHERE a.AuthorName LIKE '%' + @Value + '%'";
                         break;
-                    case "genres":
+                    case SearchBy.Genres:
                         query += " WHERE g.GenreName LIKE '%' + @Value + '%'";
                         break;
-                    case "publishers":
+                    case SearchBy.publisher:
                         query += " WHERE p.PublisherName LIKE '%' + @Value + '%'";
                         break;
-                    case "bookid":
+                    case SearchBy.id:
                         query += " WHERE b.BookID = @Value";
                         break;
-                    case "bookprice":
-                        query += " WHERE b.BookPrice = @Value";
-                        break;
-                    default:
+                    case SearchBy.name:
                         query += " WHERE b.BookName LIKE '%' + @Value + '%'";
                         break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(searchBy), "Invalid search criteria.");
                 }
 
+                // Group by BookID, BookName, and BookPrice
                 query += @"
-        GROUP BY b.BookID, b.BookName, b.BookPrice";
+                            GROUP BY b.BookID, b.BookName, b.BookPrice";
 
-                var command = new SqlCommand(query, (SqlConnection)connection);
-
-                // Use appropriate parameter type based on searchBy
-                if (searchBy.ToLower() == "bookid")
+                using (var command = new SqlCommand(query, (SqlConnection)connection))
                 {
-                    command.Parameters.AddWithValue("@Value", int.Parse(searchValue));
-                }
-                else if (searchBy.ToLower() == "bookprice")
-                {
-                    command.Parameters.AddWithValue("@Value", decimal.Parse(searchValue));
-                }
-                else
-                {
-                    command.Parameters.AddWithValue("@Value", searchValue);
-                }
-
-                using (var reader = command.ExecuteReader())
-                {
-                    while (reader.Read())
+                    // Handle parameter types based on searchBy
+                    switch (searchBy)
                     {
-                        books.Add(new Book
+                        case SearchBy.id:
+                            command.Parameters.AddWithValue("@Value", int.Parse(searchValue));
+                            break;
+                        default:
+                            command.Parameters.AddWithValue("@Value", searchValue);
+                            break;
+                    }
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
                         {
-                            BookId = reader.GetInt32(0),
-                            BookName = reader.GetString(1),
-                            BookPrice = reader.GetDecimal(2),
-                            Authors = reader.IsDBNull(3) ? null : reader.GetString(3),
-                            Genres = reader.IsDBNull(4) ? null : reader.GetString(4),
-                            Publishers = reader.IsDBNull(5) ? null : reader.GetString(5)
-                        });
+                            books.Add(new Book
+                            {
+                                BookId = reader.GetInt32(0),
+                                BookName = reader.GetString(1),
+                                BookPrice = reader.GetDecimal(2),
+                                Authors = reader.IsDBNull(3) ? null : reader.GetString(3),
+                                Genres = reader.IsDBNull(4) ? null : reader.GetString(4),
+                                Publishers = reader.IsDBNull(5) ? null : reader.GetString(5)
+                            });
+                        }
                     }
                 }
             }
 
             return books;
         }
+
 
 
 
@@ -518,14 +517,6 @@ namespace LibraryAPI.DataAccess.Repositories
             return null;
         }
 
-
-
-
-
-
-
-
-
-
+       
     }
 }

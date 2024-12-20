@@ -1,3 +1,4 @@
+using CRUDS.DataAccess.Models.Enum;
 using LibraryAPI.BusinessLogic.Interfaces;
 using LibraryAPI.DataAccess.Interfaces;
 using LibraryAPI.DataAccess.Models;
@@ -137,7 +138,7 @@ namespace LibraryAPI.BusinessLogic.Services
         /// <param name="searchValue">The value to search for.</param>
         /// <returns>A list of books that match the search criteria.</returns>
 
-        public IEnumerable<Book> SearchBooks(string searchBy, string searchValue)
+        public IEnumerable<Book> SearchBooks(SearchBy searchBy, string searchValue)
         {
             try
             {

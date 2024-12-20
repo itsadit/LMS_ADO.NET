@@ -2,6 +2,7 @@ using LibraryAPI.BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using LibraryAPI.Presentation.DTOs;
 using Swashbuckle.AspNetCore.Annotations;
+using CRUDS.DataAccess.Models.Enum;
 
 namespace LibraryAPI.Presentation.Controllers
 {
@@ -155,12 +156,21 @@ namespace LibraryAPI.Presentation.Controllers
         Description = "Use this endpoint to search for books by specifying a search field (e.g., name, author, genre) and its corresponding value.")]
         public IActionResult SearchBooks([FromQuery] SearchBooksRequest request)
         {
-            if (string.IsNullOrEmpty(request.SearchBy) || string.IsNullOrEmpty(request.SearchValue))
+            // Check if the search value is provided
+            if (string.IsNullOrEmpty(request.SearchValue))
             {
-                return BadRequest("Search criteria is missing.");
+                return BadRequest("Search value is missing.");
             }
 
-            var books = _bookService.SearchBooks(request.SearchBy, request.SearchValue);
+            // Try to parse the SearchBy value to the enum
+            if (!Enum.TryParse<SearchBy>(request.SearchBy.ToString(), true, out var searchBy))
+            {
+                return BadRequest("Invalid search criteria.");
+            }
+
+            // Call the service method with the enum-based search criteria
+            var books = _bookService.SearchBooks(searchBy, request.SearchValue);
+
             if (books == null || !books.Any())
             {
                 return NotFound("No books found matching the search criteria.");
@@ -168,5 +178,6 @@ namespace LibraryAPI.Presentation.Controllers
 
             return Ok(books);
         }
+
     }
 }

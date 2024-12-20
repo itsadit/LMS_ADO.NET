@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using CRUDS.DataAccess.Models.Enum;
 using LibraryAPI.DataAccess.Models;
 
 namespace LibraryAPI.DataAccess.Interfaces
@@ -46,8 +47,7 @@ namespace LibraryAPI.DataAccess.Interfaces
         /// <param name="searchBy">The field to search by (e.g., "Author", "Genre").</param>
         /// <param name="searchValue">The value to search for in the specified field.</param>
         /// <returns>A collection of books that match the search criteria.</returns>
-        IEnumerable<Book> SearchBooks(string searchBy, string searchValue);
-
+        IEnumerable<Book> SearchBooks(SearchBy searchBy, string searchValue);
         /// <summary>
         /// Retrieves a specific book from the repository by its ID.
         /// </summary>
@@ -64,5 +64,6 @@ namespace LibraryAPI.DataAccess.Interfaces
         /// <param name="publisherName">The publisher of the book.</param>
         /// <returns>True if the book was successfully added; otherwise, false.</returns>
         bool AddBook(Book book, string authorName, string genreName, string publisherName);
+        
     }
 }

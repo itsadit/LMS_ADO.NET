@@ -1,0 +1,232 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Aditya\\ado.net_ars\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\dataaccess\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:dataaccess\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\dataaccess\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:dataaccess\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\dataaccess\\models\\enum\\searchby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:dataaccess\\models\\enum\\searchby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\presentation\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:presentation\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\dataaccess\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:dataaccess\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\dataaccess\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:dataaccess\\interfaces\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\businesslogic\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:businesslogic\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\businesslogic\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:businesslogic\\interfaces\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|d:\\aditya\\ado.net_ars\\presentation\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{913B583E-394F-4B75-83B7-EBD342045EBA}|CRUDS.csproj|solutionrelative:presentation\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 12,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DTOs.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Presentation\\DTOs\\DTOs.cs",
+              "RelativeDocumentMoniker": "Presentation\\DTOs\\DTOs.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Presentation\\DTOs\\DTOs.cs",
+              "RelativeToolTip": "Presentation\\DTOs\\DTOs.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAywDMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:06:06.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\BusinessLogic\\Interfaces\\IBookService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Interfaces\\IBookService.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\BusinessLogic\\Interfaces\\IBookService.cs",
+              "RelativeToolTip": "BusinessLogic\\Interfaces\\IBookService.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAwBUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:01:45.928Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\BusinessLogic\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "BusinessLogic\\Services\\BookService.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\BusinessLogic\\Services\\BookService.cs",
+              "RelativeToolTip": "BusinessLogic\\Services\\BookService.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAArwJAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T07:00:49.778Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccess\\Interfaces\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Interfaces\\IBookRepository.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccess\\Interfaces\\IBookRepository.cs",
+              "RelativeToolTip": "DataAccess\\Interfaces\\IBookRepository.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAYwDEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:57:48.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccess\\Repositories\\BookRepository.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Repositories\\BookRepository.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccess\\Repositories\\BookRepository.cs",
+              "RelativeToolTip": "DataAccess\\Repositories\\BookRepository.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAAswAAAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:55:14.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAIwJsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:49:46.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SearchBy.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccess\\Models\\Enum\\SearchBy.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\Enum\\SearchBy.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccess\\Models\\Enum\\SearchBy.cs",
+              "RelativeToolTip": "DataAccess\\Models\\Enum\\SearchBy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:48:10.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccess\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccess\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "DataAccess\\Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:31:03.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccess\\Data\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DataAccess\\Data\\DatabaseHelper.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccess\\Data\\DatabaseHelper.cs",
+              "RelativeToolTip": "DataAccess\\Data\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:25:21.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T06:24:55.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T06:24:23.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T06:23:28.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

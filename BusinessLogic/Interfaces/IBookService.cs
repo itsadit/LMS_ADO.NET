@@ -1,3 +1,4 @@
+using CRUDS.DataAccess.Models.Enum;
 using LibraryAPI.DataAccess.Models;
 
 namespace LibraryAPI.BusinessLogic.Interfaces
@@ -20,6 +21,6 @@ namespace LibraryAPI.BusinessLogic.Interfaces
         bool DeleteBook(int bookId);
 
         // Search books based on a given field (e.g., name, author, genre)
-        IEnumerable<Book> SearchBooks(string searchBy, string searchValue);
+        IEnumerable<Book> SearchBooks(SearchBy searchBy, string searchValue);
     }
 }
