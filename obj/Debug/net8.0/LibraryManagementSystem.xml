@@ -1,0 +1,210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryManagementSystem</name>
+    </assembly>
+    <members>
+        <member name="T:LibraryManagementSystem.Models.DTO.CreateUserRequest">
+            <summary>
+            Represents the request model for creating a new user.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.UserName">
+            <summary>
+            Username of the user.
+            The username is required and must be less than or equal to 20 characters.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Age">
+            <summary>
+            Age of the user.
+            The age must be between 6 and 100 years.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.PhoneNumber">
+            <summary>
+            Phone number of the user.
+            The phone number is required, must start with 6, 7, 8, or 9, and contain 10 digits.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Email">
+            <summary>
+            Email address of the user.
+            The email is required and must be in a valid email format.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Password">
+            <summary>
+            Password of the user.
+            The password is required and must be at least 8 characters long.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.ConfirmPassword">
+            <summary>
+            Confirmation password for the user.
+            The confirmation password is required and must match the original password.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Role">
+            <summary>
+            Role of the user.
+            The role is required and can only be "Admin" or "User".
+            </summary>
+        </member>
+        <member name="T:LibraryManagementSystem.Models.DTO.EditUserRequest">
+            <summary>
+            Represents the request model for editing user details.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.UserName">
+            <summary>
+            Change username of the user.
+            The username must be less than or equal to 20 characters.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.Age">
+            <summary>
+            Change age of the user.
+            The age must be between 6 and 100 years.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.Email">
+            <summary>
+            Change email address of the user.
+            The email must be in a valid format.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.PhoneNumber">
+            <summary>
+            Change phone number of the user.
+            The phone number must start with 6, 7, 8, or 9 and contain 10 digits.
+            </summary>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the LoginController.
+            </summary>
+            <param name="configuration">The configuration for the application.</param>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            Logs in a user by validating the provided username and password.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <param name="password">The password of the user.</param>
+            <returns>A response indicating the result of the login attempt.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.Logout">
+            <summary>
+            Logs out the current user by clearing the logged-in user.
+            </summary>
+            <returns>A response indicating the result of the logout attempt.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.ForgotPassword(System.String,System.Int32,System.String)">
+            <summary>
+            Allows the user to reset their password by verifying username and user ID.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <param name="userID">The ID of the user.</param>
+            <param name="newPassword">The new password to be set.</param>
+            <returns>A response indicating the result of the password reset operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.GenerateJwtToken(LibraryManagementSystem.Models.Login)">
+            <summary>
+            Generates a JWT token for the authenticated user.
+            </summary>
+            <param name="login">The login object containing user details.</param>
+            <returns>A JWT token string.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.ResetPassword(System.String,System.String,System.String)">
+            <summary>
+            Resets the password for a user by validating their username and current password.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <param name="currentPassword">The current password of the user.</param>
+            <param name="newPassword">The new password to be set.</param>
+            <returns>A response indicating the result of the password reset operation.</returns>
+        </member>
+        <member name="T:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest">
+            <summary>
+            Request model for forgot password functionality.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest.UserName">
+            <summary>
+            User's username for the password reset.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest.UserID">
+            <summary>
+            User's user ID for the password reset.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest.NewPassword">
+            <summary>
+            Set the new password.
+            </summary>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserDetails">
+            <summary>
+            Retrieves the logged-in user's details.
+            </summary>
+            <returns>Returns the user data if found, or an error message if not.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.CreateUser(LibraryManagementSystem.Models.DTO.CreateUserRequest)">
+            <summary>
+            Registers a new user with their related details (e.g., Username, Email, Age, Phone number).
+            </summary>
+            <param name="request">The user details for registration.</param>
+            <returns>A response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUsers">
+            <summary>
+            Retrieves all users in the system.
+            </summary>
+            <returns>A list of all users.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetActiveUsers">
+            <summary>
+            Retrieves all active users in the system.
+            </summary>
+            <returns>A list of all active users.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserById(System.Int32)">
+            <summary>
+            Retrieves a user by their unique ID.
+            </summary>
+            <param name="userID">The ID of the user to retrieve.</param>
+            <returns>The user data if found, or an error message if not.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserByName(System.String)">
+            <summary>
+            Retrieves a user by their unique username.
+            </summary>
+            <param name="userName">The username of the user to retrieve.</param>
+            <returns>The user data if found, or an error message if not.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.ReactivateUser(System.Int32)">
+            <summary>
+            Reactivates a user by their unique ID.
+            </summary>
+            <param name="userID">The ID of the user to reactivate.</param>
+            <returns>The reactivated user data or an error message if not found.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.EditUser(System.Int32,LibraryManagementSystem.Models.DTO.EditUserRequest)">
+            <summary>
+            Edits the details of an existing user.
+            </summary>
+            <param name="userId">The ID of the user to edit.</param>
+            <param name="request">The details to update the user with.</param>
+            <returns>A response indicating the result of the update operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Deletes (deactivates) a user by their unique ID.
+            </summary>
+            <param name="userID">The ID of the user to delete.</param>
+            <returns>No content if the operation is successful, or an error message if not.</returns>
+        </member>
+    </members>
+</doc>

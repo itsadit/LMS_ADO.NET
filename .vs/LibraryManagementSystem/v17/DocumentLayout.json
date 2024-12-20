@@ -1,0 +1,313 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Ravali\\lms_ado.net\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersDAO.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\UsersDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\UsersDAO.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\UsersDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\UsersDAO.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAkwAEBAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:01.9Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUsersDAO.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\IUsersDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IUsersDAO.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\IUsersDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\IUsersDAO.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA9wAYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:59.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DatabaseHelper.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\DatabaseHelper.cs",
+              "RelativeToolTip": "DataAccessLayer\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T05:46:50.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditUserRequest.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\EditUserRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\EditUserRequest.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\EditUserRequest.cs",
+              "RelativeToolTip": "Models\\DTO\\EditUserRequest.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:27:20.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CreateUserRequest.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\CreateUserRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\CreateUserRequest.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\CreateUserRequest.cs",
+              "RelativeToolTip": "Models\\DTO\\CreateUserRequest.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:27:10.557Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\Enum\\UserRole.cs",
+              "RelativeDocumentMoniker": "Models\\Enum\\UserRole.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\Enum\\UserRole.cs",
+              "RelativeToolTip": "Models\\Enum\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T11:03:12.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwD4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:57.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUsersService.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\IUsersService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\IUsersService.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\IUsersService.cs",
+              "RelativeToolTip": "BusinessLayer\\IUsersService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA2wA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:02.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ILoginDAO.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\ILoginDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ILoginDAO.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\ILoginDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\ILoginDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:58.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Models\\Users.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\Users.cs",
+              "RelativeToolTip": "Models\\Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAA/wAMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:06.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BorrowBooks.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\BorrowBooks.cs",
+              "RelativeDocumentMoniker": "Models\\BorrowBooks.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\BorrowBooks.cs",
+              "RelativeToolTip": "Models\\BorrowBooks.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAIwAwAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:04.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LoginDAO.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\LoginDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\LoginDAO.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\LoginDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\LoginDAO.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAqwFEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:00.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:06.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\UsersService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\UsersService.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\UsersService.cs",
+              "RelativeToolTip": "BusinessLayer\\UsersService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAhwEAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:04.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-14T07:42:35.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-14T07:42:31.229Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "D:\\Ravali\\lms_ado.net\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-14T07:39:22.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
