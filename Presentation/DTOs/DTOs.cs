@@ -1,5 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+<<<<<<< HEAD
 using CRUDS.DataAccess.Models.Enum;
+=======
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
 
 namespace LibraryAPI.Presentation.DTOs
 {
@@ -46,7 +49,12 @@ namespace LibraryAPI.Presentation.DTOs
     public class SearchBooksRequest
     {
         [Required(ErrorMessage = "Search criteria is required.")]
+<<<<<<< HEAD
         public SearchBy SearchBy { get; set; }  // No StringLength here, it's an enum.
+=======
+        [StringLength(50, ErrorMessage = "SearchBy value cannot exceed 50 characters.")]
+        public string SearchBy { get; set; }
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
 
         [Required(ErrorMessage = "Search value is required.")]
         [StringLength(500, ErrorMessage = "SearchValue cannot exceed 500 characters.")]

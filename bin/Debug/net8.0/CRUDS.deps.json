@@ -448,22 +448,38 @@
           "runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "5.1.1.0"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           },
           "runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-arm64",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "5.1.1.0"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           },
           "runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x64",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "5.1.1.0"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           },
           "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll": {
             "rid": "win-x86",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "5.1.1.0"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           }
         }
       },
@@ -814,7 +830,11 @@
           "runtimes/win-arm64/native/sni.dll": {
             "rid": "win-arm64",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "4.6.25512.1"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           }
         }
       },
@@ -823,7 +843,11 @@
           "runtimes/win-x64/native/sni.dll": {
             "rid": "win-x64",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "4.6.25512.1"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           }
         }
       },
@@ -832,7 +856,11 @@
           "runtimes/win-x86/native/sni.dll": {
             "rid": "win-x86",
             "assetType": "native",
+<<<<<<< HEAD
             "fileVersion": "4.6.25512.1"
+=======
+            "fileVersion": "0.0.0.0"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
           }
         }
       },

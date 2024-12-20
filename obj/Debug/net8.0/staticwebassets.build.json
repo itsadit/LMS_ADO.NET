@@ -1,12 +1,20 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "Hash": "gqOSvZ4u2nNyeENAseLMK1vgX3AhNT5uJtdZ2CoTa98=",
+=======
+  "Hash": "5BEiYRe9YcpGhAwH6QjDL3RjmA+r/fATr93sTnf9xho=",
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
   "Source": "CRUDS",
   "BasePath": "_content/CRUDS",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
+<<<<<<< HEAD
   "Assets": [],
   "Endpoints": []
+=======
+  "Assets": []
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
 }

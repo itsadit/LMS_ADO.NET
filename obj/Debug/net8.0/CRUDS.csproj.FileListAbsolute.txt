@@ -179,6 +179,7 @@
 /Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
 /Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/adityakumar/Documents/Aditya/CRUDS/bin/Debug/net8.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+<<<<<<< HEAD
 D:\Aditya\ado.net_ars\bin\Debug\net8.0\appsettings.Development.json
 D:\Aditya\ado.net_ars\bin\Debug\net8.0\appsettings.json
 D:\Aditya\ado.net_ars\bin\Debug\net8.0\CRUDS.staticwebassets.endpoints.json
@@ -364,3 +365,5 @@ D:\Aditya\ado.net_ars\obj\Debug\net8.0\CRUDS.xml
 D:\Aditya\ado.net_ars\obj\Debug\net8.0\CRUDS.pdb
 D:\Aditya\ado.net_ars\obj\Debug\net8.0\CRUDS.genruntimeconfig.cache
 D:\Aditya\ado.net_ars\obj\Debug\net8.0\ref\CRUDS.dll
+=======
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a

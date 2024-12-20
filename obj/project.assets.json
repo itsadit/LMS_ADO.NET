@@ -6337,12 +6337,17 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\Ravali Priya Kosuri\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+=======
+    "/Users/adityakumar/.nuget/packages/": {}
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "D:\\Aditya\\ado.net_ars\\CRUDS.csproj",
       "projectName": "CRUDS",
       "projectPath": "D:\\Aditya\\ado.net_ars\\CRUDS.csproj",
@@ -6356,12 +6361,25 @@
         "C:\\Users\\Ravali Priya Kosuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+=======
+      "projectUniqueName": "/Users/adityakumar/Documents/Aditya/CRUDS/CRUDS.csproj",
+      "projectName": "CRUDS",
+      "projectPath": "/Users/adityakumar/Documents/Aditya/CRUDS/CRUDS.csproj",
+      "packagesPath": "/Users/adityakumar/.nuget/packages/",
+      "outputPath": "/Users/adityakumar/Documents/Aditya/CRUDS/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/Users/adityakumar/.nuget/NuGet/NuGet.Config"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+<<<<<<< HEAD
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+=======
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -6379,8 +6397,12 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
+<<<<<<< HEAD
       },
       "SdkAnalysisLevel": "9.0.100"
+=======
+      }
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
     },
     "frameworks": {
       "net8.0": {
@@ -6450,7 +6472,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+>>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
       }
     }
   }
