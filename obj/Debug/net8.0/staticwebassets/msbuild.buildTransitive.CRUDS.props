@@ -1,7 +1,3 @@
 ﻿<Project>
-<<<<<<< HEAD
   <Import Project="..\buildMultiTargeting\CRUDS.props" />
-=======
-  <Import Project="../buildMultiTargeting/CRUDS.props" />
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
 </Project>

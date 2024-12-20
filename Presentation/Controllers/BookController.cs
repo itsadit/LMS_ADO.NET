@@ -2,10 +2,7 @@ using LibraryAPI.BusinessLogic.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using LibraryAPI.Presentation.DTOs;
 using Swashbuckle.AspNetCore.Annotations;
-<<<<<<< HEAD
 using CRUDS.DataAccess.Models.Enum;
-=======
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
 
 namespace LibraryAPI.Presentation.Controllers
 {
@@ -159,7 +156,7 @@ namespace LibraryAPI.Presentation.Controllers
         Description = "Use this endpoint to search for books by specifying a search field (e.g., name, author, genre) and its corresponding value.")]
         public IActionResult SearchBooks([FromQuery] SearchBooksRequest request)
         {
-<<<<<<< HEAD
+
             // Check if the search value is provided
             if (string.IsNullOrEmpty(request.SearchValue))
             {
@@ -175,14 +172,6 @@ namespace LibraryAPI.Presentation.Controllers
             // Call the service method with the enum-based search criteria
             var books = _bookService.SearchBooks(searchBy, request.SearchValue);
 
-=======
-            if (string.IsNullOrEmpty(request.SearchBy) || string.IsNullOrEmpty(request.SearchValue))
-            {
-                return BadRequest("Search criteria is missing.");
-            }
-
-            var books = _bookService.SearchBooks(request.SearchBy, request.SearchValue);
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
             if (books == null || !books.Any())
             {
                 return NotFound("No books found matching the search criteria.");
@@ -190,9 +179,5 @@ namespace LibraryAPI.Presentation.Controllers
 
             return Ok(books);
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
     }
 }

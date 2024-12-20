@@ -47,11 +47,7 @@
             <param name="bookId">The ID of the book to delete.</param>
             <returns>True if the book was successfully deleted; otherwise, false.</returns>
         </member>
-<<<<<<< HEAD
         <member name="M:LibraryAPI.BusinessLogic.Services.BookService.SearchBooks(CRUDS.DataAccess.Models.Enum.SearchBy,System.String)">
-=======
-        <member name="M:LibraryAPI.BusinessLogic.Services.BookService.SearchBooks(System.String,System.String)">
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
             <summary>
             Searches for books based on a given field (e.g., name, author, genre).
             </summary>
@@ -89,11 +85,7 @@
             <param name="bookId">The ID of the book to delete.</param>
             <returns>True if the book was successfully deleted; otherwise, false.</returns>
         </member>
-<<<<<<< HEAD
         <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.SearchBooks(CRUDS.DataAccess.Models.Enum.SearchBy,System.String)">
-=======
-        <member name="M:LibraryAPI.DataAccess.Interfaces.IBookRepository.SearchBooks(System.String,System.String)">
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
             <summary>
             Searches for books in the repository based on a specific field and value.
             </summary>

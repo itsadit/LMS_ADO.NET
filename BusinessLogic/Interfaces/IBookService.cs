@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 using CRUDS.DataAccess.Models.Enum;
-=======
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
 using LibraryAPI.DataAccess.Models;
 
 namespace LibraryAPI.BusinessLogic.Interfaces
@@ -24,10 +21,6 @@ namespace LibraryAPI.BusinessLogic.Interfaces
         bool DeleteBook(int bookId);
 
         // Search books based on a given field (e.g., name, author, genre)
-<<<<<<< HEAD
         IEnumerable<Book> SearchBooks(SearchBy searchBy, string searchValue);
-=======
-        IEnumerable<Book> SearchBooks(string searchBy, string searchValue);
->>>>>>> 950b9cdb05c9e2c67eeafa9725168b4ba234d60a
     }
 }
