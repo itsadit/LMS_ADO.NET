@@ -26,7 +26,7 @@ namespace Library_Management_System.APIs___Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPut("ReturnBook")]
-        public IActionResult RetrieveBook(Request request)
+        public IActionResult RetrieveBook([FromForm] Request request)
         {
             try
             {
@@ -62,7 +62,7 @@ namespace Library_Management_System.APIs___Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPut("RenewalBook")]
-        public IActionResult RenewalBook(Request request)
+        public IActionResult RenewalBook([FromForm] Request request)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace Library_Management_System.APIs___Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpPost("PayFine")]
-        public IActionResult FinePayment(FinePaymentRequest request)
+        public IActionResult FinePayment([FromForm] FinePaymentRequest request)
         {
             try
             {
@@ -159,7 +159,7 @@ namespace Library_Management_System.APIs___Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpGet("GetPaymentDetailsByUserID")]
-        public IActionResult GetPaymentsByUserID(ByUserIDRequest request)
+        public IActionResult GetPaymentsByUserID([FromForm] ByUserIDRequest request)
         {
             try
             {
