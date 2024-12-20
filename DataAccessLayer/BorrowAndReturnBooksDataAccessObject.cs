@@ -1,7 +1,6 @@
 ﻿using Library_Management_System.Models;
-using Microsoft.AspNetCore.Http.HttpResults;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Reflection;
 
 namespace Library_Management_System.DataAccessLayer
@@ -241,16 +240,21 @@ namespace Library_Management_System.DataAccessLayer
                             string updateQuery = @"
                                                 
                                                 UPDATE BorrowedBooks
-                                                SET ReturnDate = GETDATE(),
-                                                    IsFinePaid = 0,
+                                                SET 
+                                                    ReturnDate = GETDATE(),
                                                     FineAmount = CASE 
                                                         WHEN DueDate < GETDATE() THEN DATEDIFF(DAY, DueDate, GETDATE()) * 1
                                                         ELSE 0
-                                                     
+                                                    END,
+                                                    IsFinePaid = CASE 
+                                                        WHEN DueDate < GETDATE() THEN 0 -- 0 indicates fine not paid
+                                                        ELSE 1 -- 1 indicates no fine or fine paid
                                                     END
-                                                WHERE BookID = @BookID 
-                                                AND UserID = @UserID 
-                                                AND ReturnDate IS NULL;
+                                                WHERE 
+                                                    BookID = @BookID 
+                                                    AND UserID = @UserID 
+                                                    AND ReturnDate IS NULL;
+
 
                                                 UPDATE Books
                                                 SET IsAvailable = 1
@@ -260,7 +264,7 @@ namespace Library_Management_System.DataAccessLayer
                                                 SET TotalFine = (
                                                     SELECT SUM(FineAmount) 
                                                     FROM BorrowedBooks 
-                                                    WHERE UserID = @UserID AND IsPaidFine = 0
+                                                    WHERE UserID = @UserID AND IsFinePaid = 0
                                                 )
                                                 WHERE UserID = @UserID;
                                             ";
@@ -317,7 +321,17 @@ namespace Library_Management_System.DataAccessLayer
                                                 FROM BorrowedBooks
                                                 WHERE BookID = @BookID 
                                                 AND UserID = @UserID 
-                                                AND ReturnDate IS NULL";
+                                                AND ReturnDate IS NULL
+                                                AND BorrowDate = (
+                                                    SELECT TOP 1 BorrowDate
+                                                    FROM BorrowedBooks
+                                                    WHERE BookID = @BookID 
+                                                    AND UserID = @UserID
+                                                    AND ReturnDate IS NULL
+                                                    ORDER BY BorrowDate DESC
+                                                )
+
+                                                ";
 
                             using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection, transaction))
                             {
@@ -339,6 +353,14 @@ namespace Library_Management_System.DataAccessLayer
                                                             WHERE BookID = @BookID 
                                                             AND UserID = @UserID 
                                                             AND ReturnDate IS NULL
+                                                            AND BorrowDate = (
+                                                                SELECT TOP 1 BorrowDate
+                                                                FROM BorrowedBooks
+                                                                WHERE BookID = @BookID 
+                                                                AND UserID = @UserID
+                                                                AND ReturnDate IS NULL
+                                                                ORDER BY BorrowDate DESC
+                                                            )
                                                             AND DueDate >= DATEADD(DAY, -2, GETDATE()) 
                                                             AND DueDate <= GETDATE()";
 
@@ -531,6 +553,7 @@ namespace Library_Management_System.DataAccessLayer
                         if (dataRow.Table.Columns.Contains(propertyInfo.Name))
                         {
                             object value = dataRow[propertyInfo.Name];
+
                             if (value == DBNull.Value)
                             {
                                 if (propertyInfo.PropertyType.IsGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
@@ -544,7 +567,17 @@ namespace Library_Management_System.DataAccessLayer
                             }
                             else
                             {
-                                propertyInfo.SetValue(dataObject, Convert.ChangeType(value, propertyInfo.PropertyType));
+                                // Handle nullable types explicitly
+                                if (propertyInfo.PropertyType.IsGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>))
+                                {
+                                    // Get the underlying type of the nullable type
+                                    Type underlyingType = Nullable.GetUnderlyingType(propertyInfo.PropertyType);
+                                    propertyInfo.SetValue(dataObject, Convert.ChangeType(value, underlyingType));
+                                }
+                                else
+                                {
+                                    propertyInfo.SetValue(dataObject, Convert.ChangeType(value, propertyInfo.PropertyType));
+                                }
                             }
                         }
                     }
@@ -556,4 +589,8 @@ namespace Library_Management_System.DataAccessLayer
             return dataList;
         }
     }
+    //public void CheckBookAvailable()
+    //{
+
+    //}
 }

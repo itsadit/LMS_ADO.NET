@@ -86,7 +86,7 @@ namespace Library_Management_System.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpGet("GetBorrowBooksByUserId")]
-        public IActionResult GetBorrowBooksByUserId([FromForm] ByUserIDRequest request)
+        public IActionResult GetBorrowBooksByUserId([FromQuery] ByUserIDRequest request)
         {
             try
             {
@@ -118,7 +118,7 @@ namespace Library_Management_System.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpGet("GetUsersWhoBorrowedBookByBookName")]
-        public IActionResult GetUsersWhoBorrowedBookbyBookName([FromForm] ByBookNameRequest request)
+        public IActionResult GetUsersWhoBorrowedBookbyBookName([FromQuery] ByBookNameRequest request)
         {
             try
             {
@@ -148,7 +148,7 @@ namespace Library_Management_System.Controllers
         /// <param name="request"></param>
         /// <returns></returns>
         [HttpGet("GetUsersWhoBorrowedSpecificBookByBookID")]
-        public IActionResult GetUserWhoBorrowedBookbyBookID([FromForm] ByBookIDRequest request)
+        public IActionResult GetUserWhoBorrowedBookbyBookID([FromQuery] ByBookIDRequest request)
         {
             try
             {
