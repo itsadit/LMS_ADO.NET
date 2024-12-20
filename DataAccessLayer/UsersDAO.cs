@@ -250,11 +250,6 @@ namespace LibraryManagementSystem.DataAccessLayer
 
             return usersList;
         }
-
-
-
-
-
         public Users ReactivateUser(int userID)
         {
             Users user = null;
@@ -264,7 +259,11 @@ namespace LibraryManagementSystem.DataAccessLayer
                 string query = "UPDATE Users SET IsActive = 1 WHERE UserID = @UserID";
                 using (IDbCommand command = _databaseHelper.CreateCommand(query, connection))
                 {
-                    command.Parameters.Add(new SqlParameter("@UserID",SqlDbType.Int).Value = userID);
+                    // Correctly create the SqlParameter and add it to the command
+                    var param = new SqlParameter("@UserID", SqlDbType.Int);
+                    param.Value = userID;
+                    command.Parameters.Add(param);
+
                     connection.Open();
                     int rowsAffected = command.ExecuteNonQuery();
 
@@ -272,11 +271,14 @@ namespace LibraryManagementSystem.DataAccessLayer
                     {
                         // Fetch the updated user after reactivation
                         string fetchQuery = "SELECT * FROM Users WHERE UserID = @UserID";
-                        using (IDbCommand fetchCommand = _databaseHelper.CreateCommand(query, connection))
+                        using (IDbCommand fetchCommand = _databaseHelper.CreateCommand(fetchQuery, connection))
                         {
-                            fetchCommand.Parameters.Add(new SqlParameter("@UserID", SqlDbType.Int).Value = userID);
-                            
-                            using (IDataReader reader = command.ExecuteReader())
+                            // Add parameter to fetch command
+                            var fetchParam = new SqlParameter("@UserID", SqlDbType.Int);
+                            fetchParam.Value = userID;
+                            fetchCommand.Parameters.Add(fetchParam);
+
+                            using (IDataReader reader = fetchCommand.ExecuteReader())
                             {
                                 if (reader.Read())
                                 {
@@ -286,10 +288,11 @@ namespace LibraryManagementSystem.DataAccessLayer
                         }
                     }
                 }
-
-                return null; // If user is not found, return null
             }
+
+            return user; // Return the user if found, otherwise null
         }
+
 
 
         // Helper method to map a reader to a Users object

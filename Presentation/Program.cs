@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using LibraryManagementSystem.Models.Enum;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Text;
 using Microsoft.OpenApi.Any;
 using System.Reflection;
@@ -14,6 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Register services for dependency injection
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<UsersDAO>();
+builder.Services.AddScoped<IBookService, BookService>();
+builder.Services.AddScoped<IBookRepository,BookRepository>();
 
 
 // Register SqlConnection as a scoped service, reading the connection string from appsettings.json
@@ -42,13 +44,24 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "LibraryManagementSystem", Version = "v1" });
 
+    // Mapping UserRole enum to OpenAPI schema
     c.MapType<UserRole>(() => new OpenApiSchema
     {
         Type = "string",
         Enum = Enum.GetValues(typeof(UserRole))
-                .Cast<UserRole>()
-                .Select(e => new OpenApiString(e.ToString())) // Ensuring the conversion to OpenApiString
-                .ToList<IOpenApiAny>() // Convert to IOpenApiAny for Swagger compatibility
+                    .Cast<UserRole>()
+                    .Select(e => new OpenApiString(e.ToString())) // Ensuring the conversion to OpenApiString
+                    .ToList<IOpenApiAny>() // Convert to IOpenApiAny for Swagger compatibility
+    });
+
+    // Mapping SearchBy enum to OpenAPI schema
+    c.MapType<SearchBy>(() => new OpenApiSchema
+    {
+        Type = "string",
+        Enum = Enum.GetValues(typeof(SearchBy))
+                    .Cast<SearchBy>()
+                    .Select(e => new OpenApiString(e.ToString())) // Ensuring the conversion to OpenApiString
+                    .ToList<IOpenApiAny>() // Convert to IOpenApiAny for Swagger compatibility
     });
 
     // JWT Authentication in Swagger

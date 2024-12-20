@@ -1,74 +1,138 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Ravali\\lms_ado.net\\",
+  "WorkspaceRootPath": "D:\\Aditya\\ado.net_ars\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\presentation\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\businesslayer\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\businesslayer\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\ravali\\lms_ado.net\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\bookspublishersmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\bookspublishersmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\booksgenresmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\booksgenresmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\booksauthorsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\booksauthorsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\enum\\searchby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\searchby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\dto\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\aditya\\ado.net_ars\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -77,123 +141,342 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "DockedWidth": 241,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsersDAO.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\UsersDAO.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\UsersDAO.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\UsersDAO.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\UsersDAO.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\UsersDAO.cs",
               "RelativeToolTip": "DataAccessLayer\\UsersDAO.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAkwAEBAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAABEBAAAAAAAAAAAgwCYBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:17:01.9Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "DTOs.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\DTO\\DTOs.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\DTOs.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\DTO\\DTOs.cs",
+              "RelativeToolTip": "Models\\DTO\\DTOs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:45.209Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
+              "Title": "Publisher.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Publisher.cs",
+              "RelativeDocumentMoniker": "Models\\Publisher.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Publisher.cs",
+              "RelativeToolTip": "Models\\Publisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:36.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "Models\\Login.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Login.cs",
+              "RelativeToolTip": "Models\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:35.848Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "Models\\Genre.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Genre.cs",
+              "RelativeToolTip": "Models\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:34.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BooksPublishersMap.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\BooksPublishersMap.cs",
+              "RelativeDocumentMoniker": "Models\\BooksPublishersMap.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\BooksPublishersMap.cs",
+              "RelativeToolTip": "Models\\BooksPublishersMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:31.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "BooksGenresMap.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\BooksGenresMap.cs",
+              "RelativeDocumentMoniker": "Models\\BooksGenresMap.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\BooksGenresMap.cs",
+              "RelativeToolTip": "Models\\BooksGenresMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:29.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\Book.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Book.cs",
+              "RelativeToolTip": "Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:26.676Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BooksAuthorsMap.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\BooksAuthorsMap.cs",
+              "RelativeDocumentMoniker": "Models\\BooksAuthorsMap.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\BooksAuthorsMap.cs",
+              "RelativeToolTip": "Models\\BooksAuthorsMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:24.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Author.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Author.cs",
+              "RelativeDocumentMoniker": "Models\\Author.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Author.cs",
+              "RelativeToolTip": "Models\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:22.419Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IBookRepository.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\IBookRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:15:23.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\BookRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\BookRepository.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\BookRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\BookRepository.cs",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAqwBsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:15:09.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\IBookService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\IBookService.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\IBookService.cs",
+              "RelativeToolTip": "BusinessLayer\\IBookService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:15:00.627Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\BookService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\BookService.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\BookService.cs",
+              "RelativeToolTip": "BusinessLayer\\BookService.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAowJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:14:57.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T10:14:37.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAUwHMAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:10:01.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAqwCoAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:09:05.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "SearchBy.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Enum\\SearchBy.cs",
+              "RelativeDocumentMoniker": "Models\\Enum\\SearchBy.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Enum\\SearchBy.cs",
+              "RelativeToolTip": "Models\\Enum\\SearchBy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:05:55.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
               "Title": "IUsersDAO.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\IUsersDAO.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\IUsersDAO.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\IUsersDAO.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\IUsersDAO.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\IUsersDAO.cs",
               "RelativeToolTip": "DataAccessLayer\\IUsersDAO.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAA9wAYAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:16:59.255Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 30,
               "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\DatabaseHelper.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\DatabaseHelper.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\DatabaseHelper.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\DatabaseHelper.cs",
               "RelativeToolTip": "DataAccessLayer\\DatabaseHelper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-19T05:46:50.243Z"
+              "WhenOpened": "2024-12-19T05:46:50.243Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 24,
               "Title": "EditUserRequest.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\EditUserRequest.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\DTO\\EditUserRequest.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\EditUserRequest.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\EditUserRequest.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\DTO\\EditUserRequest.cs",
               "RelativeToolTip": "Models\\DTO\\EditUserRequest.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAwCYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T13:27:20.544Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 26,
               "Title": "CreateUserRequest.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\CreateUserRequest.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\DTO\\CreateUserRequest.cs",
               "RelativeDocumentMoniker": "Models\\DTO\\CreateUserRequest.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\DTO\\CreateUserRequest.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\DTO\\CreateUserRequest.cs",
               "RelativeToolTip": "Models\\DTO\\CreateUserRequest.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAB8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T13:27:10.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 22,
               "Title": "UserRole.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\Enum\\UserRole.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Enum\\UserRole.cs",
               "RelativeDocumentMoniker": "Models\\Enum\\UserRole.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\Enum\\UserRole.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Enum\\UserRole.cs",
               "RelativeToolTip": "Models\\Enum\\UserRole.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T11:03:12.438Z"
+              "WhenOpened": "2024-12-17T11:03:12.438Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\UsersController.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\UsersController.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\UsersController.cs",
               "RelativeToolTip": "Presentation\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAgwD4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAuwLUAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:16:57.089Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 31,
               "Title": "IUsersService.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\IUsersService.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\IUsersService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\IUsersService.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\IUsersService.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\IUsersService.cs",
               "RelativeToolTip": "BusinessLayer\\IUsersService.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA2wA0AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:16:02.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 29,
               "Title": "ILoginDAO.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\ILoginDAO.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\ILoginDAO.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\ILoginDAO.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\ILoginDAO.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\ILoginDAO.cs",
               "RelativeToolTip": "DataAccessLayer\\ILoginDAO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -202,108 +485,112 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 12,
               "Title": "Users.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\Users.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\Users.cs",
               "RelativeDocumentMoniker": "Models\\Users.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\Users.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\Users.cs",
               "RelativeToolTip": "Models\\Users.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAA/wAMAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:17:06.138Z"
+              "WhenOpened": "2024-12-17T07:17:06.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "BorrowBooks.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Models\\BorrowBooks.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Models\\BorrowBooks.cs",
               "RelativeDocumentMoniker": "Models\\BorrowBooks.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Models\\BorrowBooks.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Models\\BorrowBooks.cs",
               "RelativeToolTip": "Models\\BorrowBooks.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAIwAwAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:17:04.2Z"
+              "WhenOpened": "2024-12-17T07:17:04.2Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 27,
               "Title": "LoginDAO.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\LoginDAO.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\LoginDAO.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\LoginDAO.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\DataAccessLayer\\LoginDAO.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\DataAccessLayer\\LoginDAO.cs",
               "RelativeToolTip": "DataAccessLayer\\LoginDAO.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAqwFEAAABDAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:17:00.922Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 9,
               "Title": "LoginController.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\LoginController.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\LoginController.cs",
               "RelativeDocumentMoniker": "Presentation\\Controllers\\LoginController.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Presentation\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\Presentation\\Controllers\\LoginController.cs",
               "RelativeToolTip": "Presentation\\Controllers\\LoginController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwAEAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-17T07:16:06.047Z"
+              "WhenOpened": "2024-12-17T07:16:06.047Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "UsersService.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\UsersService.cs",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\UsersService.cs",
               "RelativeDocumentMoniker": "BusinessLayer\\UsersService.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\BusinessLayer\\UsersService.cs",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\BusinessLayer\\UsersService.cs",
               "RelativeToolTip": "BusinessLayer\\UsersService.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAhwEAAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAIAwwDMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-17T07:16:04.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\appsettings.Development.json",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\appsettings.Development.json",
               "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\appsettings.Development.json",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\appsettings.Development.json",
               "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-14T07:42:35.509Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\appsettings.json",
+              "DocumentMoniker": "D:\\Aditya\\ado.net_ars\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\appsettings.json",
+              "ToolTip": "D:\\Aditya\\ado.net_ars\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-14T07:42:31.229Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Ravali\\lms_ado.net\\Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\Program.cs",
-              "ToolTip": "D:\\Ravali\\lms_ado.net\\Presentation\\Program.cs",
-              "RelativeToolTip": "Presentation\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHkAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-14T07:39:22.086Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 159,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }

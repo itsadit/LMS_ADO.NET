@@ -1,5 +1,6 @@
-﻿using System.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using LibraryManagementSystem.Models;
+
 namespace LibraryManagementSystem.DataAccessLayer
 {
     public class LoginDAO : ILoginDAO

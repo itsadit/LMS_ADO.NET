@@ -5,6 +5,253 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Book/books": {
+      "post": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Add a new book with its related details (e.g., author, genre, publisher)",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Authors",
+                  "BookName",
+                  "Genres",
+                  "Publishers"
+                ],
+                "type": "object",
+                "properties": {
+                  "BookName": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "BookPrice": {
+                    "minimum": 0.01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Authors": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Genres": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Publishers": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "BookName": {
+                  "style": "form"
+                },
+                "BookPrice": {
+                  "style": "form"
+                },
+                "Authors": {
+                  "style": "form"
+                },
+                "Genres": {
+                  "style": "form"
+                },
+                "Publishers": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Retrieve a list of all books",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Book/books/{id}": {
+      "get": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Retrieve a specific book by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique ID of the book to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Update the details of a book",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the book to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "BookName": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "BookPrice": {
+                    "minimum": 0.01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "AuthorName": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "GenreName": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "PublisherName": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "BookName": {
+                  "style": "form"
+                },
+                "BookPrice": {
+                  "style": "form"
+                },
+                "AuthorName": {
+                  "style": "form"
+                },
+                "GenreName": {
+                  "style": "form"
+                },
+                "PublisherName": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Delete a specific book by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the book to delete.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Book/books/search": {
+      "get": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Search for books based on a given field (e.g., name, author, genre)",
+        "parameters": [
+          {
+            "name": "SearchBy",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "name",
+                "author",
+                "id",
+                "publisher",
+                "Genres"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "maxLength": 500,
+              "minLength": 0,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Login/login": {
       "get": {
         "tags": [
@@ -31,7 +278,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -44,7 +291,7 @@
         "summary": "Logs out the current user by clearing the logged-in user.",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -84,7 +331,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -123,7 +370,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -136,7 +383,7 @@
         "summary": "Retrieves the logged-in user's details.",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -231,7 +478,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -244,7 +491,7 @@
         "summary": "Retrieves all users in the system.",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -257,7 +504,7 @@
         "summary": "Retrieves all active users in the system.",
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -282,7 +529,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -306,7 +553,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -330,7 +577,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -402,7 +649,7 @@
         },
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }
@@ -427,7 +674,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success"
+            "description": "OK"
           }
         }
       }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Ravali\\lms_ado.net\\LibraryManagementSystem.csproj": {}
+    "D:\\Aditya\\ado.net_ars\\LibraryManagementSystem.csproj": {}
   },
   "projects": {
-    "D:\\Ravali\\lms_ado.net\\LibraryManagementSystem.csproj": {
+    "D:\\Aditya\\ado.net_ars\\LibraryManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Ravali\\lms_ado.net\\LibraryManagementSystem.csproj",
+        "projectUniqueName": "D:\\Aditya\\ado.net_ars\\LibraryManagementSystem.csproj",
         "projectName": "LibraryManagementSystem",
-        "projectPath": "D:\\Ravali\\lms_ado.net\\LibraryManagementSystem.csproj",
+        "projectPath": "D:\\Aditya\\ado.net_ars\\LibraryManagementSystem.csproj",
         "packagesPath": "C:\\Users\\Ravali Priya Kosuri\\.nuget\\packages\\",
-        "outputPath": "D:\\Ravali\\lms_ado.net\\obj\\",
+        "outputPath": "D:\\Aditya\\ado.net_ars\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +69,10 @@
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Swashbuckle.AspNetCore.Annotations": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             },
             "System.Data.SqlClient": {
               "target": "Package",
