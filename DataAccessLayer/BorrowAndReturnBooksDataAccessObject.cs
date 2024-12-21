@@ -85,7 +85,7 @@ namespace Library_Management_System.DataAccessLayer
             }
             return borrowedBooks;
         }
-        public void BorrowBook(BorrowBooks book)
+        public void BorrowBook(Request request)
         {
             string connectionString = configuration["ConnectionStrings:DefaultConnection"];
 
@@ -106,7 +106,7 @@ namespace Library_Management_System.DataAccessLayer
 
                             using (SqlCommand checkBookCommand = new SqlCommand(checkBookQuery, connection, transaction))
                             {
-                                checkBookCommand.Parameters.AddWithValue("@BookID", book.BookID);
+                                checkBookCommand.Parameters.AddWithValue("@BookID", request.BookID);
 
                                 int bookCount = (int)checkBookCommand.ExecuteScalar();
 
@@ -123,7 +123,7 @@ namespace Library_Management_System.DataAccessLayer
 
                             using (SqlCommand checkUserCommand = new SqlCommand(checkUserQuery, connection, transaction))
                             {
-                                checkUserCommand.Parameters.AddWithValue("@UserID", book.UserID);
+                                checkUserCommand.Parameters.AddWithValue("@UserID", request.UserID);
 
                                 int userCount = (int)checkUserCommand.ExecuteScalar();
 
@@ -139,7 +139,7 @@ namespace Library_Management_System.DataAccessLayer
 
                             using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection, transaction))
                             {
-                                checkCommand.Parameters.AddWithValue("@BookID", book.BookID);
+                                checkCommand.Parameters.AddWithValue("@BookID", request.BookID);
 
                                 int count = (int)checkCommand.ExecuteScalar();
 
@@ -155,7 +155,7 @@ namespace Library_Management_System.DataAccessLayer
 
                             using (SqlCommand checkUserBooksCommand = new SqlCommand(checkUserBooksQuery, connection, transaction))
                             {
-                                checkUserBooksCommand.Parameters.AddWithValue("@UserID", book.UserID);
+                                checkUserBooksCommand.Parameters.AddWithValue("@UserID", request.UserID);
 
                                 int userBooksCount = (int)checkUserBooksCommand.ExecuteScalar();
 
@@ -175,8 +175,8 @@ namespace Library_Management_System.DataAccessLayer
 
                             using (SqlCommand command = new SqlCommand(query, connection, transaction))
                             {
-                                command.Parameters.AddWithValue("@UserID", book.UserID);
-                                command.Parameters.AddWithValue("@BookID", book.BookID);
+                                command.Parameters.AddWithValue("@UserID", request.UserID);
+                                command.Parameters.AddWithValue("@BookID", request .BookID);
 
                                 command.ExecuteNonQuery();
                             }
@@ -202,7 +202,7 @@ namespace Library_Management_System.DataAccessLayer
                 throw; // Rethrow to be caught in the controller
             }
         }
-        public void ReturnBook(BorrowBooks book)
+        public void ReturnBook(Request request)
         {
             string connectionString = configuration["ConnectionStrings:DefaultConnection"];
 
@@ -217,16 +217,16 @@ namespace Library_Management_System.DataAccessLayer
                         {
                             // Check if the book is currently borrowed by the user
                             string checkQuery = @"
-                                                SELECT COUNT(1)
-                                                FROM BorrowedBooks
-                                                WHERE BookID = @BookID 
-                                                AND UserID = @UserID 
-                                                AND ReturnDate IS NULL";
+                        SELECT COUNT(1)
+                        FROM BorrowedBooks
+                        WHERE BookID = @BookID 
+                          AND UserID = @UserID 
+                          AND ReturnDate IS NULL";
 
                             using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection, transaction))
                             {
-                                checkCommand.Parameters.AddWithValue("@BookID", book.BookID);
-                                checkCommand.Parameters.AddWithValue("@UserID", book.UserID);
+                                checkCommand.Parameters.AddWithValue("@BookID", request.BookID);
+                                checkCommand.Parameters.AddWithValue("@UserID", request.UserID);
 
                                 int count = (int)checkCommand.ExecuteScalar();
 
@@ -236,49 +236,57 @@ namespace Library_Management_System.DataAccessLayer
                                 }
                             }
 
-                            // Update the return date, fine amount, book availability, and user's total fine
-                            string updateQuery = @"
-                                                
-                                                UPDATE BorrowedBooks
-                                                SET 
-                                                    ReturnDate = GETDATE(),
-                                                    FineAmount = CASE 
-                                                        WHEN DueDate < GETDATE() THEN DATEDIFF(DAY, DueDate, GETDATE()) * 1
-                                                        ELSE 0
-                                                    END,
-                                                    IsFinePaid = CASE 
-                                                        WHEN DueDate < GETDATE() THEN 0 -- 0 indicates fine not paid
-                                                        ELSE 1 -- 1 indicates no fine or fine paid
-                                                    END
-                                                WHERE 
-                                                    BookID = @BookID 
-                                                    AND UserID = @UserID 
-                                                    AND ReturnDate IS NULL;
+                            // Update BorrowedBooks to set ReturnDate, calculate FineAmount, and set IsFinePaid
+                            string updateBorrowedBooksQuery = @"
+                        UPDATE BorrowedBooks
+                        SET 
+                            ReturnDate = GETDATE(),
+                            FineAmount = CASE 
+                                WHEN DueDate < GETDATE() THEN DATEDIFF(DAY, DueDate, GETDATE()) * 1
+                                ELSE 0
+                            END,
+                            IsFinePaid = CASE 
+                                WHEN DueDate < GETDATE() THEN 0 -- 0 indicates fine not paid
+                                ELSE 1 -- 1 indicates no fine or fine paid
+                            END
+                        WHERE 
+                            BookID = @BookID 
+                            AND UserID = @UserID 
+                            AND ReturnDate IS NULL";
 
-
-                                                UPDATE Books
-                                                SET IsAvailable = 1
-                                                WHERE BookID = @BookID;
-
-                                                UPDATE Users
-                                                SET TotalFine = (
-                                                    SELECT SUM(FineAmount) 
-                                                    FROM BorrowedBooks 
-                                                    WHERE UserID = @UserID AND IsFinePaid = 0
-                                                )
-                                                WHERE UserID = @UserID;
-                                            ";
-
-                            using (SqlCommand updateCommand = new SqlCommand(updateQuery, connection, transaction))
+                            using (SqlCommand updateBorrowedBooksCommand = new SqlCommand(updateBorrowedBooksQuery, connection, transaction))
                             {
-                                updateCommand.Parameters.AddWithValue("@BookID", book.BookID);
-                                updateCommand.Parameters.AddWithValue("@UserID", book.UserID);
-                                int rowsAffected = updateCommand.ExecuteNonQuery();
+                                updateBorrowedBooksCommand.Parameters.AddWithValue("@BookID", request.BookID);
+                                updateBorrowedBooksCommand.Parameters.AddWithValue("@UserID", request.UserID);
+                                updateBorrowedBooksCommand.ExecuteNonQuery();
+                            }
 
-                                if (rowsAffected == 0)
-                                {
-                                    throw new InvalidOperationException("Failed to update the return status for the book.");
-                                }
+                            // Update Books to mark the book as available
+                            string updateBooksQuery = @"
+                        UPDATE Books
+                        SET IsAvailable = 1
+                        WHERE BookID = @BookID";
+
+                            using (SqlCommand updateBooksCommand = new SqlCommand(updateBooksQuery, connection, transaction))
+                            {
+                                updateBooksCommand.Parameters.AddWithValue("@BookID", request.BookID);
+                                updateBooksCommand.ExecuteNonQuery();
+                            }
+
+                            // Update Users to calculate TotalFine
+                            string updateUserFineQuery = @"
+                        UPDATE Users
+                        SET TotalFine = ISNULL((
+                            SELECT SUM(FineAmount) 
+                            FROM BorrowedBooks 
+                            WHERE UserID = @UserID AND IsFinePaid = 0
+                        ), 0)
+                        WHERE UserID = @UserID";
+
+                            using (SqlCommand updateUserFineCommand = new SqlCommand(updateUserFineQuery, connection, transaction))
+                            {
+                                updateUserFineCommand.Parameters.AddWithValue("@UserID", request.UserID);
+                                updateUserFineCommand.ExecuteNonQuery();
                             }
 
                             // Commit the transaction
@@ -302,7 +310,7 @@ namespace Library_Management_System.DataAccessLayer
             }
         }
 
-        void IBorrowAndReturnBooksDataAccessObject.RenewalBook(BorrowBooks book)
+        void IBorrowAndReturnBooksDataAccessObject.RenewalBook(Request request)
         {
             string connectionString = configuration["ConnectionStrings:DefaultConnection"];
 
@@ -317,26 +325,16 @@ namespace Library_Management_System.DataAccessLayer
                         {
                             // Check if the book is borrowed by the user
                             string checkQuery = @"
-                                                SELECT COUNT(1)
-                                                FROM BorrowedBooks
-                                                WHERE BookID = @BookID 
-                                                AND UserID = @UserID 
-                                                AND ReturnDate IS NULL
-                                                AND BorrowDate = (
-                                                    SELECT TOP 1 BorrowDate
-                                                    FROM BorrowedBooks
-                                                    WHERE BookID = @BookID 
-                                                    AND UserID = @UserID
-                                                    AND ReturnDate IS NULL
-                                                    ORDER BY BorrowDate DESC
-                                                )
-
-                                                ";
+                        SELECT COUNT(1)
+                        FROM BorrowedBooks
+                        WHERE BookID = @BookID
+                          AND UserID = @UserID
+                          AND ReturnDate IS NULL";
 
                             using (SqlCommand checkCommand = new SqlCommand(checkQuery, connection, transaction))
                             {
-                                checkCommand.Parameters.AddWithValue("@BookID", book.BookID);
-                                checkCommand.Parameters.AddWithValue("@UserID", book.UserID);
+                                checkCommand.Parameters.AddWithValue("@BookID", request.BookID);
+                                checkCommand.Parameters.AddWithValue("@UserID", request.UserID);
 
                                 int count = (int)checkCommand.ExecuteScalar();
 
@@ -348,26 +346,18 @@ namespace Library_Management_System.DataAccessLayer
 
                             // Check if the current date is the due date or within the allowed renewal period (1-2 days before due date)
                             string renewalEligibilityQuery = @"
-                                                            SELECT COUNT(1)
-                                                            FROM BorrowedBooks
-                                                            WHERE BookID = @BookID 
-                                                            AND UserID = @UserID 
-                                                            AND ReturnDate IS NULL
-                                                            AND BorrowDate = (
-                                                                SELECT TOP 1 BorrowDate
-                                                                FROM BorrowedBooks
-                                                                WHERE BookID = @BookID 
-                                                                AND UserID = @UserID
-                                                                AND ReturnDate IS NULL
-                                                                ORDER BY BorrowDate DESC
-                                                            )
-                                                            AND DueDate >= DATEADD(DAY, -2, GETDATE()) 
-                                                            AND DueDate <= GETDATE()";
+                        SELECT COUNT(1)
+                        FROM BorrowedBooks
+                        WHERE BookID = @BookID
+                          AND UserID = @UserID
+                          AND ReturnDate IS NULL
+                          AND DueDate >= DATEADD(DAY, -2, GETDATE())
+                          AND DueDate <= GETDATE()";
 
                             using (SqlCommand eligibilityCommand = new SqlCommand(renewalEligibilityQuery, connection, transaction))
                             {
-                                eligibilityCommand.Parameters.AddWithValue("@BookID", book.BookID);
-                                eligibilityCommand.Parameters.AddWithValue("@UserID", book.UserID);
+                                eligibilityCommand.Parameters.AddWithValue("@BookID", request.BookID);
+                                eligibilityCommand.Parameters.AddWithValue("@UserID", request.UserID);
 
                                 int count = (int)eligibilityCommand.ExecuteScalar();
 
@@ -379,16 +369,17 @@ namespace Library_Management_System.DataAccessLayer
 
                             // Extend the due date for the borrowed book (e.g., extending by 30 days)
                             string extendDueDateQuery = @"
-                                                        UPDATE BorrowedBooks
-                                                        SET DueDate = DATEADD(DAY, 30, DueDate) 
-                                                        WHERE BookID = @BookID 
-                                                        AND UserID = @UserID 
-                                                        AND ReturnDate IS NULL";
+                        UPDATE BorrowedBooks
+                        SET DueDate = DATEADD(DAY, 30, DueDate)
+                        WHERE BookID = @BookID
+                          AND UserID = @UserID
+                          AND ReturnDate IS NULL";
 
                             using (SqlCommand extendDueDateCommand = new SqlCommand(extendDueDateQuery, connection, transaction))
                             {
-                                extendDueDateCommand.Parameters.AddWithValue("@BookID", book.BookID);
-                                extendDueDateCommand.Parameters.AddWithValue("@UserID", book.UserID);
+                                extendDueDateCommand.Parameters.AddWithValue("@BookID", request.BookID);
+                                extendDueDateCommand.Parameters.AddWithValue("@UserID", request.UserID);
+
                                 int rowsAffected = extendDueDateCommand.ExecuteNonQuery();
 
                                 if (rowsAffected == 0)

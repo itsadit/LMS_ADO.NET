@@ -4,7 +4,6 @@ using Library_Management_System.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
-using Library_Management_System.DataTransferObjects;
 using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Library_Management_System.Controllers
@@ -41,7 +40,7 @@ namespace Library_Management_System.Controllers
                 };
 
                 // Call the BorrowBook method to insert the new record into the database
-                _dataServicesObject.BorrowBook(borrowBook);
+                _dataServicesObject.BorrowBook(request);
 
                 return Ok(new { message = "Book borrowed successfully" });
             }

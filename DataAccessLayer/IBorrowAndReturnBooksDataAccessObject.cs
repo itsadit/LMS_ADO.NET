@@ -8,9 +8,9 @@ namespace Library_Management_System.DataAccessLayer
         public IEnumerable<BorrowBooks> GetBorrowedBooksByUserID(int id);
         public IEnumerable<BorrowBooks> GetUsersWhoBorrowedBookbyBookName(string Book_name);
         public IEnumerable<BorrowBooks> GetUserWhoBorrowedBookbyBookID(int ID);
-        public void BorrowBook(BorrowBooks book);
-        public void ReturnBook(BorrowBooks book);
-        public void RenewalBook(BorrowBooks book);
+        public void BorrowBook(Request request );
+        public void ReturnBook(Request request);
+        public void RenewalBook(Request request);
         public void FinePayment(FinePayments fines);
         public IEnumerable<FinePayments> GetAllPayments();
         public IEnumerable<FinePayments> GetPayment(int id);

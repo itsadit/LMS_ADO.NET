@@ -1,4 +1,5 @@
-﻿using Library_Management_System.DataAccessLayer;
+﻿using Azure.Core;
+using Library_Management_System.DataAccessLayer;
 using Library_Management_System.Models;
 using System.Xml.Linq;
 
@@ -18,9 +19,9 @@ namespace Library_Management_System.BLL
 
     // Implement methods that utilize _dataAccessObject
 
-    public void BorrowBook(BorrowBooks books)
+    public void BorrowBook(Models.Request request)
         {
-            _dataAccessObject.BorrowBook(books);
+            _dataAccessObject.BorrowBook(request);
         }
 
         public IEnumerable<BorrowBooks> GetAllUser_BookTransactions()
@@ -47,9 +48,9 @@ namespace Library_Management_System.BLL
             return BorrowBooks;
         }
 
-        public void ReturnBook(BorrowBooks books)
+        public void ReturnBook(Models.Request request)
         {
-            _dataAccessObject.ReturnBook(books);
+            _dataAccessObject.ReturnBook(request);
         }
 
         IEnumerable<FinePayments> IBorrowAndReturnBookServices.GetAllFinePayments()
@@ -69,9 +70,9 @@ namespace Library_Management_System.BLL
             _dataAccessObject.FinePayment(Fines);
         }
 
-        void IBorrowAndReturnBookServices.RenewalBook(BorrowBooks books)
+        void IBorrowAndReturnBookServices.RenewalBook(Models.Request request)
         {
-            _dataAccessObject.RenewalBook(books);
+            _dataAccessObject.RenewalBook(request);
         }
     }
 }

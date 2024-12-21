@@ -5,11 +5,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using static System.Reflection.Metadata.BlobBuilder;
-using Library_Management_System.DataTransferObjects;
 
 namespace Library_Management_System.APIs___Controllers
 {
-    
+
     public class ReturnBooksController : ControllerBase
     {
         
@@ -45,7 +44,7 @@ namespace Library_Management_System.APIs___Controllers
                 };
 
                 // Call the ReturnBook method to update the record in the database
-                _dataServicesObject.ReturnBook(borrowBook);
+                _dataServicesObject.ReturnBook(request);
 
                 return Ok(new { message = "Book Returned successfully" });
             }
@@ -81,7 +80,7 @@ namespace Library_Management_System.APIs___Controllers
                 };
 
                 // Call the BorrowBook method to insert the new record into the database
-                _dataServicesObject.RenewalBook(borrowBook);
+                _dataServicesObject.RenewalBook(request);
 
                 return Ok(new { message = "Book Renewed successfully" });
             }

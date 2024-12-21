@@ -8,9 +8,9 @@ namespace Library_Management_System.BLL
         public IEnumerable<BorrowBooks> GetBorrowedBooksbyUserID(int ID);
         public IEnumerable<BorrowBooks> GetUsersWhoBorrowedASpecificBookByName(string name);
         public IEnumerable<BorrowBooks> GetUserWhoBorrowedBookBYID(int ID);
-        public void BorrowBook(BorrowBooks books);
-        public void ReturnBook(BorrowBooks books);
-        public void RenewalBook(BorrowBooks books);
+        public void BorrowBook(Request request);
+        public void ReturnBook(Request request);
+        public void RenewalBook(Request request);
         public void PayFine(FinePayments Fines);
         public IEnumerable<FinePayments> GetAllFinePayments();
         public IEnumerable<FinePayments> GetFinePaymentsByID(int ID);

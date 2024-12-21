@@ -1,7 +1,7 @@
 ﻿using Library_Management_System.Models.Enum;
 using System.ComponentModel.DataAnnotations;
 
-namespace Library_Management_System.DataTransferObjects
+namespace Library_Management_System.Models
 {
     public class Request
     {
