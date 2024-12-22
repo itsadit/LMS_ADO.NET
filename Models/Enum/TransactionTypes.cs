@@ -1,4 +1,4 @@
-﻿namespace Library_Management_System.Models.Enum
+﻿namespace LibraryManagementSystem.Models.Enum
 {
     public enum TransactionTypes
     {

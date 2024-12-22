@@ -1,6 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace Library_Management_System.Models
+﻿namespace LibraryManagementSystem.Models
 {
     public class BorrowBooks
     {
