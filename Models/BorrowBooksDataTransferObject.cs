@@ -1,7 +1,7 @@
-﻿using Library_Management_System.Models.Enum;
+﻿using LibraryManagementSystem.Models.Enum;
 using System.ComponentModel.DataAnnotations;
+namespace LibraryManagementSystem.Models.DTO
 
-namespace Library_Management_System.Models
 {
     public class Request
     {

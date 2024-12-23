@@ -1,0 +1,516 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>LibraryManagementSystem</name>
+    </assembly>
+    <members>
+        <member name="M:LibraryManagementSystem.BusinessLayer.BookService.AddBook(System.String,System.Decimal,System.String,System.String,System.String)">
+            <summary>
+            Adds a new book to the database with related authors, genres, and publishers.
+            </summary>
+            <param name="bookName">The name of the book.</param>
+            <param name="bookPrice">The price of the book.</param>
+            <param name="authors">The list of authors related to the book.</param>
+            <param name="genres">The list of genres related to the book.</param>
+            <param name="publishers">The list of publishers related to the book.</param>
+            <returns>True if the book was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.BusinessLayer.BookService.GetAllBooks">
+            <summary>
+            Retrieves all books from the database.
+            </summary>
+            <returns>A list of all books.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.BusinessLayer.BookService.GetBook(System.Int32)">
+            <summary>
+            Retrieves a book with its related details (author, genre, publisher) by book ID.
+            </summary>
+            <param name="bookId">The ID of the book to retrieve.</param>
+            <returns>The book with its related details, or null if not found.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.BusinessLayer.BookService.UpdateBook(System.Int32,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String)">
+            <summary>
+            Updates the details of a book.
+            </summary>
+            <param name="bookId">The ID of the book to update.</param>
+            <param name="bookName">The updated book name.</param>
+            <param name="bookPrice">The updated book price.</param>
+            <param name="authorName">The updated author name.</param>
+            <param name="genreName">The updated genre name.</param>
+            <param name="publisherName">The updated publisher name.</param>
+            <returns>True if the book was successfully updated; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.BusinessLayer.BookService.DeleteBook(System.Int32)">
+            <summary>
+            Deletes a book based on its ID.
+            </summary>
+            <param name="bookId">The ID of the book to delete.</param>
+            <returns>True if the book was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.BusinessLayer.BookService.SearchBooks(LibraryManagementSystem.Models.Enum.SearchBy,System.String)">
+            <summary>
+            Searches for books based on a given field (e.g., name, author, genre).
+            </summary>
+            <param name="searchBy">The field to search by (e.g., name, author, genre).</param>
+            <param name="searchValue">The value to search for.</param>
+            <returns>A list of books that match the search criteria.</returns>
+        </member>
+        <member name="T:LibraryManagementSystem.DataAccessLayer.IBookRepository">
+            <summary>
+            Interface for book repository defining CRUD operations and additional functionalities for managing books.
+            </summary>
+        </member>
+        <member name="M:LibraryManagementSystem.DataAccessLayer.IBookRepository.GetAllBooks">
+            <summary>
+            Retrieves all books from the repository.
+            </summary>
+            <returns>A collection of all books.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.DataAccessLayer.IBookRepository.UpdateBook(System.Int32,System.String,System.Nullable{System.Decimal},System.String,System.String,System.String)">
+            <summary>
+            Updates an existing book's details in the repository. 
+            Only the provided parameters will be updated.
+            </summary>
+            <param name="bookId">The ID of the book to update.</param>
+            <param name="bookName">The new name of the book (optional).</param>
+            <param name="bookPrice">The new price of the book (optional).</param>
+            <param name="authorName">The new author name for the book (optional).</param>
+            <param name="genreName">The new genre name for the book (optional).</param>
+            <param name="publisherName">The new publisher name for the book (optional).</param>
+        </member>
+        <member name="M:LibraryManagementSystem.DataAccessLayer.IBookRepository.DeleteBook(System.Int32)">
+            <summary>
+            Deletes a book from the repository by its ID.
+            </summary>
+            <param name="bookId">The ID of the book to delete.</param>
+            <returns>True if the book was successfully deleted; otherwise, false.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.DataAccessLayer.IBookRepository.SearchBooks(LibraryManagementSystem.Models.Enum.SearchBy,System.String)">
+            <summary>
+            Searches for books in the repository based on a specific field and value.
+            </summary>
+            <param name="searchBy">The field to search by (e.g., "Author", "Genre").</param>
+            <param name="searchValue">The value to search for in the specified field.</param>
+            <returns>A collection of books that match the search criteria.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.DataAccessLayer.IBookRepository.GetBookWithId(System.Int32)">
+            <summary>
+            Retrieves a specific book from the repository by its ID.
+            </summary>
+            <param name="bookId">The ID of the book to retrieve.</param>
+            <returns>The book with the specified ID.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.DataAccessLayer.IBookRepository.AddBook(LibraryManagementSystem.Models.Book,System.String,System.String,System.String)">
+            <summary>
+            Adds a new book to the repository along with its associated author, genre, and publisher details.
+            </summary>
+            <param name="book">The book object containing basic book details.</param>
+            <param name="authorName">The name of the author associated with the book.</param>
+            <param name="genreName">The genre of the book.</param>
+            <param name="publisherName">The publisher of the book.</param>
+            <returns>True if the book was successfully added; otherwise, false.</returns>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.Request.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.Request.UserID">
+            <summary>
+            Input UserID(Integer Value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.FinePaymentRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.FinePaymentRequest.Amount">
+            <summary>
+            Input exact Fine Amount that need to pay. To Know your Amount Goto GetUser API
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.FinePaymentRequest.PaymentMethod">
+            <summary>
+            Select the Type of Payment Done by the User
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.FinePaymentRequest.TransactionID">
+            <summary>
+            Enter TransactionID for Reference
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.ByUserIDRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.ByBookIDRequest.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.ByBookNameRequest.BookName">
+            <summary>
+            Input Exact BookName to get required Result. To Know BookName Check out the Cover Page
+            </summary>
+        </member>
+        <member name="T:LibraryManagementSystem.Models.DTO.CreateUserRequest">
+            <summary>
+            Represents the request model for creating a new user.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.UserName">
+            <summary>
+            Username of the user.
+            The username is required and must be less than or equal to 20 characters.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Age">
+            <summary>
+            Age of the user.
+            The age must be between 6 and 100 years.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.PhoneNumber">
+            <summary>
+            Phone number of the user.
+            The phone number is required, must start with 6, 7, 8, or 9, and contain 10 digits.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Email">
+            <summary>
+            Email address of the user.
+            The email is required and must be in a valid email format.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Password">
+            <summary>
+            Password of the user.
+            The password is required and must be at least 8 characters long.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.ConfirmPassword">
+            <summary>
+            Confirmation password for the user.
+            The confirmation password is required and must match the original password.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.CreateUserRequest.Role">
+            <summary>
+            Role of the user.
+            The role is required and can only be "Admin" or "User".
+            </summary>
+        </member>
+        <member name="T:LibraryManagementSystem.Models.DTO.EditUserRequest">
+            <summary>
+            Represents the request model for editing user details.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.UserName">
+            <summary>
+            Change username of the user.
+            The username must be less than or equal to 20 characters.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.Age">
+            <summary>
+            Change age of the user.
+            The age must be between 6 and 100 years.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.Email">
+            <summary>
+            Change email address of the user.
+            The email must be in a valid format.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.DTO.EditUserRequest.PhoneNumber">
+            <summary>
+            Change phone number of the user.
+            The phone number must start with 6, 7, 8, or 9 and contain 10 digits.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.Request.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.Request.UserID">
+            <summary>
+            Input UserID(Integer Value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.Amount">
+            <summary>
+            Input exact Fine Amount that need to pay. To Know your Amount Goto GetUser API
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.PaymentMethod">
+            <summary>
+            Select the Type of Payment Done by the User
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.TransactionID">
+            <summary>
+            Enter TransactionID for Reference
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.ByUserIDRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.ByBookIDRequest.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.ByBookNameRequest.BookName">
+            <summary>
+            Input Exact BookName to get required Result. To Know BookName Check out the Cover Page
+            </summary>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.AddBook(LibraryManagementSystem.Models.DTO.AddBookRequest)">
+            <summary>
+            Add a new book with its related details (e.g., author, genre, publisher)
+            </summary>
+            <param name="request">The book details to be added.</param>
+            <returns>A response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.GetAllBooks">
+            <summary>
+            Retrieve a list of all books
+            </summary>
+            <returns>A list of all books in the system.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.GetBook(System.Int32)">
+            <summary>
+            Retrieve a specific book by its ID
+            </summary>
+            <param name="id">The unique ID of the book to retrieve.</param>
+            <returns>The details of the book if found, otherwise an error message.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.UpdateBook(System.Int32,LibraryManagementSystem.Models.DTO.UpdateBookRequest)">
+            <summary>
+            Update the details of a book
+            </summary>
+            <param name="id">The ID of the book to update.</param>
+            <param name="request">The updated book details.</param>
+            <returns>A response indicating the result of the update operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.DeleteBook(System.Int32)">
+            <summary>
+            Delete a specific book by its ID
+            </summary>
+            <param name="id">The ID of the book to delete.</param>
+            <returns>A response indicating whether the deletion was successful.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.SearchBooks(LibraryManagementSystem.Models.DTO.SearchBooksRequest)">
+            <summary>
+            Search for books based on a given field (e.g., name, author, genre)
+            </summary>
+            <param name="request">The search criteria (search field and value).</param>
+            <returns>A list of books matching the search criteria.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.BorrowBook(LibraryManagementSystem.Models.Request)">
+            <summary>
+            Takes BookID and UserID as input and Assigns Book to the User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetAllBorrowedBooks">
+            <summary>
+            On Execution Returns All the Details of Books Borrowed By Different Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetBorrowBooksByUserId(LibraryManagementSystem.Models.ByUserIDRequest)">
+            <summary>
+            Takes UserID as Input and Returns All the Books Borrowed Books By that User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetUsersWhoBorrowedBookbyBookName(LibraryManagementSystem.Models.ByBookNameRequest)">
+            <summary>
+            Takes BookName As Input and Returns all the Users Who Borrowed Books With that BookName
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetUserWhoBorrowedBookbyBookID(LibraryManagementSystem.Models.ByBookIDRequest)">
+            <summary>
+            Takes BookID as Input and Returns all the Books Details Who Borrowed that Specific Book
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the LoginController.
+            </summary>
+            <param name="configuration">The configuration for the application.</param>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.Login(System.String,System.String)">
+            <summary>
+            Logs in a user by validating the provided username and password.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <param name="password">The password of the user.</param>
+            <returns>A response indicating the result of the login attempt.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.Logout">
+            <summary>
+            Logs out the current user by clearing the logged-in user.
+            </summary>
+            <returns>A response indicating the result of the logout attempt.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.ForgotPassword(System.String,System.Int32,System.String)">
+            <summary>
+            Allows the user to reset their password by verifying username and user ID.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <param name="userID">The ID of the user.</param>
+            <param name="newPassword">The new password to be set.</param>
+            <returns>A response indicating the result of the password reset operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.GenerateJwtToken(LibraryManagementSystem.Models.Login)">
+            <summary>
+            Generates a JWT token for the authenticated user.
+            </summary>
+            <param name="login">The login object containing user details.</param>
+            <returns>A JWT token string.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.ResetPassword(System.String,System.String,System.String)">
+            <summary>
+            Resets the password for a user by validating their username and current password.
+            </summary>
+            <param name="userName">The username of the user.</param>
+            <param name="currentPassword">The current password of the user.</param>
+            <param name="newPassword">The new password to be set.</param>
+            <returns>A response indicating the result of the password reset operation.</returns>
+        </member>
+        <member name="T:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest">
+            <summary>
+            Request model for forgot password functionality.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest.UserName">
+            <summary>
+            User's username for the password reset.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest.UserID">
+            <summary>
+            User's user ID for the password reset.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Presentation.Controllers.ForgotPasswordRequest.NewPassword">
+            <summary>
+            Set the new password.
+            </summary>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.RetrieveBook(LibraryManagementSystem.Models.Request)">
+            <summary>
+            Takes UserID and BookID as Input and Updates the Return Date and Fines in the DataBase
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.RenewalBook(LibraryManagementSystem.Models.Request)">
+            <summary>
+            Takes UserID and BookID as Input and Increments the Due date
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.FinePayment(LibraryManagementSystem.Models.FinePaymentRequest)">
+            <summary>
+            Takes UserID and Amount as Input and Updates Total Fine in Users Table and Fine Paid in Borrowed Books Table
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.GetAllPayments">
+            <summary>
+            Returns All the Payments Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.GetPaymentsByUserID(LibraryManagementSystem.Models.ByUserIDRequest)">
+            <summary>
+            Takes UserID as Input and Returns All the Payments Done By that User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserDetails">
+            <summary>
+            Retrieves the logged-in user's details.
+            </summary>
+            <returns>Returns the user data if found, or an error message if not.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.CreateUser(LibraryManagementSystem.Models.DTO.CreateUserRequest)">
+            <summary>
+            Registers a new user with their related details (e.g., Username, Email, Age, Phone number).
+            </summary>
+            <param name="request">The user details for registration.</param>
+            <returns>A response indicating the result of the operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUsers">
+            <summary>
+            Retrieves all users in the system.
+            </summary>
+            <returns>A list of all users.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetActiveUsers">
+            <summary>
+            Retrieves all active users in the system.
+            </summary>
+            <returns>A list of all active users.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserById(System.Int32)">
+            <summary>
+            Retrieves a user by their unique ID.
+            </summary>
+            <param name="userID">The ID of the user to retrieve.</param>
+            <returns>The user data if found, or an error message if not.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserByName(System.String)">
+            <summary>
+            Retrieves a user by their unique username.
+            </summary>
+            <param name="userName">The username of the user to retrieve.</param>
+            <returns>The user data if found, or an error message if not.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.ReactivateUser(System.Int32)">
+            <summary>
+            Reactivates a user by their unique ID.
+            </summary>
+            <param name="userID">The ID of the user to reactivate.</param>
+            <returns>The reactivated user data or an error message if not found.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.EditUser(System.Int32,LibraryManagementSystem.Models.DTO.EditUserRequest)">
+            <summary>
+            Edits the details of an existing user.
+            </summary>
+            <param name="userId">The ID of the user to edit.</param>
+            <param name="request">The details to update the user with.</param>
+            <returns>A response indicating the result of the update operation.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Deletes (deactivates) a user by their unique ID.
+            </summary>
+            <param name="userID">The ID of the user to delete.</param>
+            <returns>No content if the operation is successful, or an error message if not.</returns>
+        </member>
+    </members>
+</doc>

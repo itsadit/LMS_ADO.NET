@@ -1,4 +1,4 @@
-﻿namespace Library_Management_System.Models
+﻿namespace LibraryManagementSystem.Models
 {
     public class FinePayments
     {

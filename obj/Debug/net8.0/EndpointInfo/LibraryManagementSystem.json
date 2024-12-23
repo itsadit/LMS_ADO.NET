@@ -1,0 +1,1062 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "LibraryManagementSystem",
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Book/books": {
+      "post": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Add a new book with its related details (e.g., author, genre, publisher)",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Authors",
+                  "BookName",
+                  "Genres",
+                  "Publishers"
+                ],
+                "type": "object",
+                "properties": {
+                  "BookName": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "BookPrice": {
+                    "minimum": 0.01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "Authors": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Genres": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Publishers": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "BookName": {
+                  "style": "form"
+                },
+                "BookPrice": {
+                  "style": "form"
+                },
+                "Authors": {
+                  "style": "form"
+                },
+                "Genres": {
+                  "style": "form"
+                },
+                "Publishers": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Retrieve a list of all books",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Book/books/{id}": {
+      "get": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Retrieve a specific book by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The unique ID of the book to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Update the details of a book",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the book to update.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "BookName": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "BookPrice": {
+                    "minimum": 0.01,
+                    "type": "number",
+                    "format": "double"
+                  },
+                  "AuthorName": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "GenreName": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "PublisherName": {
+                    "maxLength": 500,
+                    "minLength": 0,
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "BookName": {
+                  "style": "form"
+                },
+                "BookPrice": {
+                  "style": "form"
+                },
+                "AuthorName": {
+                  "style": "form"
+                },
+                "GenreName": {
+                  "style": "form"
+                },
+                "PublisherName": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Delete a specific book by its ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The ID of the book to delete.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Book/books/search": {
+      "get": {
+        "tags": [
+          "Book"
+        ],
+        "summary": "Search for books based on a given field (e.g., name, author, genre)",
+        "parameters": [
+          {
+            "name": "SearchBy",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "enum": [
+                "name",
+                "author",
+                "id",
+                "publisher",
+                "Genres"
+              ],
+              "type": "string"
+            }
+          },
+          {
+            "name": "SearchValue",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "maxLength": 500,
+              "minLength": 0,
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/BorrowBook": {
+      "post": {
+        "tags": [
+          "BorrowBooks"
+        ],
+        "summary": "Takes BookID and UserID as input and Assigns Book to the User",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "BookID",
+                  "UserID"
+                ],
+                "type": "object",
+                "properties": {
+                  "BookID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book",
+                    "format": "int32"
+                  },
+                  "UserID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input UserID(Integer Value) to get required Result",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "BookID": {
+                  "style": "form"
+                },
+                "UserID": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetAllUserBookTransactions": {
+      "get": {
+        "tags": [
+          "BorrowBooks"
+        ],
+        "summary": "On Execution Returns All the Details of Books Borrowed By Different Users",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetBorrowBooksByUserId": {
+      "get": {
+        "tags": [
+          "BorrowBooks"
+        ],
+        "summary": "Takes UserID as Input and Returns All the Books Borrowed Books By that User",
+        "parameters": [
+          {
+            "name": "UserID",
+            "in": "query",
+            "description": "Input UserID(Integer value) to get required Result",
+            "required": true,
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetUsersWhoBorrowedBookByBookName": {
+      "get": {
+        "tags": [
+          "BorrowBooks"
+        ],
+        "summary": "Takes BookName As Input and Returns all the Users Who Borrowed Books With that BookName",
+        "parameters": [
+          {
+            "name": "BookName",
+            "in": "query",
+            "description": "Input Exact BookName to get required Result. To Know BookName Check out the Cover Page",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetUsersWhoBorrowedSpecificBookByBookID": {
+      "get": {
+        "tags": [
+          "BorrowBooks"
+        ],
+        "summary": "Takes BookID as Input and Returns all the Books Details Who Borrowed that Specific Book",
+        "parameters": [
+          {
+            "name": "BookID",
+            "in": "query",
+            "description": "Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book.",
+            "required": true,
+            "schema": {
+              "maximum": 2147483647,
+              "minimum": 1,
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/login": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Logs in a user by validating the provided username and password.",
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "description": "The username of the user.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "query",
+            "description": "The password of the user.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/logout": {
+      "post": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Logs out the current user by clearing the logged-in user.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/forgot-password": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Allows the user to reset their password by verifying username and user ID.",
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "description": "The username of the user.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "userID",
+            "in": "query",
+            "description": "The ID of the user.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "newPassword",
+            "in": "query",
+            "description": "The new password to be set.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Login/reset-password": {
+      "get": {
+        "tags": [
+          "Login"
+        ],
+        "summary": "Resets the password for a user by validating their username and current password.",
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "query",
+            "description": "The username of the user.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "currentPassword",
+            "in": "query",
+            "description": "The current password of the user.",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "newPassword",
+            "in": "query",
+            "description": "The new password to be set.",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/ReturnBook": {
+      "put": {
+        "tags": [
+          "ReturnBooks"
+        ],
+        "summary": "Takes UserID and BookID as Input and Updates the Return Date and Fines in the DataBase",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "BookID",
+                  "UserID"
+                ],
+                "type": "object",
+                "properties": {
+                  "BookID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book",
+                    "format": "int32"
+                  },
+                  "UserID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input UserID(Integer Value) to get required Result",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "BookID": {
+                  "style": "form"
+                },
+                "UserID": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/RenewalBook": {
+      "put": {
+        "tags": [
+          "ReturnBooks"
+        ],
+        "summary": "Takes UserID and BookID as Input and Increments the Due date",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "BookID",
+                  "UserID"
+                ],
+                "type": "object",
+                "properties": {
+                  "BookID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book",
+                    "format": "int32"
+                  },
+                  "UserID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input UserID(Integer Value) to get required Result",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "BookID": {
+                  "style": "form"
+                },
+                "UserID": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/PayFine": {
+      "post": {
+        "tags": [
+          "ReturnBooks"
+        ],
+        "summary": "Takes UserID and Amount as Input and Updates Total Fine in Users Table and Fine Paid in Borrowed Books Table",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "Amount",
+                  "PaymentMethod",
+                  "TransactionID",
+                  "UserID"
+                ],
+                "type": "object",
+                "properties": {
+                  "UserID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input UserID(Integer value) to get required Result",
+                    "format": "int32"
+                  },
+                  "Amount": {
+                    "minimum": 0.01,
+                    "type": "number",
+                    "description": "Input exact Fine Amount that need to pay. To Know your Amount Goto GetUser API",
+                    "format": "double"
+                  },
+                  "PaymentMethod": {
+                    "enum": [
+                      "UPI",
+                      "Debit_Card",
+                      "Credit_Card",
+                      "Net_Banking"
+                    ],
+                    "type": "string",
+                    "description": "Select the Type of Payment Done by the User"
+                  },
+                  "TransactionID": {
+                    "type": "string",
+                    "description": "Enter TransactionID for Reference"
+                  }
+                }
+              },
+              "encoding": {
+                "UserID": {
+                  "style": "form"
+                },
+                "Amount": {
+                  "style": "form"
+                },
+                "PaymentMethod": {
+                  "style": "form"
+                },
+                "TransactionID": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetAllPaymentDetails": {
+      "get": {
+        "tags": [
+          "ReturnBooks"
+        ],
+        "summary": "Returns All the Payments Details",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/GetPaymentDetailsByUserID": {
+      "get": {
+        "tags": [
+          "ReturnBooks"
+        ],
+        "summary": "Takes UserID as Input and Returns All the Payments Done By that User",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "UserID"
+                ],
+                "type": "object",
+                "properties": {
+                  "UserID": {
+                    "maximum": 2147483647,
+                    "minimum": 1,
+                    "type": "integer",
+                    "description": "Input UserID(Integer value) to get required Result",
+                    "format": "int32"
+                  }
+                }
+              },
+              "encoding": {
+                "UserID": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/getMyDetails": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Retrieves the logged-in user's details.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/registerUser": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Registers a new user with their related details (e.g., Username, Email, Age, Phone number).",
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ConfirmPassword",
+                  "Email",
+                  "Password",
+                  "PhoneNumber",
+                  "Role",
+                  "UserName"
+                ],
+                "type": "object",
+                "properties": {
+                  "UserName": {
+                    "maxLength": 20,
+                    "minLength": 0,
+                    "type": "string",
+                    "description": "Username of the user.\r\nThe username is required and must be less than or equal to 20 characters."
+                  },
+                  "Age": {
+                    "maximum": 100,
+                    "minimum": 6,
+                    "type": "integer",
+                    "description": "Age of the user.\r\nThe age must be between 6 and 100 years.",
+                    "format": "int32"
+                  },
+                  "PhoneNumber": {
+                    "pattern": "^[6789]\\d{9}$",
+                    "type": "string",
+                    "description": "Phone number of the user.\r\nThe phone number is required, must start with 6, 7, 8, or 9, and contain 10 digits."
+                  },
+                  "Email": {
+                    "type": "string",
+                    "description": "Email address of the user.\r\nThe email is required and must be in a valid email format.",
+                    "format": "email"
+                  },
+                  "Password": {
+                    "minLength": 8,
+                    "type": "string",
+                    "description": "Password of the user.\r\nThe password is required and must be at least 8 characters long."
+                  },
+                  "ConfirmPassword": {
+                    "type": "string",
+                    "description": "Confirmation password for the user.\r\nThe confirmation password is required and must match the original password."
+                  },
+                  "Role": {
+                    "enum": [
+                      "Admin",
+                      "User"
+                    ],
+                    "type": "string",
+                    "description": "Role of the user.\r\nThe role is required and can only be \"Admin\" or \"User\"."
+                  }
+                }
+              },
+              "encoding": {
+                "UserName": {
+                  "style": "form"
+                },
+                "Age": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                },
+                "ConfirmPassword": {
+                  "style": "form"
+                },
+                "Role": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/allUsers": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Retrieves all users in the system.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/allActiveUsers": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Retrieves all active users in the system.",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/id/searchUsersBy{userID}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Retrieves a user by their unique ID.",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "The ID of the user to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/name/searchUsersBy{userName}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Retrieves a user by their unique username.",
+        "parameters": [
+          {
+            "name": "userName",
+            "in": "path",
+            "description": "The username of the user to retrieve.",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/reactivateUser": {
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Reactivates a user by their unique ID.",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "query",
+            "description": "The ID of the user to reactivate.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/editUser": {
+      "put": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Edits the details of an existing user.",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "query",
+            "description": "The ID of the user to edit.",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "UserName": {
+                    "maxLength": 20,
+                    "minLength": 0,
+                    "type": "string",
+                    "description": "Change username of the user.\r\nThe username must be less than or equal to 20 characters."
+                  },
+                  "Age": {
+                    "maximum": 100,
+                    "minimum": 6,
+                    "type": "integer",
+                    "description": "Change age of the user.\r\nThe age must be between 6 and 100 years.",
+                    "format": "int32"
+                  },
+                  "Email": {
+                    "type": "string",
+                    "description": "Change email address of the user.\r\nThe email must be in a valid format.",
+                    "format": "email"
+                  },
+                  "PhoneNumber": {
+                    "pattern": "^[6789]\\d{9}$",
+                    "type": "string",
+                    "description": "Change phone number of the user.\r\nThe phone number must start with 6, 7, 8, or 9 and contain 10 digits."
+                  }
+                }
+              },
+              "encoding": {
+                "UserName": {
+                  "style": "form"
+                },
+                "Age": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Users/Delete User {userID}": {
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Deletes (deactivates) a user by their unique ID.",
+        "parameters": [
+          {
+            "name": "userID",
+            "in": "path",
+            "description": "The ID of the user to delete.",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "Enter your token in the text input below.",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}

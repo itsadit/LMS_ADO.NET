@@ -1,6 +1,405 @@
 [
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BookController",
+    "Method": "AddBook",
+    "RelativePath": "api/Book/books",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "BookName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrice",
+        "Type": "System.Decimal",
+        "IsRequired": false
+      },
+      {
+        "Name": "Authors",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Genres",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Publishers",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BookController",
+    "Method": "GetAllBooks",
+    "RelativePath": "api/Book/books",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BookController",
+    "Method": "GetBook",
+    "RelativePath": "api/Book/books/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BookController",
+    "Method": "UpdateBook",
+    "RelativePath": "api/Book/books/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "BookName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "BookPrice",
+        "Type": "System.Nullable\u00601[[System.Decimal, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "AuthorName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "GenreName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PublisherName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BookController",
+    "Method": "DeleteBook",
+    "RelativePath": "api/Book/books/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BookController",
+    "Method": "SearchBooks",
+    "RelativePath": "api/Book/books/search",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SearchBy",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SearchValue",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.LoginController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/Login/forgot-password",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "api/Login/login",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.LoginController",
+    "Method": "Logout",
+    "RelativePath": "api/Login/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.LoginController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/Login/reset-password",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "currentPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "newPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "GetActiveUsers",
+    "RelativePath": "api/Users/allActiveUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "GetUsers",
+    "RelativePath": "api/Users/allUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/Users/Delete User {userID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "EditUser",
+    "RelativePath": "api/Users/editUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Age",
+        "Type": "System.Nullable\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "GetUserDetails",
+    "RelativePath": "api/Users/getMyDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "GetUserById",
+    "RelativePath": "api/Users/id/searchUsersBy{userID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "GetUserByName",
+    "RelativePath": "api/Users/name/searchUsersBy{userName}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "ReactivateUser",
+    "RelativePath": "api/Users/reactivateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.UsersController",
+    "Method": "CreateUser",
+    "RelativePath": "api/Users/registerUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Age",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PhoneNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ConfirmPassword",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Role",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "BorrowBook",
     "RelativePath": "BorrowBook",
     "HttpMethod": "POST",
@@ -21,7 +420,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "GetAllPayments",
     "RelativePath": "GetAllPaymentDetails",
     "HttpMethod": "GET",
@@ -31,7 +430,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetAllBorrowedBooks",
     "RelativePath": "GetAllUserBookTransactions",
     "HttpMethod": "GET",
@@ -41,7 +440,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetBorrowBooksByUserId",
     "RelativePath": "GetBorrowBooksByUserId",
     "HttpMethod": "GET",
@@ -57,7 +456,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "GetPaymentsByUserID",
     "RelativePath": "GetPaymentDetailsByUserID",
     "HttpMethod": "GET",
@@ -73,7 +472,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetUsersWhoBorrowedBookbyBookName",
     "RelativePath": "GetUsersWhoBorrowedBookByBookName",
     "HttpMethod": "GET",
@@ -89,7 +488,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetUserWhoBorrowedBookbyBookID",
     "RelativePath": "GetUsersWhoBorrowedSpecificBookByBookID",
     "HttpMethod": "GET",
@@ -105,7 +504,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "FinePayment",
     "RelativePath": "PayFine",
     "HttpMethod": "POST",
@@ -136,7 +535,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "RenewalBook",
     "RelativePath": "RenewalBook",
     "HttpMethod": "PUT",
@@ -157,7 +556,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "RetrieveBook",
     "RelativePath": "ReturnBook",
     "HttpMethod": "PUT",

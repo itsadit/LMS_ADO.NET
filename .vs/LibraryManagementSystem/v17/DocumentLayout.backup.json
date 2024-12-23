@@ -1,0 +1,793 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\santhosh\\ado.net_ars\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\presentation\\controllers\\returnbookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\returnbookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\presentation\\controllers\\borrowbookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\borrowbookscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\presentation\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\bookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\borrowandreturnbooksdataaccessobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\borrowandreturnbooksdataaccessobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\logindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\usersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\iusersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\businesslayer\\iborrowandreturnbookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\iborrowandreturnbookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\businesslayer\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\ibookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\businesslayer\\borrowandreturnbookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\borrowandreturnbookservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\businesslayer\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:businesslayer\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\iborrowandreturnbooksdataaccessobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\iborrowandreturnbooksdataaccessobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\dto\\borrowbooksdatatransferobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\borrowbooksdatatransferobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:presentation\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\genre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\finepayments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\finepayments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\borrowbooksdatatransferobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\borrowbooksdatatransferobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\borrowbooks.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\bookspublishersmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\bookspublishersmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\booksgenresmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\booksgenresmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\booksauthorsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\booksauthorsmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\enum\\transactiontypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\transactiontypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\enum\\searchby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\enum\\searchby.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\edituserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\dto\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:models\\dto\\createuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\iusersdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ilogindao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\ibooksdataaccessobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ibooksdataaccessobjects.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\ibookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:dataaccesslayer\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\librarymanagementsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:librarymanagementsystem.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|d:\\santhosh\\ado.net_ars\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{54D7410B-61C4-4EF0-93BB-60CDE0364126}|LibraryManagementSystem.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 241,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersDAO.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\UsersDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\UsersDAO.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\UsersDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\UsersDAO.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAewA4AAABfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:01.9Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookRepository.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\BookRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\BookRepository.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\BookRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\BookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:15:09.847Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BookController.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\BookController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\BookController.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\BookController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\BookController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAxwDQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:10:01.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BorrowBooksController.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\BorrowBooksController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\BorrowBooksController.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\BorrowBooksController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\BorrowBooksController.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAswCAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:41:02.772Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReturnBooksController.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\ReturnBooksController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\ReturnBooksController.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\ReturnBooksController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\ReturnBooksController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAFEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:41:16.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\UsersService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\UsersService.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\UsersService.cs",
+              "RelativeToolTip": "BusinessLayer\\UsersService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:04.213Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BorrowAndReturnBooksDataAccessObject.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\BorrowAndReturnBooksDataAccessObject.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\BorrowAndReturnBooksDataAccessObject.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\BorrowAndReturnBooksDataAccessObject.cs",
+              "RelativeToolTip": "DataAccessLayer\\BorrowAndReturnBooksDataAccessObject.cs",
+              "ViewState": "AgIAAAMCAAAAAAAAAAAUwA8CAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:38:26.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "LoginDAO.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\LoginDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\LoginDAO.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\LoginDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\LoginDAO.cs",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwE0AAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:00.922Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAiwI0AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:09:05.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-14T07:42:35.509Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IUsersService.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\IUsersService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\IUsersService.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\IUsersService.cs",
+              "RelativeToolTip": "BusinessLayer\\IUsersService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:02.911Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "IBorrowAndReturnBookServices.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\IBorrowAndReturnBookServices.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\IBorrowAndReturnBookServices.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\IBorrowAndReturnBookServices.cs",
+              "RelativeToolTip": "BusinessLayer\\IBorrowAndReturnBookServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:38:03.871Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IBookService.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\IBookService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\IBookService.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\IBookService.cs",
+              "RelativeToolTip": "BusinessLayer\\IBookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:15:00.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BorrowAndReturnBookServices.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\BorrowAndReturnBookServices.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\BorrowAndReturnBookServices.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\BorrowAndReturnBookServices.cs",
+              "RelativeToolTip": "BusinessLayer\\BorrowAndReturnBookServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:37:51.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\BookService.cs",
+              "RelativeDocumentMoniker": "BusinessLayer\\BookService.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\BusinessLayer\\BookService.cs",
+              "RelativeToolTip": "BusinessLayer\\BookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:14:57.748Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-14T07:42:31.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IBorrowAndReturnBooksDataAccessObject.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IBorrowAndReturnBooksDataAccessObject.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IBorrowAndReturnBooksDataAccessObject.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IBorrowAndReturnBooksDataAccessObject.cs",
+              "RelativeToolTip": "DataAccessLayer\\IBorrowAndReturnBooksDataAccessObject.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAzwAEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:38:48.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "BorrowBooksDataTransferObject.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\BorrowBooksDataTransferObject.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\BorrowBooksDataTransferObject.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\BorrowBooksDataTransferObject.cs",
+              "RelativeToolTip": "Models\\DTO\\BorrowBooksDataTransferObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:39:51.859Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:57.089Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\LoginController.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Presentation\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:06.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Users.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Users.cs",
+              "RelativeDocumentMoniker": "Models\\Users.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Users.cs",
+              "RelativeToolTip": "Models\\Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:06.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Publisher.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Publisher.cs",
+              "RelativeDocumentMoniker": "Models\\Publisher.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Publisher.cs",
+              "RelativeToolTip": "Models\\Publisher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:36.923Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Login.cs",
+              "RelativeDocumentMoniker": "Models\\Login.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Login.cs",
+              "RelativeToolTip": "Models\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:35.848Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Genre.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Genre.cs",
+              "RelativeDocumentMoniker": "Models\\Genre.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Genre.cs",
+              "RelativeToolTip": "Models\\Genre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:34.566Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FinePayments.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\FinePayments.cs",
+              "RelativeDocumentMoniker": "Models\\FinePayments.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\FinePayments.cs",
+              "RelativeToolTip": "Models\\FinePayments.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:40:38.483Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "BorrowBooksDataTransferObject.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\BorrowBooksDataTransferObject.cs",
+              "RelativeDocumentMoniker": "Models\\BorrowBooksDataTransferObject.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\BorrowBooksDataTransferObject.cs",
+              "RelativeToolTip": "Models\\BorrowBooksDataTransferObject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-23T05:47:32.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "BooksGenresMap.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\BooksGenresMap.cs",
+              "RelativeDocumentMoniker": "Models\\BooksGenresMap.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\BooksGenresMap.cs",
+              "RelativeToolTip": "Models\\BooksGenresMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:29.535Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "BooksAuthorsMap.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\BooksAuthorsMap.cs",
+              "RelativeDocumentMoniker": "Models\\BooksAuthorsMap.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\BooksAuthorsMap.cs",
+              "RelativeToolTip": "Models\\BooksAuthorsMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:24.607Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Book.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Book.cs",
+              "RelativeDocumentMoniker": "Models\\Book.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Book.cs",
+              "RelativeToolTip": "Models\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:26.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "BooksPublishersMap.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\BooksPublishersMap.cs",
+              "RelativeDocumentMoniker": "Models\\BooksPublishersMap.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\BooksPublishersMap.cs",
+              "RelativeToolTip": "Models\\BooksPublishersMap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:31.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "BorrowBooks.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\BorrowBooks.cs",
+              "RelativeDocumentMoniker": "Models\\BorrowBooks.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\BorrowBooks.cs",
+              "RelativeToolTip": "Models\\BorrowBooks.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:17:04.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Author.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Author.cs",
+              "RelativeDocumentMoniker": "Models\\Author.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Author.cs",
+              "RelativeToolTip": "Models\\Author.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:22.419Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Enum\\UserRole.cs",
+              "RelativeDocumentMoniker": "Models\\Enum\\UserRole.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Enum\\UserRole.cs",
+              "RelativeToolTip": "Models\\Enum\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T11:03:12.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "TransactionTypes.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Enum\\TransactionTypes.cs",
+              "RelativeDocumentMoniker": "Models\\Enum\\TransactionTypes.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Enum\\TransactionTypes.cs",
+              "RelativeToolTip": "Models\\Enum\\TransactionTypes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:40:03.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SearchBy.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\Enum\\SearchBy.cs",
+              "RelativeDocumentMoniker": "Models\\Enum\\SearchBy.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\Enum\\SearchBy.cs",
+              "RelativeToolTip": "Models\\Enum\\SearchBy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:05:55.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EditUserRequest.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\EditUserRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\EditUserRequest.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\EditUserRequest.cs",
+              "RelativeToolTip": "Models\\DTO\\EditUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:27:20.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DTOs.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\DTOs.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\DTOs.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\DTOs.cs",
+              "RelativeToolTip": "Models\\DTO\\DTOs.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:16:45.209Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CreateUserRequest.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\CreateUserRequest.cs",
+              "RelativeDocumentMoniker": "Models\\DTO\\CreateUserRequest.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Models\\DTO\\CreateUserRequest.cs",
+              "RelativeToolTip": "Models\\DTO\\CreateUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAB8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T13:27:10.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IUsersDAO.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IUsersDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IUsersDAO.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IUsersDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\IUsersDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:59.255Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "ILoginDAO.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\ILoginDAO.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\ILoginDAO.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\ILoginDAO.cs",
+              "RelativeToolTip": "DataAccessLayer\\ILoginDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T07:16:58.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "IBooksDataAccessObjects.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IBooksDataAccessObjects.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IBooksDataAccessObjects.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IBooksDataAccessObjects.cs",
+              "RelativeToolTip": "DataAccessLayer\\IBooksDataAccessObjects.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T12:38:47.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "IBookRepository.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IBookRepository.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\IBookRepository.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\IBookRepository.cs",
+              "RelativeToolTip": "DataAccessLayer\\IBookRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T10:15:23.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DatabaseHelper.cs",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\DataAccessLayer\\DatabaseHelper.cs",
+              "RelativeToolTip": "DataAccessLayer\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-19T05:46:50.243Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.101\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
+              "ViewState": "AgIAAFYCAAAAAAAAAAArwGUCAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2024-12-20T12:51:22.222Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "LibraryManagementSystem.csproj",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\LibraryManagementSystem.csproj",
+              "RelativeDocumentMoniker": "LibraryManagementSystem.csproj",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\LibraryManagementSystem.csproj",
+              "RelativeToolTip": "LibraryManagementSystem.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-20T12:50:22.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "README.md",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2024-12-20T12:49:24.044Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\santhosh\\ado.net_ars\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "D:\\santhosh\\ado.net_ars\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-20T10:14:37.222Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 159,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

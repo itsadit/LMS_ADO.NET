@@ -1,9 +1,9 @@
-﻿using Library_Management_System.Models;
-using System.Data;
+﻿using System.Data;
 using Microsoft.Data.SqlClient;
 using System.Reflection;
+using LibraryManagementSystem.Models;
 
-namespace Library_Management_System.DataAccessLayer
+namespace LibraryManagementSystem.DataAccessLayer
 {
     public class BorrowAndReturnBooksDataAccessObject : IBorrowAndReturnBooksDataAccessObject
     {
@@ -23,7 +23,7 @@ namespace Library_Management_System.DataAccessLayer
             string query = $"SELECT BorrowedBooks.*,Books.BookName FROM BorrowedBooks INNER JOIN Books on Books.BookID = BorrowedBooks.BookID WHERE UserID = {id}";
             return ReturnData<BorrowBooks>(query);
         }
-        
+
         public IEnumerable<BorrowBooks> GetUserWhoBorrowedBookbyBookID(int ID)
         {
             string query = $"Select BorrowedBooks.*,Books.BookName From BorrowedBooks " +
@@ -34,7 +34,7 @@ namespace Library_Management_System.DataAccessLayer
         }
         public IEnumerable<BorrowBooks> GetUsersWhoBorrowedBookbyBookName(string bookName)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = configuration["ConnectionStrings:LMSConnection"];
             List<BorrowBooks> borrowedBooks = new List<BorrowBooks>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -87,7 +87,7 @@ namespace Library_Management_System.DataAccessLayer
         }
         public void BorrowBook(Request request)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = configuration["ConnectionStrings:LMSConnection"];
 
             try
             {
@@ -176,7 +176,9 @@ namespace Library_Management_System.DataAccessLayer
                             using (SqlCommand command = new SqlCommand(query, connection, transaction))
                             {
                                 command.Parameters.AddWithValue("@UserID", request.UserID);
+
                                 command.Parameters.AddWithValue("@BookID", request .BookID);
+
 
                                 command.ExecuteNonQuery();
                             }
@@ -204,7 +206,7 @@ namespace Library_Management_System.DataAccessLayer
         }
         public void ReturnBook(Request request)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = configuration["ConnectionStrings:LMSConnection"];
 
             try
             {
@@ -312,7 +314,7 @@ namespace Library_Management_System.DataAccessLayer
 
         void IBorrowAndReturnBooksDataAccessObject.RenewalBook(Request request)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = configuration["ConnectionStrings:LMSConnection"];
 
             try
             {
@@ -411,7 +413,7 @@ namespace Library_Management_System.DataAccessLayer
 
         void IBorrowAndReturnBooksDataAccessObject.FinePayment(FinePayments fines)
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = configuration["ConnectionStrings:LMSConnection"];
 
             try
             {
@@ -483,7 +485,7 @@ namespace Library_Management_System.DataAccessLayer
                             {
                                 insertFinePaymentCommand.Parameters.AddWithValue("@UserID", fines.UserID);
                                 insertFinePaymentCommand.Parameters.AddWithValue("@Amount", fines.Amount);
-                                insertFinePaymentCommand.Parameters.AddWithValue("@PaymentMethod",fines.PaymentMethod);
+                                insertFinePaymentCommand.Parameters.AddWithValue("@PaymentMethod", fines.PaymentMethod);
                                 insertFinePaymentCommand.Parameters.AddWithValue("@TransactionID", fines.TransactionID);
                                 insertFinePaymentCommand.ExecuteNonQuery();
                             }
@@ -523,7 +525,7 @@ namespace Library_Management_System.DataAccessLayer
 
         public IEnumerable<T> ReturnData<T>(string query) where T : class
         {
-            string connectionString = configuration["ConnectionStrings:DefaultConnection"];
+            string connectionString = configuration["ConnectionStrings:LMSConnection"];
             List<T> dataList = new List<T>();
 
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -580,8 +582,4 @@ namespace Library_Management_System.DataAccessLayer
             return dataList;
         }
     }
-    //public void CheckBookAvailable()
-    //{
-
-    //}
 }

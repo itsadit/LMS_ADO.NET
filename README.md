@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 # LMS Using ADO.NET
+=======
+<<<<<<< HEAD
+# LMS_ADO.NET
+=======
+# Ado.Net_ARS
+>>>>>>> ddb225c728cf51c1dcb4262d79f2e7b62cfdfc12
+>>>>>>> 4a55c7595161936614b0e317ce4be608201b5be0
 
 
 
@@ -15,14 +23,30 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
+<<<<<<< HEAD
 git remote add origin https://gitlab.sparity.com/saisanthosh.vemireddi/lms-using-ado.net.git
+=======
+<<<<<<< HEAD
+git remote add origin https://gitlab.sparity.com/ravalipriya.kosuri/lms_ado.net.git
+=======
+git remote add origin https://gitlab.sparity.com/itsadit/ado.net_ars.git
+>>>>>>> ddb225c728cf51c1dcb4262d79f2e7b62cfdfc12
+>>>>>>> 4a55c7595161936614b0e317ce4be608201b5be0
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
+<<<<<<< HEAD
 - [ ] [Set up project integrations](https://gitlab.sparity.com/saisanthosh.vemireddi/lms-using-ado.net/-/settings/integrations)
+=======
+<<<<<<< HEAD
+- [ ] [Set up project integrations](https://gitlab.sparity.com/ravalipriya.kosuri/lms_ado.net/-/settings/integrations)
+=======
+- [ ] [Set up project integrations](https://gitlab.sparity.com/itsadit/ado.net_ars/-/settings/integrations)
+>>>>>>> ddb225c728cf51c1dcb4262d79f2e7b62cfdfc12
+>>>>>>> 4a55c7595161936614b0e317ce4be608201b5be0
 
 ## Collaborate with your team
 
