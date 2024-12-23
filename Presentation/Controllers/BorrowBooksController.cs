@@ -1,14 +1,13 @@
 ﻿
 using LibraryManagementSystem.BusinessLayer;
 using LibraryManagementSystem.Models;
-using LibraryManagementSystem.Models.DTO;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using static System.Reflection.Metadata.BlobBuilder;
 
-namespace Library_Management_System.Controllers
+namespace LibraryManagementSystem.Presentation.Controllers
 {
     public class BorrowBooksController : Controller
     {

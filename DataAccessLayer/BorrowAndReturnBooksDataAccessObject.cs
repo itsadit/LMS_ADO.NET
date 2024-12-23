@@ -2,7 +2,6 @@
 using Microsoft.Data.SqlClient;
 using System.Reflection;
 using LibraryManagementSystem.Models;
-using LibraryManagementSystem.Models.DTO;
 
 namespace LibraryManagementSystem.DataAccessLayer
 {
@@ -177,7 +176,9 @@ namespace LibraryManagementSystem.DataAccessLayer
                             using (SqlCommand command = new SqlCommand(query, connection, transaction))
                             {
                                 command.Parameters.AddWithValue("@UserID", request.UserID);
-                                command.Parameters.AddWithValue("@BookID", request.BookID);
+
+                                command.Parameters.AddWithValue("@BookID", request .BookID);
+
 
                                 command.ExecuteNonQuery();
                             }

@@ -1,10 +1,8 @@
-﻿
+﻿using LibraryManagementSystem.Models.Enum;
 using System.ComponentModel.DataAnnotations;
-using LibraryManagementSystem.Models.Enum;
+namespace LibraryManagementSystem.Models.DTO
 
-namespace LibraryManagementSystem.Models
 {
-
     public class Request
     {
         /// <summary>
@@ -72,4 +70,5 @@ namespace LibraryManagementSystem.Models
         [Required(ErrorMessage = "BookName is required.")]
         public string BookName { get; set; }
     }
+
 }

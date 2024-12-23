@@ -399,7 +399,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "BorrowBook",
     "RelativePath": "BorrowBook",
     "HttpMethod": "POST",
@@ -420,7 +420,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "GetAllPayments",
     "RelativePath": "GetAllPaymentDetails",
     "HttpMethod": "GET",
@@ -430,7 +430,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetAllBorrowedBooks",
     "RelativePath": "GetAllUserBookTransactions",
     "HttpMethod": "GET",
@@ -440,7 +440,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetBorrowBooksByUserId",
     "RelativePath": "GetBorrowBooksByUserId",
     "HttpMethod": "GET",
@@ -456,7 +456,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "GetPaymentsByUserID",
     "RelativePath": "GetPaymentDetailsByUserID",
     "HttpMethod": "GET",
@@ -472,7 +472,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetUsersWhoBorrowedBookbyBookName",
     "RelativePath": "GetUsersWhoBorrowedBookByBookName",
     "HttpMethod": "GET",
@@ -488,7 +488,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.Controllers.BorrowBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.BorrowBooksController",
     "Method": "GetUserWhoBorrowedBookbyBookID",
     "RelativePath": "GetUsersWhoBorrowedSpecificBookByBookID",
     "HttpMethod": "GET",
@@ -504,7 +504,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "FinePayment",
     "RelativePath": "PayFine",
     "HttpMethod": "POST",
@@ -535,7 +535,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "RenewalBook",
     "RelativePath": "RenewalBook",
     "HttpMethod": "PUT",
@@ -556,7 +556,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "Library_Management_System.APIs___Controllers.ReturnBooksController",
+    "ContainingType": "LibraryManagementSystem.Presentation.Controllers.ReturnBooksController",
     "Method": "RetrieveBook",
     "RelativePath": "ReturnBook",
     "HttpMethod": "PUT",

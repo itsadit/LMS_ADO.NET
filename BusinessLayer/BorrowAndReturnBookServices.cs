@@ -1,8 +1,7 @@
-﻿using LibraryManagementSystem.DataAccessLayer;
-using LibraryManagementSystem.Models.DTO;
+using LibraryManagementSystem.DataAccessLayer;
 using LibraryManagementSystem.Models;
 
-using System.Reflection;
+
 
 namespace LibraryManagementSystem.BusinessLayer
 {
@@ -14,7 +13,16 @@ namespace LibraryManagementSystem.BusinessLayer
 
         public BorrowAndReturnBookServices(IBorrowAndReturnBooksDataAccessObject dataAccessObject)
         {
-            _dataAccessObject = dataAccessObject;
+              _dataAccessObject = dataAccessObject;
+        }
+        
+
+    // Implement methods that utilize _dataAccessObject
+
+    public void BorrowBook(Models.Request request)
+        {
+            _dataAccessObject.BorrowBook(request);
+
         }
 
         public IEnumerable<BorrowBooks> GetAllUser_BookTransactions()
@@ -41,9 +49,11 @@ namespace LibraryManagementSystem.BusinessLayer
             return BorrowBooks;
         }
 
-        void IBorrowAndReturnBookServices.BorrowBook(Request request)
+
+        void IBorrowAndReturnBookServices.ReturnBook(Request request)
         {
             _dataAccessObject.BorrowBook(request);
+
         }
 
         IEnumerable<FinePayments> IBorrowAndReturnBookServices.GetAllFinePayments()
@@ -63,14 +73,10 @@ namespace LibraryManagementSystem.BusinessLayer
             _dataAccessObject.FinePayment(Fines);
         }
 
+
         void IBorrowAndReturnBookServices.RenewalBook(Request request)
         {
             _dataAccessObject.RenewalBook(request);
-        }
-
-        void IBorrowAndReturnBookServices.ReturnBook(Request request)
-        {
-            _dataAccessObject.ReturnBook(request);
         }
     }
 }

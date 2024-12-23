@@ -231,6 +231,51 @@
             The phone number must start with 6, 7, 8, or 9 and contain 10 digits.
             </summary>
         </member>
+        <member name="P:LibraryManagementSystem.Models.Request.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.Request.UserID">
+            <summary>
+            Input UserID(Integer Value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.Amount">
+            <summary>
+            Input exact Fine Amount that need to pay. To Know your Amount Goto GetUser API
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.PaymentMethod">
+            <summary>
+            Select the Type of Payment Done by the User
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.FinePaymentRequest.TransactionID">
+            <summary>
+            Enter TransactionID for Reference
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.ByUserIDRequest.UserID">
+            <summary>
+            Input UserID(Integer value) to get required Result
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.ByBookIDRequest.BookID">
+            <summary>
+            Input BookID(Integer value) to get required Result. To Know BookID Check on the 1st Page of Book.
+            </summary>
+        </member>
+        <member name="P:LibraryManagementSystem.Models.ByBookNameRequest.BookName">
+            <summary>
+            Input Exact BookName to get required Result. To Know BookName Check out the Cover Page
+            </summary>
+        </member>
         <member name="M:LibraryManagementSystem.Presentation.Controllers.BookController.AddBook(LibraryManagementSystem.Models.DTO.AddBookRequest)">
             <summary>
             Add a new book with its related details (e.g., author, genre, publisher)
@@ -272,6 +317,40 @@
             </summary>
             <param name="request">The search criteria (search field and value).</param>
             <returns>A list of books matching the search criteria.</returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.BorrowBook(LibraryManagementSystem.Models.Request)">
+            <summary>
+            Takes BookID and UserID as input and Assigns Book to the User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetAllBorrowedBooks">
+            <summary>
+            On Execution Returns All the Details of Books Borrowed By Different Users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetBorrowBooksByUserId(LibraryManagementSystem.Models.ByUserIDRequest)">
+            <summary>
+            Takes UserID as Input and Returns All the Books Borrowed Books By that User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetUsersWhoBorrowedBookbyBookName(LibraryManagementSystem.Models.ByBookNameRequest)">
+            <summary>
+            Takes BookName As Input and Returns all the Users Who Borrowed Books With that BookName
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.BorrowBooksController.GetUserWhoBorrowedBookbyBookID(LibraryManagementSystem.Models.ByBookIDRequest)">
+            <summary>
+            Takes BookID as Input and Returns all the Books Details Who Borrowed that Specific Book
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
         </member>
         <member name="M:LibraryManagementSystem.Presentation.Controllers.LoginController.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
             <summary>
@@ -338,6 +417,40 @@
             Set the new password.
             </summary>
         </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.RetrieveBook(LibraryManagementSystem.Models.Request)">
+            <summary>
+            Takes UserID and BookID as Input and Updates the Return Date and Fines in the DataBase
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.RenewalBook(LibraryManagementSystem.Models.Request)">
+            <summary>
+            Takes UserID and BookID as Input and Increments the Due date
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.FinePayment(LibraryManagementSystem.Models.FinePaymentRequest)">
+            <summary>
+            Takes UserID and Amount as Input and Updates Total Fine in Users Table and Fine Paid in Borrowed Books Table
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.GetAllPayments">
+            <summary>
+            Returns All the Payments Details
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:LibraryManagementSystem.Presentation.Controllers.ReturnBooksController.GetPaymentsByUserID(LibraryManagementSystem.Models.ByUserIDRequest)">
+            <summary>
+            Takes UserID as Input and Returns All the Payments Done By that User
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
         <member name="M:LibraryManagementSystem.Presentation.Controllers.UsersController.GetUserDetails">
             <summary>
             Retrieves the logged-in user's details.
@@ -398,74 +511,6 @@
             </summary>
             <param name="userID">The ID of the user to delete.</param>
             <returns>No content if the operation is successful, or an error message if not.</returns>
-        </member>
-        <member name="M:Library_Management_System.Controllers.BorrowBooksController.BorrowBook(LibraryManagementSystem.Models.DTO.Request)">
-            <summary>
-            Takes BookID and UserID as input and Assigns Book to the User
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.Controllers.BorrowBooksController.GetAllBorrowedBooks">
-            <summary>
-            On Execution Returns All the Details of Books Borrowed By Different Users
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.Controllers.BorrowBooksController.GetBorrowBooksByUserId(LibraryManagementSystem.Models.DTO.ByUserIDRequest)">
-            <summary>
-            Takes UserID as Input and Returns All the Books Borrowed Books By that User
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.Controllers.BorrowBooksController.GetUsersWhoBorrowedBookbyBookName(LibraryManagementSystem.Models.DTO.ByBookNameRequest)">
-            <summary>
-            Takes BookName As Input and Returns all the Users Who Borrowed Books With that BookName
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.Controllers.BorrowBooksController.GetUserWhoBorrowedBookbyBookID(LibraryManagementSystem.Models.DTO.ByBookIDRequest)">
-            <summary>
-            Takes BookID as Input and Returns all the Books Details Who Borrowed that Specific Book
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.RetrieveBook(LibraryManagementSystem.Models.DTO.Request)">
-            <summary>
-            Takes UserID and BookID as Input and Updates the Return Date and Fines in the DataBase
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.RenewalBook(LibraryManagementSystem.Models.DTO.Request)">
-            <summary>
-            Takes UserID and BookID as Input and Increments the Due date
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.FinePayment(LibraryManagementSystem.Models.DTO.FinePaymentRequest)">
-            <summary>
-            Takes UserID and Amount as Input and Updates Total Fine in Users Table and Fine Paid in Borrowed Books Table
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.GetAllPayments">
-            <summary>
-            Returns All the Payments Details
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Library_Management_System.APIs___Controllers.ReturnBooksController.GetPaymentsByUserID(LibraryManagementSystem.Models.DTO.ByUserIDRequest)">
-            <summary>
-            Takes UserID as Input and Returns All the Payments Done By that User
-            </summary>
-            <param name="request"></param>
-            <returns></returns>
         </member>
     </members>
 </doc>
