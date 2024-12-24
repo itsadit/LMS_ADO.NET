@@ -8,8 +8,6 @@ using System.IdentityModel.Tokens.Jwt;
 
 namespace LibraryManagementSystem.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class LoginController : ControllerBase
     {
         private readonly LoginDAO _loginDAO;
@@ -34,7 +32,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="userName">The username of the user.</param>
         /// <param name="password">The password of the user.</param>
         /// <returns>A response indicating the result of the login attempt.</returns>
-        [HttpGet("login")]
+        [HttpGet("Login")]
         public IActionResult Login([FromQuery] string userName, [FromQuery] string password)
         {
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
@@ -76,7 +74,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// Logs out the current user by clearing the logged-in user.
         /// </summary>
         /// <returns>A response indicating the result of the logout attempt.</returns>
-        [HttpPost("logout")]
+        [HttpPost("Logout")]
         public IActionResult Logout()
         {
             if (_currentlyLoggedInUser == null)
@@ -96,7 +94,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="userID">The ID of the user.</param>
         /// <param name="newPassword">The new password to be set.</param>
         /// <returns>A response indicating the result of the password reset operation.</returns>
-        [HttpGet("forgot-password")]
+        [HttpGet("ForgotPassword")]
         public IActionResult ForgotPassword([FromQuery] string userName, [FromQuery] int userID, [FromQuery] string newPassword)
         {
             // Check if both username and userID match in the database
@@ -152,7 +150,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="currentPassword">The current password of the user.</param>
         /// <param name="newPassword">The new password to be set.</param>
         /// <returns>A response indicating the result of the password reset operation.</returns>
-        [HttpGet("reset-password")]
+        [HttpGet("ResetPassword")]
         public IActionResult ResetPassword([FromQuery] string userName, [FromQuery] string currentPassword, [FromQuery] string newPassword)
         {
             if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(currentPassword) || string.IsNullOrEmpty(newPassword))

@@ -6,8 +6,6 @@ using LibraryManagementSystem.Models.DTO;
 
 namespace LibraryManagementSystem.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class UsersController : ControllerBase
     {
         public readonly IUsersService _usersService;
@@ -22,7 +20,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// </summary>
         /// <returns>Returns the user data if found, or an error message if not.</returns>
         [Authorize(Roles = "Admin, User")]
-        [HttpGet("getMyDetails")]
+        [HttpGet("GetMyDetails")]
         public IActionResult GetUserDetails()
         {
             try
@@ -53,7 +51,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="request">The user details for registration.</param>
         /// <returns>A response indicating the result of the operation.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpPost("registerUser")]
+        [HttpPost("RegisterUser")]
         public IActionResult CreateUser([FromForm] CreateUserRequest request)
         {
             if (!ModelState.IsValid)
@@ -97,7 +95,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// </summary>
         /// <returns>A list of all users.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpGet("allUsers")]
+        [HttpGet("AllUsers")]
         public IActionResult GetUsers()
         {
             var usersList = _usersService.GetAllUsers();
@@ -109,7 +107,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// </summary>
         /// <returns>A list of all active users.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpGet("allActiveUsers")]
+        [HttpGet("AllActiveUsers")]
         public IActionResult GetActiveUsers()
         {
             var usersList = _usersService.GetActiveUsers();
@@ -122,7 +120,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="userID">The ID of the user to retrieve.</param>
         /// <returns>The user data if found, or an error message if not.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpGet("id/searchUsersBy{userID}")]
+        [HttpGet("SearchUsersBy/UserID")]
         public IActionResult GetUserById(int userID)
         {
             try
@@ -142,7 +140,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="userName">The username of the user to retrieve.</param>
         /// <returns>The user data if found, or an error message if not.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpGet("name/searchUsersBy{userName}")]
+        [HttpGet("SearchUsersBy/UserName")]
         public IActionResult GetUserByName(string userName)
         {
             try
@@ -162,7 +160,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="userID">The ID of the user to reactivate.</param>
         /// <returns>The reactivated user data or an error message if not found.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpPut("reactivateUser")]
+        [HttpPut("ReactivateUser")]
         public IActionResult ReactivateUser(int userID)
         {
             try
@@ -194,7 +192,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="request">The details to update the user with.</param>
         /// <returns>A response indicating the result of the update operation.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpPut("editUser")]
+        [HttpPut("EditUser")]
         public IActionResult EditUser(int userId, [FromForm] EditUserRequest request)
         {
             try
@@ -256,7 +254,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="userID">The ID of the user to delete.</param>
         /// <returns>No content if the operation is successful, or an error message if not.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpDelete("Delete User {userID}")]
+        [HttpPatch("DeleteUser")]
         public IActionResult DeleteUser(int userID)
         {
             try

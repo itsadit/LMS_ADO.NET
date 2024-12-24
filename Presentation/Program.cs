@@ -44,7 +44,7 @@ builder.Services.AddSwaggerGen(c =>
 // Swagger Configuration with JWT Bearer Authentication
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "LibraryManagementSystem", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Library Management System", Version = "v1" });
 
     // Mapping UserRole enum to OpenAPI schema
     c.MapType<UserRole>(() => new OpenApiSchema
@@ -111,7 +111,7 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateLifetime = true,
-            ValidateIssuerSigningKey = true,
+            ValidateIssuerSigningKey = true,  
             ValidIssuer = builder.Configuration["Jwt:Issuer"], // These should be in appsettings.json
             ValidAudience = builder.Configuration["Jwt:Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:SecretKey"])) // SecretKey should be in appsettings.json

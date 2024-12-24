@@ -1,11 +1,7 @@
-﻿
-using LibraryManagementSystem.BusinessLayer;
+﻿using LibraryManagementSystem.BusinessLayer;
 using LibraryManagementSystem.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
-using static System.Reflection.Metadata.BlobBuilder;
 
 namespace LibraryManagementSystem.Presentation.Controllers
 {
