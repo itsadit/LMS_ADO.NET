@@ -7,8 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace LibraryManagementSystem.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class BookController : ControllerBase
     {
         private readonly IBookService _bookService;
@@ -24,7 +22,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="request">The book details to be added.</param>
         /// <returns>A response indicating the result of the operation.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpPost("books")]
+        [HttpPost("AddBook")]
         [SwaggerOperation(Summary = "Add a new book along with its author, genre, and publisher",
         Description = "Use this endpoint to add a new book with associated details like authors, genres, and publishers.")]
         public IActionResult AddBook([FromForm] AddBookRequest request)
@@ -51,7 +49,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// </summary>
         /// <returns>A list of all books in the system.</returns>
         [Authorize(Roles = "Admin, User")]
-        [HttpGet("books")]
+        [HttpGet("GetAllBooks")]
         [SwaggerOperation(Summary = "Retrieve a list of all books",
         Description = "Use this endpoint to get a list of all books in the system.")]
         public IActionResult GetAllBooks()
@@ -70,7 +68,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="id">The unique ID of the book to retrieve.</param>
         /// <returns>The details of the book if found, otherwise an error message.</returns>
         [Authorize(Roles = "Admin, User")]
-        [HttpGet("books/{id}")]
+        [HttpGet("GetBookById")]
         [SwaggerOperation(Summary = "Retrieve a specific book by its ID", Description = "Use this endpoint to retrieve a specific book by providing its unique ID.")]
         public IActionResult GetBook([FromRoute] int id)
         {
@@ -94,7 +92,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="request">The updated book details.</param>
         /// <returns>A response indicating the result of the update operation.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpPut("books/{id}")]
+        [HttpPut("UpdateBooks")]
         [SwaggerOperation(Summary = "Update the details of a book",
         Description = "Use this endpoint to update the details (name, price, author, genre, publisher) of an existing book.")]
         public IActionResult UpdateBook(int id, [FromForm] UpdateBookRequest request)
@@ -127,7 +125,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="id">The ID of the book to delete.</param>
         /// <returns>A response indicating whether the deletion was successful.</returns>
         [Authorize(Roles = "Admin")]
-        [HttpDelete("books/{id}")]
+        [HttpDelete("DeleteBook")]
         [SwaggerOperation(Summary = "Delete a specific book by its ID",
         Description = "Use this endpoint to delete a specific book by providing its unique ID.")]
         public IActionResult DeleteBook([FromRoute] int id)
@@ -152,7 +150,7 @@ namespace LibraryManagementSystem.Presentation.Controllers
         /// <param name="request">The search criteria (search field and value).</param>
         /// <returns>A list of books matching the search criteria.</returns>
         [Authorize(Roles = "Admin, User")]
-        [HttpGet("books/search")]
+        [HttpGet("SearchBookBySpecificField")]
         [SwaggerOperation(Summary = "Search for books based on a given field",
         Description = "Use this endpoint to search for books by specifying a search field (e.g., name, author, genre) and its corresponding value.")]
         public IActionResult SearchBooks([FromQuery] SearchBooksRequest request)

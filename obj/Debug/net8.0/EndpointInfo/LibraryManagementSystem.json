@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "LibraryManagementSystem",
+    "title": "Library Management System",
     "version": "v1"
   },
   "paths": {
-    "/api/Book/books": {
+    "/AddBook": {
       "post": {
         "tags": [
           "Book"
@@ -75,7 +75,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/GetAllBooks": {
       "get": {
         "tags": [
           "Book"
@@ -88,7 +90,7 @@
         }
       }
     },
-    "/api/Book/books/{id}": {
+    "/GetBookById": {
       "get": {
         "tags": [
           "Book"
@@ -111,7 +113,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/UpdateBooks": {
       "put": {
         "tags": [
           "Book"
@@ -120,9 +124,8 @@
         "parameters": [
           {
             "name": "id",
-            "in": "path",
+            "in": "query",
             "description": "The ID of the book to update.",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -187,7 +190,9 @@
             "description": "OK"
           }
         }
-      },
+      }
+    },
+    "/DeleteBook": {
       "delete": {
         "tags": [
           "Book"
@@ -212,7 +217,7 @@
         }
       }
     },
-    "/api/Book/books/search": {
+    "/SearchBookBySpecificField": {
       "get": {
         "tags": [
           "Book"
@@ -393,7 +398,7 @@
         }
       }
     },
-    "/api/Login/login": {
+    "/Login": {
       "get": {
         "tags": [
           "Login"
@@ -424,7 +429,7 @@
         }
       }
     },
-    "/api/Login/logout": {
+    "/Logout": {
       "post": {
         "tags": [
           "Login"
@@ -437,7 +442,7 @@
         }
       }
     },
-    "/api/Login/forgot-password": {
+    "/ForgotPassword": {
       "get": {
         "tags": [
           "Login"
@@ -477,7 +482,7 @@
         }
       }
     },
-    "/api/Login/reset-password": {
+    "/ResetPassword": {
       "get": {
         "tags": [
           "Login"
@@ -739,7 +744,7 @@
         }
       }
     },
-    "/api/Users/getMyDetails": {
+    "/GetMyDetails": {
       "get": {
         "tags": [
           "Users"
@@ -752,7 +757,7 @@
         }
       }
     },
-    "/api/Users/registerUser": {
+    "/RegisterUser": {
       "post": {
         "tags": [
           "Users"
@@ -847,7 +852,7 @@
         }
       }
     },
-    "/api/Users/allUsers": {
+    "/AllUsers": {
       "get": {
         "tags": [
           "Users"
@@ -860,7 +865,7 @@
         }
       }
     },
-    "/api/Users/allActiveUsers": {
+    "/AllActiveUsers": {
       "get": {
         "tags": [
           "Users"
@@ -873,7 +878,7 @@
         }
       }
     },
-    "/api/Users/id/searchUsersBy{userID}": {
+    "/SearchUsersBy/UserID": {
       "get": {
         "tags": [
           "Users"
@@ -882,9 +887,8 @@
         "parameters": [
           {
             "name": "userID",
-            "in": "path",
+            "in": "query",
             "description": "The ID of the user to retrieve.",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -898,7 +902,7 @@
         }
       }
     },
-    "/api/Users/name/searchUsersBy{userName}": {
+    "/SearchUsersBy/UserName": {
       "get": {
         "tags": [
           "Users"
@@ -907,9 +911,8 @@
         "parameters": [
           {
             "name": "userName",
-            "in": "path",
+            "in": "query",
             "description": "The username of the user to retrieve.",
-            "required": true,
             "schema": {
               "type": "string"
             }
@@ -922,7 +925,7 @@
         }
       }
     },
-    "/api/Users/reactivateUser": {
+    "/ReactivateUser": {
       "put": {
         "tags": [
           "Users"
@@ -946,7 +949,7 @@
         }
       }
     },
-    "/api/Users/editUser": {
+    "/EditUser": {
       "put": {
         "tags": [
           "Users"
@@ -1018,8 +1021,8 @@
         }
       }
     },
-    "/api/Users/Delete User {userID}": {
-      "delete": {
+    "/DeleteUser": {
+      "patch": {
         "tags": [
           "Users"
         ],
@@ -1027,9 +1030,8 @@
         "parameters": [
           {
             "name": "userID",
-            "in": "path",
+            "in": "query",
             "description": "The ID of the user to delete.",
-            "required": true,
             "schema": {
               "type": "integer",
               "format": "int32"

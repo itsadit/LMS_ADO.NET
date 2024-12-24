@@ -5,7 +5,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryManagementSystem.Presentation.Controllers
 {
-
     public class ReturnBooksController : ControllerBase
     {
 
@@ -40,7 +39,6 @@ namespace LibraryManagementSystem.Presentation.Controllers
                     UserID = request.UserID,
                     BookID = request.BookID
                 };
-
                 // Call the ReturnBook method to update the record in the database
                 _dataServicesObject.ReturnBook(request);
 
