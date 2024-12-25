@@ -6987,31 +6987,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ravali Priya Kosuri\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/adityakumar/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\santhosh\\ado.net_ars\\LibraryManagementSystem.csproj",
+      "projectUniqueName": "/Users/adityakumar/Documents/Complete_code/ado.net_ars/LibraryManagementSystem.csproj",
       "projectName": "LibraryManagementSystem",
-      "projectPath": "D:\\santhosh\\ado.net_ars\\LibraryManagementSystem.csproj",
-      "packagesPath": "C:\\Users\\Ravali Priya Kosuri\\.nuget\\packages\\",
-      "outputPath": "D:\\santhosh\\ado.net_ars\\obj\\",
+      "projectPath": "/Users/adityakumar/Documents/Complete_code/ado.net_ars/LibraryManagementSystem.csproj",
+      "packagesPath": "/Users/adityakumar/.nuget/packages/",
+      "outputPath": "/Users/adityakumar/Documents/Complete_code/ado.net_ars/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ravali Priya Kosuri\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/adityakumar/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7029,8 +7022,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -7088,7 +7080,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
